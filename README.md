@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/MullaiGreatify/-Greatify_ERP_Automation">
-    <img src="File/Image.jpeg" alt="Logo" width="800" height="800">
+    <img src="File/Image.jpeg" alt="Logo" width="200" height="200">
   </a>
 
   <h3 align="center">Greatify Web Automation</h3>
