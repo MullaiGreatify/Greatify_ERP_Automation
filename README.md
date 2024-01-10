@@ -63,16 +63,15 @@ Key Features:
 ### Installation & Prerequisites
 
 1. JDK 1.8+ (Ensure that the Java class path is properly set)
-2. Maven (Ensure that the .m2 class path is properly set)
-3. Eclipse IDE
-4. Required Eclipse Plugins:
+2. Eclipse IDE
+3. Required Eclipse Plugins:
    - Maven
    - Cucumber
-5. Browser driver (Ensure that you have the appropriate browser driver for your desired browser and that the class path is correctly configured)
+4. Browser driver (Ensure that you have the appropriate browser driver for your desired browser and that the class path is correctly configured)
 
 ## Framework Setup
 
-To set up the framework, you can either fork or clone the repository from [here](https://github.com/amiya-pattnaik/selenium-cucumber-java), or download the ZIP file and set it up in your local workspace.
+To set up the framework, you can either fork or clone the repository from [here](), or download the ZIP file and set it up in your local workspace.
 
 ## Running Sample Tests
 
