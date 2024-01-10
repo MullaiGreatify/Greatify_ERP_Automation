@@ -49,7 +49,7 @@ Greatify Web Automation
 This repository contains a Student Information System project and libraries that demonstrate how to create a Student Profile and verify the details across all dashboards. The project is implemented using a BDD (Behavior-Driven Development) framework with Cucumber (v7.15.0) and Java. Page Object Manager and the singleton concept are utilized to enhance code reusability.
 
 Key Features:
-- Programming Language: Java
+- Programming Language: Java (v21.0.1)
 - BDD Framework: Cucumber (v7.15.0)
 - Project Management Tool: Maven (v4.0.0)
 - Selenium Drivers: Web Driver Manager (v5.6.2)
