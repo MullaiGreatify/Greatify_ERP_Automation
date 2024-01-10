@@ -5,7 +5,7 @@
 <br />
 <div >
 
-  <a align="right" href="https://github.com/MullaiGreatify/-Greatify_ERP_Automation">
+  <a align="center" href="https://github.com/MullaiGreatify/-Greatify_ERP_Automation">
     <img src="File/Image.jpeg" alt="Logo" width="200" height="100">
   </a>
 
