@@ -18,7 +18,7 @@ Greatify Web Automation
 
 
 <!-- TABLE OF CONTENTS -->
-<details>
+<details align="right">
   <summary>Table of Contents</summary>
   <ol>
     <li>
