@@ -10,19 +10,7 @@
 
   <h3 align="center">Greatify Web Automation</h3>
 
-  <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/MullaiGreatify/-Greatify_ERP_Automation"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/MullaiGreatify/-Greatify_ERP_Automation">View Demo</a>
-    ·
-    <a href="https://github.com/MullaiGreatify/-Greatify_ERP_Automation/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/MullaiGreatify/-Greatify_ERP_Automation/issues">Request Feature</a>
-  </p>
-</div>
+
 
 
 
