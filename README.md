@@ -12,11 +12,8 @@
 
 </p>
   
-
 Greatify Web Automation
 ===================================
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details align="left">
