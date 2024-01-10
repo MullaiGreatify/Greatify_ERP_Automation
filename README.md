@@ -10,7 +10,7 @@
 
   <h3 align="center">Greatify Web Automation</h3>
 
-Basic Selenium Project
+Greatify Web Automation
 ===================================
 
 
