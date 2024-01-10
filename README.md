@@ -73,6 +73,79 @@ Key Features:
 
 To set up the framework, you can either fork or clone the repository from [here](), or download the ZIP file and set it up in your local workspace.
 
+## Project Structure
+
+The project is structured as follows:
+
+```bash
+selenium-java-test-automation-architecture
+├─ .github
+│  ├─ FUNDING.yml
+│  ├─ dependabot.yml
+│  └─ workflows
+│     └─ test-execution.yml
+├─ .gitignore
+├─ LICENSE
+├─ README.md
+├─ build.gradle
+├─ gradle
+│  └─ wrapper
+│     ├─ gradle-wrapper.jar
+│     └─ gradle-wrapper.properties
+├─ gradlew
+├─ gradlew.bat
+├─ script
+│  └─ install_chrome.sh
+├─ settings.gradle
+└─ src
+   ├─ main
+   │  └─ java
+   │     └─ io
+   │        └─ github
+   │           └─ tahanima
+   │              ├─ config
+   │              │  ├─ Configuration.java
+   │              │  └─ ConfigurationManager.java
+   │              ├─ dto
+   │              │  ├─ BaseDto.java
+   │              │  ├─ LoginDto.java
+   │              │  └─ ProductsDto.java
+   │              ├─ factory
+   │              │  ├─ BasePageFactory.java
+   │              │  └─ BrowserFactory.java
+   │              ├─ report
+   │              │  └─ ExtentReportManager.java
+   │              └─ ui
+   │                 ├─ component
+   │                 │  ├─ BaseComponent.java
+   │                 │  ├─ Header.java
+   │                 │  └─ SideNavMenu.java
+   │                 └─ page
+   │                    ├─ BasePage.java
+   │                    ├─ LoginPage.java
+   │                    └─ ProductsPage.java
+   └─ test
+      ├─ java
+      │  └─ io
+      │     └─ github
+      │        └─ tahanima
+      │           ├─ e2e
+      │           │  ├─ BaseTest.java
+      │           │  ├─ LoginTest.java
+      │           │  └─ ProductsTest.java
+      │           └─ util
+      │              ├─ DataProviderUtil.java
+      │              ├─ TestListener.java
+      │              └─ TestRetry.java
+      └─ resources
+         ├─ config.properties
+         └─ testdata
+            ├─ login.csv
+            ├─ login.json
+            ├─ products.csv
+            └─ products.json
+```
+
 ## Running Sample Tests
 
 Access the CLI of your operating system (e.g., iTerm for macOS or PowerShell for Windows) and navigate to the project directory. Then, run the following command to execute the features: `mvn clean test`. 
