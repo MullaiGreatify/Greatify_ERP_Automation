@@ -8,7 +8,7 @@
     <img src="File/Image.jpeg" alt="Logo" width="200" height="100">
   </a>
 
-  <h3 align="center">Greatify Web Automation</h3>
+  
 
 Greatify Web Automation
 ===================================
