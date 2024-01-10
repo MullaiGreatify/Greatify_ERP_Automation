@@ -79,71 +79,33 @@ The project is structured as follows:
 
 ```bash
 selenium-java-test-automation-architecture
-├─ .github
-│  ├─ FUNDING.yml
-│  ├─ dependabot.yml
-│  └─ workflows
-│     └─ test-execution.yml
-├─ .gitignore
+├─ File
+│  ├─ Image.jpeg
+│  └─ StudentData.csv
+├─ Screenshots
+│  └─ Image.png
+├─ config
+│  └─ config.properties
+├─ src
+│  ├─ main
+│  └─ test
+│     ├─ java/com
+│        ├─ base
+│        ├─ pagemanager
+│        ├─ pages
+│        ├─ runner
+│        └─ stepdefinition
+│     └─ resources
+│        ├─ Features
+│           └─ TC1_StudentInformation.feature 
+│        ├─ extent-config.xml
+│        └─ extent.properties
+├─ test-output
+│  └─ Report
+│     └─ report.html 
 ├─ LICENSE
-├─ README.md
-├─ build.gradle
-├─ gradle
-│  └─ wrapper
-│     ├─ gradle-wrapper.jar
-│     └─ gradle-wrapper.properties
-├─ gradlew
-├─ gradlew.bat
-├─ script
-│  └─ install_chrome.sh
-├─ settings.gradle
-└─ src
-   ├─ main
-   │  └─ java
-   │     └─ io
-   │        └─ github
-   │           └─ tahanima
-   │              ├─ config
-   │              │  ├─ Configuration.java
-   │              │  └─ ConfigurationManager.java
-   │              ├─ dto
-   │              │  ├─ BaseDto.java
-   │              │  ├─ LoginDto.java
-   │              │  └─ ProductsDto.java
-   │              ├─ factory
-   │              │  ├─ BasePageFactory.java
-   │              │  └─ BrowserFactory.java
-   │              ├─ report
-   │              │  └─ ExtentReportManager.java
-   │              └─ ui
-   │                 ├─ component
-   │                 │  ├─ BaseComponent.java
-   │                 │  ├─ Header.java
-   │                 │  └─ SideNavMenu.java
-   │                 └─ page
-   │                    ├─ BasePage.java
-   │                    ├─ LoginPage.java
-   │                    └─ ProductsPage.java
-   └─ test
-      ├─ java
-      │  └─ io
-      │     └─ github
-      │        └─ tahanima
-      │           ├─ e2e
-      │           │  ├─ BaseTest.java
-      │           │  ├─ LoginTest.java
-      │           │  └─ ProductsTest.java
-      │           └─ util
-      │              ├─ DataProviderUtil.java
-      │              ├─ TestListener.java
-      │              └─ TestRetry.java
-      └─ resources
-         ├─ config.properties
-         └─ testdata
-            ├─ login.csv
-            ├─ login.json
-            ├─ products.csv
-            └─ products.json
+└─ README.md
+
 ```
 
 ## Running Sample Tests
