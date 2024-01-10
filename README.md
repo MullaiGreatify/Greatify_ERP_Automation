@@ -46,186 +46,136 @@ Greatify Web Automation
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+This repository contains a Student Information System project and libraries that demonstrate how to create a Student Profile and verify the details across all dashboards. The project is implemented using a BDD (Behavior-Driven Development) framework with Cucumber (v7.15.0) and Java. Page Object Manager and the singleton concept are utilized to enhance code reusability.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Key Features:
+- Programming Language: Java
+- BDD Framework: Cucumber (v7.15.0)
+- Project Management Toll: Maven (v4.0.0)
+- Selenium Drivers: Web Driver Manager (v5.6.2)
+- Design Pattern: Page Object Manager with Singleton Concept
+- Reporters: Extent Report, Cucumber Reporting, HTML Report
+- CSV Integration: Opencsv (v5.7.1)
+- Mail Integration: The project leverages Javax.mail to send generated reports to specified recipients.
+- Error Handling: Captures error screenshots for failed test cases.
 
 
+### Installation & Prerequisites
 
-<!-- GETTING STARTED -->
-## Getting Started
+1. JDK 1.8+ (Ensure that the Java class path is properly set)
+2. Maven (Ensure that the .m2 class path is properly set)
+3. Eclipse IDE
+4. Required Eclipse Plugins:
+   - Maven
+   - Cucumber
+5. Browser driver (Ensure that you have the appropriate browser driver for your desired browser and that the class path is correctly configured)
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+## Framework Setup
 
-### Prerequisites
+To set up the framework, you can either fork or clone the repository from [here](https://github.com/amiya-pattnaik/selenium-cucumber-java), or download the ZIP file and set it up in your local workspace.
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+## Running Sample Tests
 
-### Installation
+Access the CLI of your operating system (e.g., iTerm for macOS or PowerShell for Windows) and navigate to the project directory. Then, run the following command to execute the features: `mvn clean test`. 
+By default, this command will invoke the Firefox browser and execute the tests.
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+- To run features on a specific browser, use the command: `mvn test "-Dbrowser=browser_name"`. Replace `browser_name` with one of the following options: Firefox, Chrome, Safari, etc. Ensure that the browser's driver files are present and specified in the system variables.
+// Need to find out if Internet Explorer is supported or this should be updated to Edge, then update details around IE to Edge
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+Please note that browser drivers are not included as part of this framework. The reason for this is that the version of Selenium browser drivers varies based on the browser version you are using, as well as the Selenium server version.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- To run a specific feature file among multiple feature files, use the command: `mvn test -Dcucumber.options="classpath:features/my_first.feature"`.
 
+## Reporters
 
+Once you have run your tests, you can generate various types of reports. This `selenium-cucumber-java` framework utilizes different test reporters to communicate pass/failure information.
 
-<!-- USAGE EXAMPLES -->
-## Usage
+## Reporting
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+### Allure Report
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+To generate an Allure report, you can use one of the following commands:
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- `mvn allure:serve`: This command generates the report in the temp folder and opens a web server with the results in your default browser. 
 
+A typical Allure report will look like this:
 
+![Allure Report](https://github.com/amiya-pattnaik/selenium-cucumber-java/blob/master/src/main/resources/demo/readme-img.png)
 
-<!-- ROADMAP -->
-## Roadmap
+- `mvn allure:report`: This command generates the report in the `target/site/allure-maven/index.html` directory, allowing you to view it locally.
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+### HTML Report
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+To generate an HTML report, use the following command: `mvn test -Dcucumber.options="--plugin html:target/result.html"`. 
+This command generates an HTML report, and you can find it at `target/result.html`.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+### JSON Report
 
+To generate a JSON report, use the following command: `mvn test -Dcucumber.options="--plugin json:target/result.json"`. 
+This command generates a JSON report, and you can find it at `target/result.json`.
 
+### Extent Spark Reports
 
-<!-- CONTRIBUTING -->
-## Contributing
+The framework utilizes the [Spark Reports Framework](http://www.extentreports.com/docs/versions/4/java/spark-reporter.html) to generate HTML test reports. Here is an example of a report generated by the Extent Reports open-source library:
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+![Extent Spark Report](https://github.com/amiya-pattnaik/selenium-cucumber-java/blob/master/src/main/resources/demo/demo.png)
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+## BDD Automation with Cucumber-Java and Page Objects
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+In this repository, we encourage the use of Behavior-Driven Development (BDD) with Cucumber and Java to develop automation scripts. We provide predefined Step Definitions packaged under `/steps/Commonsteps.java` to help you accelerate your automation development. These Step Definitions support commonly used helper methods and can be customized according to your needs.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Tests are written in the Cucumber framework using the Gherkin syntax. If you're new to Gherkin and Cucumber, you can find more information at [cucumber.io/docs/reference](https://cucumber.io/docs/reference). A typical test will have a structure similar to this:
 
+```gherkin
+Feature: Performing a Google Search
 
+    As a user on the Google search page
+    I want to search for Selenium-Webdriver
+    Because I want to learn more about it
 
-<!-- LICENSE -->
-## License
+    Background:
+        Given I am on the search page
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+    Scenario: Performing a search operation
+        When I enter "Selenium Webdriver" into the search box
+        And I click the search button
+        Then I should see a list of search results
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+    Scenario Outline: Performing a search operation with test data from a data table
+        When I enter <searchItem> into the search box
+        And I click the search button
+        Then I should see a list of search results
 
+        Examples:
+        | searchItem         |
+        | "Selenium Webdriver" |
+```
 
+## The Page Object Design Pattern
 
-<!-- CONTACT -->
-## Contact
+To better organize your test code and make it more maintainable, we recommend using the Page Object Design Pattern. With this pattern, the UI elements of your web application are modeled as objects within the test code. This approach reduces code duplication and allows easy updates if the UI changes. Writing and maintaining test automation can be challenging, especially when it comes to keeping selectors (classes, IDs, or XPath, etc.) up to date with the latest code changes. The Page Object pattern provides a solution by centralizing these selectors in separate <pagename>.java files, where you can manage them along with the associated methods.
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+By using the Page Object pattern, your test files will only call the test methods, while the selectors and reusable methods reside in the corresponding Page Objects. This approach helps maintain a separation of concerns and ensures that when a test fails, it fails on an individual step. If a selector becomes invalid, updating it in the Page Object file can fix multiple failing tests that rely on the same selector.
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Implementing the Page Object pattern promotes maintainable and scalable test automation code, making it easier to adapt to UI changes and keep your code DRY (Don't Repeat Yourself).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Contribution
 
+We welcome and encourage contributions from the community to make this project even better! If you have ideas, bug fixes, or new features to contribute, follow the steps below:
 
+1. Fork the project repository to your own GitHub account.
+2. Create a new branch for your changes and switch to it.
+3. Make the necessary changes, additions, or bug fixes in your branch.
+4. Write clear and concise commit messages to explain the purpose of each change.
+5. If your contribution introduces new functionality, consider adding tests to ensure its robustness.
+6. Once your changes are ready, submit a pull request (PR) to the original repository.
+7. In the PR description, provide a detailed explanation of the changes you made, including any relevant context or background information.
+8. The project maintainers will review your PR, provide feedback, and collaborate with you to refine the changes if needed.
+9. Once approved, your contribution will be merged into the main project.
+10. Celebrate your successful contribution! 🎉
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+We encourage respectful and constructive interactions among contributors. Your time and effort in improving this project are highly valued, and we are excited to see your contributions. Together, let's create something amazing!
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+### Licensing
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[MIT](https://github.com/amiya-pattnaik/selenium-cucumber-java/MIT-LICENSE.txt) 
