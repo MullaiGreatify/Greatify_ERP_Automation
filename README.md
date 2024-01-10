@@ -4,12 +4,13 @@
 <!-- PROJECT LOGO -->
 <br />
 <div  >
+<p align="center" >
 
-  <a align="center" href="https://github.com/MullaiGreatify/-Greatify_ERP_Automation">
+  <a  href="https://github.com/MullaiGreatify/-Greatify_ERP_Automation">
     <img  src="File/Image.jpeg" alt="Logo" width="200" height="100">
   </a>
 
-
+</p>
   
 
 Greatify Web Automation
