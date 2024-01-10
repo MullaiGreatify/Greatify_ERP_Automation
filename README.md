@@ -51,7 +51,7 @@ This repository contains a Student Information System project and libraries that
 Key Features:
 - Programming Language: Java
 - BDD Framework: Cucumber (v7.15.0)
-- Project Management Toll: Maven (v4.0.0)
+- Project Management Tool: Maven (v4.0.0)
 - Selenium Drivers: Web Driver Manager (v5.6.2)
 - Design Pattern: Page Object Manager with Singleton Concept
 - Reporters: Extent Report, Cucumber Reporting, HTML Report
