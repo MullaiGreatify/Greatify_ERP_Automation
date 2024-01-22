@@ -59,7 +59,6 @@ Key Features:
 - Mail Integration: The project leverages Javax.mail to send generated reports to specified recipients.
 - Error Handling: Captures error screenshots for failed test cases.
 
-
 ### Installation & Prerequisites
 
 1. JDK 1.8+ (Ensure that the Java class path is properly set)
@@ -73,48 +72,14 @@ Key Features:
 
 To set up the framework, you can either fork or clone the repository from [here](), or download the ZIP file and set it up in your local workspace.
 
-## Project Structure
+## Basic Usage
 
-The project is structured as follows:
+- ### Configuration
+  The project uses a [*config.properties*](./src/test/resources/config.properties) file to manage global configurations such as browser type and base url.
+- ### Test Data
+  The project uses *csv* file to store test data. *CSVReader* used to retrieve the data.
+  Student document path 
 
-```bash
-selenium-java-test-automation-architecture
-├─ File
-│  ├─ Image.jpeg
-│  └─ StudentData.csv
-├─ Screenshots
-│  └─ Image.png
-├─ config
-│  └─ config.properties
-├─ src
-│  ├─ main
-│  └─ test
-│     ├─ java/com
-│        ├─ base
-│           └─ BaseClass.java  
-│        ├─ pagemanager
-│           └─ PageObjectManager.java
-│        ├─ pages
-│           ├─ CreateNewStudentPage.java
-│           ├─ EmailReport.java
-│           └─ StudentInformationPage.java
-│        ├─ runner
-│           └─ TestRunner.java
-│        └─ stepdefinition
-│           ├─ HooksClass.java
-│           └─ TC1_StudentInformationStep.java
-│     └─ resources
-│        ├─ Features
-│           └─ TC1_StudentInformation.feature 
-│        ├─ extent-config.xml
-│        └─ extent.properties
-├─ test-output
-│  └─ Report
-│     └─ report.html 
-├─ LICENSE
-└─ README.md
-
-```
 
 ## Running Sample Tests
 
