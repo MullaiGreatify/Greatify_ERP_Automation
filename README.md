@@ -42,7 +42,7 @@ Greatify Web Automation
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This repository contains a Student Information System project and libraries that demonstrate how to create a Student Profile and verify the details across all dashboards. The project is implemented using a BDD (Behavior-Driven Development) framework with Cucumber (v7.15.0) and Java. Page Object Manager and the singleton concept are utilized to enhance code reusability.
+This repository contains a Student Information System project and libraries that demonstrate how to create a Student Profile and verify the details across *School Admin dashboard* , *Teacher dashboard* , *Principal dashboard*. The project is implemented using a BDD (Behavior-Driven Development) framework with Cucumber (v7.15.0) and Java. Page Object Manager and the singleton concept are utilized to enhance code reusability.
 
 Key Features:
 - Programming Language: Java (v21.0.1)
@@ -75,7 +75,7 @@ To set up the framework, you can either fork or clone the repository from [here]
 
 - ### Test Data
   The project uses *csv* file to store test data. *CSVReader* used to retrieve the data.
-  Student document path need to mention in the csv file.
+  Student data and document path which we are going to onboard in the school admin dashboard need to mention in the csv file.
 
 ## Reports
 
