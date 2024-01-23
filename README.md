@@ -20,8 +20,12 @@ Greatify Web Automation
     <li>
       <a href="#Installation-&-Prerequisites">Getting Started</a>
     </li>
-    <li><a href="#Framework-Setup">Usage</a></li>
-    <li><a href="#Basic-Usage">Roadmap</a></li>
+    <li><a href="#Basic-Usage">Basic Usage</a></li>
+     <ul>
+        <li><a href="#Configuration">Configuration</a></li>
+        <li><a href="#Test-Data">Test Data</a></li>
+      </ul>
+    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
