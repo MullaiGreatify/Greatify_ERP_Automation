@@ -2,11 +2,9 @@
 <br />
 <div  >
 <p align="center" >
-
   <a  href="https://github.com/MullaiGreatify/-Greatify_ERP_Automation">
     <img  src="File/Image.jpeg" alt="Logo" width="300" height="150">
   </a>
-
 </p>
   
 Greatify Web Automation
@@ -18,19 +16,12 @@ Greatify Web Automation
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
+      <a href="#Installation-&-Prerequisites">Getting Started</a>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#Framework-Setup">Usage</a></li>
+    <li><a href="#Basic-Usage">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
