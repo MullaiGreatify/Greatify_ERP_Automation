@@ -35,7 +35,7 @@ Greatify Web Automation
         <li><a href="#HTML-report">HTML Report</a></li>
         <li><a href="#extent-spark-reports">Extent Spark Reports</a></li>
       </ul>
-    <li><a href="#BDD-automation-with-cucumber-java">BDD Automation with Cucumber-Java and Page Objects</a></li>
+    <li><a href="#BDD-automation-with-cucumber-java">BDD Automation with Cucumber-Java</a></li>
     <li><a href="#page-object-design-pattern">Page Object Design Pattern</a></li>
   </ol>
 </details>
@@ -95,11 +95,11 @@ The framework utilizes the [Spark Reports Framework](http://www.extentreports.co
 
 ![Extent Spark Report](https://github.com/amiya-pattnaik/selenium-cucumber-java/blob/master/src/main/resources/demo/demo.png)
 
-## BDD Automation with Cucumber-Java and Page Objects
+## BDD Automation with Cucumber-Java
 
 In this repository, we encourage the use of Behavior-Driven Development (BDD) with Cucumber and Java to develop automation scripts. We provide predefined Step Definitions packaged under `/stepdefinition/TC1_StudentInformationStep.java` to help you accelerate your automation development. These Step Definitions support commonly used helper methods and can be customized according to your needs.
 
-## The Page Object Design Pattern
+## Page Object Design Pattern
 
 To better organize your test code and make it more maintainable, we recommend using the Page Object Design Pattern. With this pattern, the UI elements of your web application are modeled as objects within the test code. This approach reduces code duplication and allows easy updates if the UI changes. Writing and maintaining test automation can be challenging, especially when it comes to keeping selectors (classes, IDs, or XPath, etc.) up to date with the latest code changes. The Page Object pattern provides a solution by centralizing these selectors in separate <pagename>.java files, where you can manage them along with the associated methods.
 
