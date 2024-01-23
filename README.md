@@ -18,21 +18,25 @@ Greatify Web Automation
       <a href="#about-the-project">About The Project</a>
     </li>
     <li>
-      <a href="#Installation-&-Prerequisites">Getting Started</a>
+      <a href="#installation-&-prerequisites">Installation & Prerequisites</a>
     </li>
-    <li><a href="#Basic-Usage">Basic Usage</a></li>
+    <li><a href="#framework-setup">Framework Setup</a></li>
+    <li><a href="#basic-usage">Basic Usage</a></li>
      <ul>
-        <li><a href="#Configuration">Configuration</a></li>
-        <li><a href="#Test-Data">Test Data</a></li>
+        <li><a href="#configuration">Configuration</a></li>
+        <li><a href="#test-data">Test Data</a></li>
       </ul>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#reports">Reports</a></li>
+    <li><a href="#reporting">Reporting</a></li>
+     <ul>
+        <li><a href="#HTML-report">HTML Report</a></li>
+        <li><a href="#extent-spark-reports">Extent Spark Reports</a></li>
+      </ul>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-
 
 
 <!-- ABOUT THE PROJECT -->
@@ -58,7 +62,7 @@ Key Features:
 3. Required Eclipse Plugins:
    - Maven
    - Cucumber
-4. Browser driver (Ensure that you have the appropriate browser driver for your desired browser and that the class path is correctly configured)
+4. Browser driver 
 
 ## Framework Setup
 
@@ -67,8 +71,8 @@ To set up the framework, you can either fork or clone the repository from [here]
 ## Basic Usage
 
 - ### Configuration
-  The project uses a [*config.properties*](./src/test/resources/config.properties) file to manage global configurations such as browser type and base url.
-  
+  The project uses a [*config.properties*](./src/test/resources/config.properties) file to manage global configurations such as *superadminurl* , *schooladminurl* , *schooladminusername* , *schooladminpassword* , *stdid* , *teacherdashboardurl* , *teachermobnum* , *teacherid* , *principaldashboardurl* , *principalid* , *principalpassword* , *vendordashboardurl* , *browser* , *stddataCSVpath* , *emailreportpath* , *reportpath* , *reportConfigPath*
+
 - ### Test Data
   The project uses *csv* file to store test data. *CSVReader* used to retrieve the data.
   Student document path need to mention in the csv file.
