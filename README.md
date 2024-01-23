@@ -16,6 +16,9 @@ Greatify Web Automation
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#key-features">Key Features:</a></li>
+      </ul>
     </li>
     <li>
       <a href="#installation-&-prerequisites">Installation & Prerequisites</a>
@@ -32,9 +35,8 @@ Greatify Web Automation
         <li><a href="#HTML-report">HTML Report</a></li>
         <li><a href="#extent-spark-reports">Extent Spark Reports</a></li>
       </ul>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#BDD-automation-with-cucumber-java">BDD Automation with Cucumber-Java and Page Objects</a></li>
+    <li><a href="#page-object-design-pattern">Page Object Design Pattern</a></li>
   </ol>
 </details>
 
