@@ -36,7 +36,6 @@ import java.io.Reader;
 
 import org.json.JSONObject;
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
@@ -427,7 +426,7 @@ public class BaseClass {
 		}
 	}
 
-	public byte[] Screenshot() {
+	public static byte[] Screenshot() {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		byte[] b = ts.getScreenshotAs(OutputType.BYTES);
 		return b;

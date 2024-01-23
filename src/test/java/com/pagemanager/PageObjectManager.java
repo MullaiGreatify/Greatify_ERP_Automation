@@ -2,6 +2,7 @@ package com.pagemanager;
 
 import com.pages.CreateNewStudentPage;
 import com.pages.StudentInformationPage;
+import com.pages.TeacherInformationPage;
 
 public class PageObjectManager {
 
@@ -10,6 +11,13 @@ public class PageObjectManager {
 	public StudentInformationPage getStudentInformationPage() {
 		return (studentInformationPage == null) ? studentInformationPage = new StudentInformationPage()
 				: studentInformationPage;
+	}
+
+	private TeacherInformationPage teacherInformationPage;
+
+	public TeacherInformationPage getTeacherInformationPage() {
+		return (teacherInformationPage == null) ? teacherInformationPage = new TeacherInformationPage()
+				: teacherInformationPage;
 	}
 
 	private CreateNewStudentPage createNewStudentPage;

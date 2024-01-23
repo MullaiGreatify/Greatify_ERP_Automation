@@ -28,9 +28,9 @@ public class HooksClass extends BaseClass {
 	public void afterScenario(Scenario scenario) throws InterruptedException {
 		boolean b = scenario.isFailed();
 		if (b == true) {
-			scenario.attach(Screenshot(), "image/png", "Every Scenario");
+			scenario.attach(Screenshot(), "image/png", "Failed Scenario Screenshot");
 		}
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		closeAllWind();
 	}
 
