@@ -13,6 +13,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -365,7 +366,17 @@ public class BaseClass {
 		switch (browser) {
 		case "chrome":
 			WebDriverManager.chromedriver().setup();
-			ChromeOptions options = new ChromeOptions();
+
+			ChromeOptions chromeOptions = new ChromeOptions();
+			chromeOptions.addArguments("--disable-popup-blocking", "--disable-extensions", "--disable-infobars",
+					"--disable-extensions", "test-type");
+			chromeOptions.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+			chromeOptions.setExperimentalOption("prefs", Collections.singletonMap("credentials_enable_service", false));
+			chromeOptions.setExperimentalOption("prefs",
+					Collections.singletonMap("profile.password_manager_enabled", false));
+
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver(chromeOptions);
 
 			// 1. Without opening the browser
 			// options.addArguments("--headless");
@@ -378,15 +389,15 @@ public class BaseClass {
 			// (If we use this chrome options it will block the country code dropdown in the
 			// Teacher Dashboard)
 			// 5. Disable Popup
-			options.addArguments("--disable-popup-blocking");
+//			options.addArguments("--disable-popup-blocking");
 			// 6. To Remove Info-bars
-			options.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
+//			options.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
 			// options.addArguments("--kiosk");
 			// options.addArguments("disable-infobars");
 			// options.addArguments("--disable-extensions");
-			options.addArguments("--disable-extensions");
-			options.addArguments("--disable-popup-blocking");
-			options.addArguments("--disable-infobars");
+//			options.addArguments("--disable-extensions");
+//			options.addArguments("--disable-popup-blocking");
+//			options.addArguments("--disable-infobars");
 
 //			options.AddUserProfilePreference("credentials_enable_service", false);
 //			options.AddUserProfilePreference("profile.password_manager_enabled", false);
@@ -397,14 +408,14 @@ public class BaseClass {
 
 			// 7. To remove Auto Save Password popup
 
-			options.addArguments("--disable-extensions");
-			options.addArguments("test-type");
-			Map<String, Object> prefs = new HashMap<String, Object>();
-			prefs.put("credentials_enable_service", false);
-			prefs.put("profile.password_manager_enabled", false);
-			options.setExperimentalOption("prefs", prefs);
-
-			driver = new ChromeDriver(options);
+//			options.addArguments("--disable-extensions");
+//			options.addArguments("test-type");
+//			Map<String, Object> prefs = new HashMap<String, Object>();
+//			prefs.put("credentials_enable_service", false);
+//			prefs.put("profile.password_manager_enabled", false);
+//			options.setExperimentalOption("prefs", prefs);
+//
+//			driver = new ChromeDriver(options);
 
 			break;
 		case "firefox":
@@ -839,28 +850,28 @@ public class BaseClass {
 		System.out.println("Merged String: " + mergedString);
 		return mergedString;
 	}
-	
-	 public static Map<String, String> createMapFromKeyValuePairs(String[] keyValuePairs) {
-	        Map<String, String> resultMap = new TreeMap<>();
 
-	        for (int i = 0; i < keyValuePairs.length - 1; i += 2) {
-	            String key = keyValuePairs[i];
-	            String value = keyValuePairs[i + 1];
-	            resultMap.put(key, value);
-	        }
+	public static Map<String, String> createMapFromKeyValuePairs(String[] keyValuePairs) {
+		Map<String, String> resultMap = new TreeMap<>();
 
-	        return resultMap;
-	    }
-	 
-	 // Read the config properties for Extent Report
-	
-	 public String getReportConfigPath() throws FileNotFoundException, IOException{
-			String reportConfigPath = getPropertyFileValue("reportConfigPath");
-			if(reportConfigPath!= null) return reportConfigPath;
-			else throw new RuntimeException("Report Config Path not specified in the Configuration.properties file for the Key:reportConfigPath");		
+		for (int i = 0; i < keyValuePairs.length - 1; i += 2) {
+			String key = keyValuePairs[i];
+			String value = keyValuePairs[i + 1];
+			resultMap.put(key, value);
 		}
 
-	
-	
+		return resultMap;
+	}
+
+	// Read the config properties for Extent Report
+
+	public String getReportConfigPath() throws FileNotFoundException, IOException {
+		String reportConfigPath = getPropertyFileValue("reportConfigPath");
+		if (reportConfigPath != null)
+			return reportConfigPath;
+		else
+			throw new RuntimeException(
+					"Report Config Path not specified in the Configuration.properties file for the Key:reportConfigPath");
+	}
 
 }
