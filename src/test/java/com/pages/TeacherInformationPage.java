@@ -332,7 +332,7 @@ public class TeacherInformationPage extends BaseClass {
 
 	public void NaviagteToTheTeacherDetailsPage() {
 
-		mouseOverAction(getTeacherProfile());
+		mouseOverActionMoveToElement(getTeacherProfile());
 		// eleClick(getTeacherProfile());
 		clickWithRetry(getTeacherProfile());
 		explicitWaitClickable(20, getProfile());

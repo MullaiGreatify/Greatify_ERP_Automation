@@ -13,15 +13,13 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.CucumberOptions.SnippetType;
 
-
 @RunWith(Cucumber.class)
 @CucumberOptions(tags = "@StudentInformation", stepNotifications = true, dryRun = (false), monochrome = true, snippets = SnippetType.CAMELCASE, plugin = {
 		"pretty", "html:target//output.html",
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }, features = "src/test/resources", glue = "com.stepdefinition")
 public class TestRunner {
-	
-	@AfterClass
 
+	@AfterClass
 	public static void afterClass() throws FileNotFoundException, IOException {
 
 		EmailReport.main(null);
@@ -36,10 +34,9 @@ public class TestRunner {
  * com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter: Extent
  * Report Plugin:
  * com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.
- * html
- * target/cucumber-reports/report.html
+ * html target/cucumber-reports/report.html
  * 
- * 	
+ * 
  * 
  * 
  * 

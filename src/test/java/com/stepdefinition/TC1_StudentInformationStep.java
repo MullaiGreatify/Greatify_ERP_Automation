@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import com.base.BaseClass;
-import com.opencsv.exceptions.CsvValidationException;
+import com.opencsv.exceptions.CsvException;
 import com.pagemanager.PageObjectManager;
 import com.pages.StudentInformationPage;
 
@@ -78,7 +78,7 @@ public class TC1_StudentInformationStep extends BaseClass {
 
 	@When("the user creates a new student profile in the School Admin Dashboard")
 	public void theUserCreatesANewStudentProfileInTheSchoolAdminDashboard()
-			throws InterruptedException, CsvValidationException, IOException, AWTException {
+			throws InterruptedException, IOException, AWTException, CsvException {
 
 		pom.getCreateNewStudentPage().CreateNewStudentProfile();
 

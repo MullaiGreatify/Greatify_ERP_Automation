@@ -18,7 +18,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.base.BaseClass;
 import com.opencsv.CSVParser;
 import com.opencsv.CSVReaderHeaderAware;
-import com.opencsv.exceptions.CsvValidationException;
+import com.opencsv.exceptions.CsvException;
 
 public class CreateNewStudentPage extends BaseClass {
 
@@ -498,8 +498,7 @@ public class CreateNewStudentPage extends BaseClass {
 
 	}
 
-	public void CreateNewStudentProfile()
-			throws CsvValidationException, IOException, AWTException, InterruptedException {
+	public void CreateNewStudentProfile() throws IOException, AWTException, InterruptedException, CsvException {
 
 		// Create a Scanner object to read input from the user
 		Scanner scanner = new Scanner(System.in);

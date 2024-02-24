@@ -10,33 +10,21 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 import java.util.TreeMap;
 
-import org.apache.commons.csv.CSVFormat;
-import org.apache.commons.csv.CSVParser;
-import org.apache.commons.csv.CSVRecord;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-
-import java.io.FileReader;
-import java.io.Reader;
-
 import org.json.JSONObject;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
@@ -58,18 +46,13 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.base.Objects;
 import com.opencsv.CSVReader;
-import com.opencsv.CSVReaderHeaderAware;
-import com.opencsv.exceptions.CsvValidationException;
+import com.opencsv.CSVWriter;
+import com.opencsv.exceptions.CsvException;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 public class BaseClass {
+
 	public static WebDriver driver;
 
 	public void enterUrl(String url) {
@@ -115,7 +98,7 @@ public class BaseClass {
 		return attribute;
 	}
 
-	public void closeAllWind() {
+	public static void closeAllWind() {
 		driver.quit();
 	}
 
@@ -176,14 +159,16 @@ public class BaseClass {
 		return innerHTML;
 	}
 
-	public void scrollUpJs(WebElement element) {
+	public void scrollUpJs(WebElement element) throws InterruptedException {
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
-		executor.executeScript("arguments[0].scrollIntoView(true)", element);
+		executor.executeScript("arguments[0].scrollIntoView(true);", element);
+		Thread.sleep(500);
 	}
 
 	public void scrollDownJs(WebElement element) {
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
-		executor.executeScript("arguments[0].scrollIntoView(false)", element);
+//		executor.executeScript("arguments[0].scrollIntoView(false)", element);
+		executor.executeScript("arguments[0].scrollIntoView();", element);
 	}
 
 	public WebElement locatorByID(String data) {
@@ -221,7 +206,7 @@ public class BaseClass {
 		return element;
 	}
 
-	public List<WebElement> getAllOptionAsText(WebElement element) {
+	public List<WebElement> getAllOption(WebElement element) {
 		Select s = new Select(element);
 		List<WebElement> list = s.getOptions();
 		return list;
@@ -265,9 +250,10 @@ public class BaseClass {
 		return file;
 	}
 
-	public Actions mouseOverAction(WebElement element) {
+	public Actions mouseOverActionMoveToElement(WebElement element) {
 		Actions a = new Actions(driver);
 		Actions moveToElement = a.moveToElement(element);
+		a.perform();
 		return moveToElement;
 	}
 
@@ -349,6 +335,11 @@ public class BaseClass {
 		// Click.click();
 	}
 
+	public void explicitWaitAlert(long time) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(time));
+		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	}
+
 	public static String getProjectPath() {
 		String path = System.getProperty("user.dir");
 		return path;
@@ -366,38 +357,28 @@ public class BaseClass {
 		switch (browser) {
 		case "chrome":
 			WebDriverManager.chromedriver().setup();
-
-			ChromeOptions chromeOptions = new ChromeOptions();
-			chromeOptions.addArguments("--disable-popup-blocking", "--disable-extensions", "--disable-infobars",
-					"--disable-extensions", "test-type");
-			chromeOptions.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-			chromeOptions.setExperimentalOption("prefs", Collections.singletonMap("credentials_enable_service", false));
-			chromeOptions.setExperimentalOption("prefs",
-					Collections.singletonMap("profile.password_manager_enabled", false));
-
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver(chromeOptions);
+			ChromeOptions options = new ChromeOptions();
 
 			// 1. Without opening the browser
 			// options.addArguments("--headless");
 			// 2. Maximize Window
 			// options.addArguments("--start-maximized");
 			// 3. Open in incognito
-			// options.addArguments("--incognito");
+//			options.addArguments("--incognito");
 			// 4. Disable Notification
 			// options.addArguments("--disable-notifications");
 			// (If we use this chrome options it will block the country code dropdown in the
 			// Teacher Dashboard)
 			// 5. Disable Popup
-//			options.addArguments("--disable-popup-blocking");
+			options.addArguments("--disable-popup-blocking");
 			// 6. To Remove Info-bars
-//			options.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
+			options.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
 			// options.addArguments("--kiosk");
 			// options.addArguments("disable-infobars");
 			// options.addArguments("--disable-extensions");
-//			options.addArguments("--disable-extensions");
-//			options.addArguments("--disable-popup-blocking");
-//			options.addArguments("--disable-infobars");
+			options.addArguments("--disable-extensions");
+			options.addArguments("--disable-popup-blocking");
+			options.addArguments("--disable-infobars");
 
 //			options.AddUserProfilePreference("credentials_enable_service", false);
 //			options.AddUserProfilePreference("profile.password_manager_enabled", false);
@@ -408,14 +389,14 @@ public class BaseClass {
 
 			// 7. To remove Auto Save Password popup
 
-//			options.addArguments("--disable-extensions");
-//			options.addArguments("test-type");
-//			Map<String, Object> prefs = new HashMap<String, Object>();
-//			prefs.put("credentials_enable_service", false);
-//			prefs.put("profile.password_manager_enabled", false);
-//			options.setExperimentalOption("prefs", prefs);
-//
-//			driver = new ChromeDriver(options);
+			options.addArguments("--disable-extensions");
+			options.addArguments("test-type");
+			Map<String, Object> prefs = new HashMap<String, Object>();
+			prefs.put("credentials_enable_service", false);
+			prefs.put("profile.password_manager_enabled", false);
+			options.setExperimentalOption("prefs", prefs);
+
+			driver = new ChromeDriver(options);
 
 			break;
 		case "firefox":
@@ -484,10 +465,28 @@ public class BaseClass {
 		return objectMapper.valueToTree(keyValueMap);
 	}
 
+	public void clickWithMultipleRetry(WebElement element, int maxRetries, long retryIntervalMillis) {
+		int attempt = 1;
+		while (attempt <= maxRetries) {
+			try {
+				element.click();
+				break;
+			} catch (Exception e) {
+				System.out.println("Handling Exception - Attempt " + attempt);
+				try {
+					Thread.sleep(retryIntervalMillis);
+				} catch (InterruptedException ex) {
+					Thread.currentThread().interrupt();
+				}
+			}
+			attempt++;
+		}
+	}
+
 	public void clickWithRetry(WebElement element) {
 		try {
 			element.click();
-		} catch (Exception e) {
+		} catch (ElementClickInterceptedException e) {
 			// If Exception occurs, wait for a moment and retry
 			sleep(500); // You might need to adjust the sleep duration
 			element.click();
@@ -592,6 +591,10 @@ public class BaseClass {
 		return true;
 	}
 
+	/*
+	 * Window Handling
+	 */
+
 	public void switchToNewTabByIndex(WebDriver driver, int tabIndex) {
 		// Get all window handles
 		Set<String> handles = driver.getWindowHandles();
@@ -607,8 +610,12 @@ public class BaseClass {
 		}
 	}
 
+	/*
+	 * Read the data from CSV using CSV Reader
+	 */
+
 	public static String readSpecificCell(String filePath, int targetRow, int targetColumn)
-			throws IOException, CsvValidationException {
+			throws IOException, CsvException {
 		CSVReader reader = new CSVReader(new FileReader(filePath));
 
 		String[] nextRecord;
@@ -664,12 +671,27 @@ public class BaseClass {
 		robot.delay(500);
 	}
 
+	public static void CancelRobot(Robot robot) {
+		robot.keyPress(KeyEvent.VK_CANCEL);
+		robot.keyRelease(KeyEvent.VK_CANCEL);
+
+		robot.delay(500);
+	}
+
 	public static void command_TabRobot(Robot robot) {
 		robot.delay(500);
 
 		robot.keyPress(KeyEvent.VK_META);
 		robot.keyPress(KeyEvent.VK_TAB);
 		robot.keyRelease(KeyEvent.VK_META);
+		robot.keyRelease(KeyEvent.VK_TAB);
+
+	}
+
+	public static void tabRobot(Robot robot) {
+		robot.delay(500);
+
+		robot.keyPress(KeyEvent.VK_TAB);
 		robot.keyRelease(KeyEvent.VK_TAB);
 
 	}
@@ -863,15 +885,122 @@ public class BaseClass {
 		return resultMap;
 	}
 
-	// Read the config properties for Extent Report
+	/*
+	 * Delete a row from csv
+	 */
 
-	public String getReportConfigPath() throws FileNotFoundException, IOException {
-		String reportConfigPath = getPropertyFileValue("reportConfigPath");
-		if (reportConfigPath != null)
-			return reportConfigPath;
-		else
-			throw new RuntimeException(
-					"Report Config Path not specified in the Configuration.properties file for the Key:reportConfigPath");
+	public void DeleteRowFromCSV(String filePath, int rowNumber) throws IOException, CsvException {
+
+		CSVReader reader2 = new CSVReader(new FileReader(filePath));
+		List<String[]> allElements = reader2.readAll();
+		allElements.remove(rowNumber);
+
+		FileWriter sw = new FileWriter(filePath);
+		CSVWriter writer = new CSVWriter(sw);
+		writer.writeAll(allElements);
+		writer.close();
+
+		System.out.println("Row " + rowNumber + " deleted successfully.");
+
+	}
+
+	public void ExplicityWaitStaleness(WebElement webelement) {
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.stalenessOf(webelement));
+
+	}
+
+	public void datePcikerByJS(WebDriver driver, String time, WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].setAttribute('value','" + time + "')", element);
+	}
+
+	/*
+	 * scroll Using Coordinates
+	 */
+
+	public static void scrollUsingCoordinates(WebDriver driver, int x, int y) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		js.executeScript("window.scrollTo(" + x + ", " + y + ");");
+
+	}
+
+	/*
+	 * Click Element With JavaScript
+	 */
+	public static void clickElementWithJavaScript(WebDriver driver, WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		js.executeScript("arguments[0].click();", element);
+	}
+
+	/*
+	 * Scroll Down to the bottom of the Page
+	 */
+
+	public void scrollDown2() {
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+	}
+
+	/*
+	 * Dynamic Date-Picker Handling
+	 */
+
+	public void selectDate(String desiredDate, String desiredMonth, String desiredYear, WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		element.click();
+
+		WebElement dateTimePickerWidget = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".bootstrap-datetimepicker-widget")));
+
+		WebElement pickerswitch = dateTimePickerWidget.findElement(By.className("picker-switch"));
+		pickerswitch.click();
+
+		WebElement monthSelector = dateTimePickerWidget.findElement(By.className("datepicker-months"));
+		WebElement findElement = monthSelector.findElement(By.className("picker-switch"));
+		findElement.click();
+
+		// Select the desired year
+
+		WebElement yearSelector = dateTimePickerWidget.findElement(By.className("datepicker-years"));
+
+		WebElement yearOption = yearSelector.findElement(By.xpath("//span[text()='" + desiredYear + "']"));
+
+		explicitWaitClickable(10, yearOption);
+		clickWithRetry(yearOption);
+
+		// Select the desired month
+
+		WebElement monthOption = monthSelector.findElement(By.xpath("//span[text()='" + desiredMonth + "']"));
+
+		explicitWaitClickable(10, monthOption);
+		clickWithRetry(monthOption);
+
+		// Select the desired date
+		WebElement dateSelector = dateTimePickerWidget.findElement(By.className("datepicker-days"));
+
+		try {
+
+			WebElement dateOption = dateSelector
+					.findElement(By.xpath("//td[contains(@class, 'day') and text()='" + desiredDate + "']"));
+
+			explicitWaitClickable(10, dateOption);
+			clickWithRetry(dateOption);
+
+		} catch (Exception e) {
+
+			WebElement dateOption = dateSelector.findElement(By.xpath(
+					"//td[contains(@class, 'day') and contains(@class, 'weekend') and text()='" + desiredDate + "']"));
+
+			explicitWaitClickable(10, dateOption);
+			clickWithRetry(dateOption);
+		}
+
 	}
 
 }
