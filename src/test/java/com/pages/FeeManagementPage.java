@@ -947,7 +947,7 @@ public class FeeManagementPage extends BaseClass {
 		System.out.println(desiredYear);
 
 		// Assume 'driver' is your WebDriver instance
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
 		// Locate the datepicker input field and click on it
 		getDatepickerEditDate().click();
@@ -969,14 +969,16 @@ public class FeeManagementPage extends BaseClass {
 		WebElement yearOption = yearSelector.findElement(By.xpath("//span[text()='" + desiredYear + "']"));
 
 		explicitWaitClickable(10, yearOption);
-		clickWithRetry(yearOption);
+		clickWithMultipleRetry(yearOption, 20, 2000);
+//		clickWithRetry(yearOption);
 
 		// Select the desired month
 
 		WebElement monthOption = monthSelector.findElement(By.xpath("//span[text()='" + desiredMonth + "']"));
 
 		explicitWaitClickable(10, monthOption);
-		clickWithRetry(monthOption);
+		clickWithMultipleRetry(monthOption, 20, 2000);
+//		clickWithRetry(monthOption);
 
 		// Select the desired date
 		WebElement dateSelector = dateTimePickerWidget.findElement(By.className("datepicker-days"));
@@ -985,7 +987,9 @@ public class FeeManagementPage extends BaseClass {
 				"//td[contains(@class, 'day') and contains(@class, 'weekend') and text()='" + desiredDate + "']"));
 
 		explicitWaitClickable(10, dateOption);
-		clickWithRetry(dateOption);
+		clickWithMultipleRetry(dateOption, 20, 2000);
+//		clickWithRetry(dateOption);
+
 		/**
 		 * GST Radio Button
 		 */
@@ -1178,7 +1182,6 @@ public class FeeManagementPage extends BaseClass {
 //
 //		EnterRobot(robot);
 
-		explicitWaitClickable(20, getBtnSuccessOk());
 		clickWithMultipleRetry(getBtnSuccessOk(), 20, 2000);
 
 		/*
