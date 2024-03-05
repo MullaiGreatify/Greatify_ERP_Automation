@@ -1179,7 +1179,7 @@ public class FeeManagementPage extends BaseClass {
 //		EnterRobot(robot);
 
 		explicitWaitClickable(20, getBtnSuccessOk());
-		clickWithRetry(getBtnSuccessOk());
+		clickWithMultipleRetry(getBtnSuccessOk(), 20, 2000);
 
 		/*
 		 * Create Button
