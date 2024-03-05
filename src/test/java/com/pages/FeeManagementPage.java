@@ -983,8 +983,10 @@ public class FeeManagementPage extends BaseClass {
 		// Select the desired date
 		WebElement dateSelector = dateTimePickerWidget.findElement(By.className("datepicker-days"));
 
-		WebElement dateOption = dateSelector.findElement(By.xpath(
-				"//td[contains(@class, 'day') and contains(@class, 'weekend') and text()='" + desiredDate + "']"));
+		WebElement dateOption = dateSelector.findElement(By.xpath("//td[text()='" + desiredDate + "']"));
+//				"//td[contains(@class, 'day') and contains(@class, 'weekend') and text()='" + desiredDate + "']"));
+		
+				
 
 		explicitWaitClickable(10, dateOption);
 		clickWithMultipleRetry(dateOption, 20, 2000);
