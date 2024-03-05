@@ -517,9 +517,9 @@ public class FeeManagementPage extends BaseClass {
 	private WebElement concessionTab;
 	@FindBy(css = "#pills-table .year_btn")
 	private WebElement btnAddDiscount;
-	@FindBy(id = "discount1")
+	@FindBy(xpath = "//select[@class='discount_standards' and @id='discount1']")
 	private WebElement ddnClassName;
-	@FindBy(id = "discount2")
+	@FindBy(xpath = "//select[@class='discounts_fee_name' and @id='discount2']")
 	private WebElement ddnFeeName;
 	@FindBy(id = "discount3")
 	private WebElement txtDiscountName;
@@ -1119,7 +1119,7 @@ public class FeeManagementPage extends BaseClass {
 		 * GST Radio button
 		 */
 
-		explicitWaitClickable(10, getRadiobtnGST());
+		explicitWaitClickable(20, getRadiobtnGST());
 		clickWithRetry(getRadiobtnGST());
 
 		/*

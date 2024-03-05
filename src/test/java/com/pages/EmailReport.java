@@ -113,7 +113,7 @@ public class EmailReport extends BaseClass {
 			MimeBodyPart messageBodyPart2 = new MimeBodyPart();
 
 			// Mention the file which you want to send
-			String filename = getPropertyFileValue("report");
+			String filename = getProjectPath() + getPropertyFileValue("report");
 
 			// Create data source and pass the filename
 			DataSource source = new FileDataSource(filename);

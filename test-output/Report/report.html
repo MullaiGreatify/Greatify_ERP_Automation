@@ -40,7 +40,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -51,7 +50,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Mar 5, 2024 01:32:25 pm</span>
+			<span class='label blue darken-3 suite-start-time'>Mar 5, 2024 03:07:48 pm</span>
 			</a>
 		</ul>
 	</div>
@@ -67,7 +66,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -79,9 +77,9 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@FeeManage</a></li>
 					<li><a href='#'>@SchoolOnboard</a></li>
 					<li><a href='#'>@TimetableConfiguration</a></li>
-					<li><a href='#'>@FeeManage</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -123,12 +121,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$66%'>
-                    <span class='strong'>2</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
+                    <span class='strong'>3</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='33%'>
-                    1</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -141,12 +139,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='66%'>
-                    <span class='strong'>2</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>3</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='33%'>
-                    1</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -161,14 +159,14 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='91%'>
-                    <span class='strong'>34</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>36</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='2%'>
-                    1</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='5%'>
-                    2</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
                 </div>
@@ -192,7 +190,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Generate a new school invite from Super Admin Dashboard. Onboard the new school and log in to School Admin Dashboard.</span>
-						<span class='test-time'>Mar 5, 2024 01:32:26 pm</span>
+						<span class='test-time'>Mar 5, 2024 03:07:49 pm</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -205,7 +203,7 @@
 
 <div class='scenario node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 19.102</span>
+	<span class='duration right label'>00 00 18.238</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Invite a new school, onboard the school, and log in to the School Admin Dashboard.</div>
 	</div>
@@ -265,11 +263,11 @@
 </div>
 					</div>
 				</li>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='14'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='14'>
 					<div class='test-heading'>
 						<span class='test-name'>Timetable generation for all the classes in the newly onboarded school</span>
-						<span class='test-time'>Mar 5, 2024 01:32:45 pm</span>
-						<span class='test-status right fail'>Fail</span>
+						<span class='test-time'>Mar 5, 2024 03:08:07 pm</span>
+						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -279,11 +277,11 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 
-<div class='scenario node' test-id='15' status='fail'>
+<div class='scenario node' test-id='15' status='pass'>
 
-	<span class='duration right label'>00 01 46.127</span>
+	<span class='duration right label'>00 01 38.035</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: School Admin generates the timetable for all the classes in the newly onboarded school</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: School Admin generates the timetable for all the classes in the newly onboarded school</div>
 	</div>
 	
 	
@@ -312,40 +310,20 @@
 
 
 		</li>
-		<li test-id='21' class='node and Fail' status='Fail'>
-			<div class="step-name" title="(com.stepdefinition.TC3_TimetableConfigurationStep.theUserEntersAllTheRequiredCredentialsForCreatingTheTimetable())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>And the user enters all the required credentials for creating the timetable</div>
+		<li test-id='21' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC3_TimetableConfigurationStep.theUserEntersAllTheRequiredCredentialsForCreatingTheTimetable())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the user enters all the required credentials for creating the timetable</div>
 
 
-					<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because "toEscape" is null
-	at org.openqa.selenium.support.ui.Quotes.escape(Quotes.java:38)
-	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:287)
-	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:194)
-	at com.base.BaseClass.selectDdnByValue(BaseClass.java:126)
-	at com.pages.TimetableConfigurationPage.RequiredCredentialsForTimetableCreation(TimetableConfigurationPage.java:868)
-	at com.stepdefinition.TC3_TimetableConfigurationStep.theUserEntersAllTheRequiredCredentialsForCreatingTheTimetable(TC3_TimetableConfigurationStep.java:59)
-	at ✽.the user enters all the required credentials for creating the timetable(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC3_TimetableConfiguration.feature:11)
-</textarea>
 		</li>
-		<li test-id='22' class='node and Skip' status='Skip'>
-			<div class="step-name" title="(com.stepdefinition.TC3_TimetableConfigurationStep.theUserConfiguresAndPublishesTheTimetable())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user configures and publishes the timetable</div>
+		<li test-id='22' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC3_TimetableConfigurationStep.theUserConfiguresAndPublishesTheTimetable())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the user configures and publishes the timetable</div>
 
 
-					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='23' class='node then Skip' status='Skip'>
-			<div class="step-name" title="(com.stepdefinition.TC3_TimetableConfigurationStep.theUserVerifiesTheSuccessfulPopupMessage())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then the user verifies the successful popup message</div>
+		<li test-id='23' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC3_TimetableConfigurationStep.theUserVerifiesTheSuccessfulPopupMessage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user verifies the successful popup message</div>
 
 
-					<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='24' class='node * Pass' status='Pass'>
-			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.stepdefinition.HooksClass.afterScenario(io.cucumber.java.Scenario)</div>
-
-
-					<div class="node-step">Failed Scenario Screenshot</div>
-					<div class='screenshots'>
-						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../embedded1.png' src='../embedded1.png'>
-					</div>
 		</li>
 	</ul>
 </div>
@@ -354,7 +332,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='25'>
 					<div class='test-heading'>
 						<span class='test-name'>Manage School Fees, Add-On Fees, and Fee Discounts for newly Onboarded School</span>
-						<span class='test-time'>Mar 5, 2024 01:34:31 pm</span>
+						<span class='test-time'>Mar 5, 2024 03:09:45 pm</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -367,7 +345,7 @@
 
 <div class='scenario node' test-id='26' status='pass'>
 
-	<span class='duration right label'>00 01 13.816</span>
+	<span class='duration right label'>00 01 11.785</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Manage School Fees, Add-On Fees, Fee Discounts</div>
 	</div>
@@ -524,72 +502,6 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@SchoolOnboard</span>
-						<span class='category-status right'>
-						<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Mar 5, 2024 01:32:26 pm</td>
-										<td class='linked' test-id='2'>Invite a new school, onboard the school, and log in to the School Admin Dashboard.</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@TimetableConfiguration</span>
-						<span class='category-status right'>
-						<span class='label fail'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Mar 5, 2024 01:32:45 pm</td>
-										<td class='linked' test-id='15'>School Admin generates the timetable for all the classes in the newly onboarded school</td>
-										<td><span class='test-status Fail'>Fail</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
 						<span class='category-name'>@FeeManage</span>
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
@@ -612,8 +524,74 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 5, 2024 01:34:31 pm</td>
+										<td>Mar 5, 2024 03:09:45 pm</td>
 										<td class='linked' test-id='26'>Manage School Fees, Add-On Fees, Fee Discounts</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@SchoolOnboard</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 5, 2024 03:07:49 pm</td>
+										<td class='linked' test-id='2'>Invite a new school, onboard the school, and log in to the School Admin Dashboard.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TimetableConfiguration</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 5, 2024 03:08:07 pm</td>
+										<td class='linked' test-id='15'>School Admin generates the timetable for all the classes in the newly onboarded school</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -630,70 +608,7 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='exception-view' class='view hide'>
-	<section id='controls'>
-		<div class='controls grey lighten-4'>
-			<!-- search -->
-			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
-				<a href="#" class='search-div'>
-				<i class='material-icons'>search</i> Search
-				</a>
-				<div class='input-field left hide'>
-					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-				</div>
-			</div>
-			<!-- search -->
-		</div>
-	</section>
-	<div class='subview-left left'>
-		<div class='view-summary'>
-			<ul id='exception-collection' class='exception-collection'>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>java.lang.NullPointerException</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>StackTrace</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Mar 5, 2024 01:34:25 pm</td>
-										<td class='linked' test-id='21'>And the user enters all the required credentials for creating the timetable</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because "toEscape" is null
-	at org.openqa.selenium.support.ui.Quotes.escape(Quotes.java:38)
-	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:287)
-	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:194)
-	at com.base.BaseClass.selectDdnByValue(BaseClass.java:126)
-	at com.pages.TimetableConfigurationPage.RequiredCredentialsForTimetableCreation(TimetableConfigurationPage.java:868)
-	at com.stepdefinition.TC3_TimetableConfigurationStep.theUserEntersAllTheRequiredCredentialsForCreatingTheTimetable(TC3_TimetableConfigurationStep.java:59)
-	at ✽.the user enters all the required credentials for creating the timetable(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC3_TimetableConfiguration.feature:11)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class='subview-right left'>
-		<div class='view-summary'>
-			<h5 class='exception-name'></h5>
-		</div>
-	</div>
-</div>
-<!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -713,25 +628,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>37</div>
+					<div class='panel-lead'>36</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Mar 5, 2024 01:32:25 pm</div>
+					<div class='panel-lead'>Mar 5, 2024 03:07:48 pm</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Mar 5, 2024 01:35:45 pm</div>
+			 		<div class='panel-lead'>Mar 5, 2024 03:10:57 pm</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 03 20.220</div>
+					<div class='panel-lead'>00 03 09.193</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -747,6 +662,15 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
+							<td>@FeeManage</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
 							<td>@SchoolOnboard</td>
 							<td>1</td>
 							<td>0</td>
@@ -757,15 +681,6 @@
 						</tr>
 						<tr>
 							<td>@TimetableConfiguration</td>
-							<td>0</td>
-							<td>1</td>
-							<td>0</td>
-							<td>
-									0%
-							</td>
-						</tr>
-						<tr>
-							<td>@FeeManage</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -785,34 +700,34 @@
 		<script>
 			var statusGroup = {
                 parentCount: 3,
-				passParent: 2,
-				failParent: 1,
+				passParent: 3,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
 				childCount: 3,
-				passChild: 2,
-				failChild: 1,
+				passChild: 3,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 37,
-				passGrandChild: 34,
-				failGrandChild: 1,
+				grandChildCount: 36,
+				passGrandChild: 36,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 2,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
 			};
 			</script>
 		
 		<script>
 			var timeline = {
-			        "Generate a new school invite from Super Admin Dashboard. Onboard the new school and log in to School Admin Dashboard.":19.105,"Timetable generation for all the classes in the newly onboarded school":106.127,"Manage School Fees, Add-On Fees, and Fee Discounts for newly Onboarded School":73.816
+			        "Generate a new school invite from Super Admin Dashboard. Onboard the new school and log in to School Admin Dashboard.":18.243,"Timetable generation for all the classes in the newly onboarded school":98.036,"Manage School Fees, Add-On Fees, and Fee Discounts for newly Onboarded School":71.786
 			};
 		</script>
 		
