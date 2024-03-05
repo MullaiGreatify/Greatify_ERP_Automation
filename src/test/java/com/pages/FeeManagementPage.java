@@ -1235,11 +1235,18 @@ public class FeeManagementPage extends BaseClass {
 		 * Select the dropdown using Index
 		 */
 
+		explicitWaitClickable(20, getDdnClassName());
+		clickWithMultipleRetry(getDdnClassName(), 20, 2000);
 		selectDdnByIndex(getDdnClassName(), ddnClassName);
+
+		explicitWaitClickable(20, getDdnFeeName());
+		clickWithMultipleRetry(getDdnFeeName(), 20, 2000);
 		selectDdnByIndex(getDdnFeeName(), ddnFeeName);
 
 		String cell = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 21);
 		System.out.println(cell);
+		explicitWaitClickable(20, getTxtDiscountName());
+		clickWithMultipleRetry(getTxtDiscountName(), 20, 2000);
 		EnterInTextbox(getTxtDiscountName(), cell);
 
 		String cell1 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 22);
