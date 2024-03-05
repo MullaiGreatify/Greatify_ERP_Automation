@@ -914,7 +914,7 @@ public class FeeManagementPage extends BaseClass {
 
 				break;
 
-			} catch (StaleElementReferenceException e) {
+			} catch (Exception e) {
 				System.out.println("Exception occurred: " + e.getMessage() + attempt);
 				e.printStackTrace();
 //				System.out.println("Handling stale element reference - Attempt " + attempt);
@@ -989,7 +989,9 @@ public class FeeManagementPage extends BaseClass {
 		/**
 		 * GST Radio Button
 		 */
-		getRadiobtnEditGST().click();
+//		getRadiobtnEditGST().click();
+
+		clickWithMultipleRetry(getRadiobtnEditGST(), 20, 2000);
 
 		String BreakdownFeeName = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 13);
 		System.out.println(BreakdownFeeName);
