@@ -31,7 +31,7 @@ public class HooksClass extends BaseClass {
 			scenario.attach(Screenshot(), "image/png", "Failed Scenario Screenshot");
 		}
 		Thread.sleep(500);
-		closeAllWind();
+//		closeAllWind();
 	}
 
 }

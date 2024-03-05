@@ -16,7 +16,7 @@ import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(tags = "@SchoolOnboard or @TimetableConfiguration", stepNotifications = true, dryRun = (false), monochrome = true, snippets = SnippetType.CAMELCASE, plugin = {
+@CucumberOptions(tags = "@SchoolOnboard or @TimetableConfiguration or @FeeManage", stepNotifications = true, dryRun = (false), monochrome = true, snippets = SnippetType.CAMELCASE, plugin = {
 		"pretty", "html:target//output.html",
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }, features = "src/test/resources", glue = "com.stepdefinition")
 public class TestRunner extends BaseClass{
@@ -26,7 +26,7 @@ public class TestRunner extends BaseClass{
 
 		EmailReport.main(null);
 		System.clearProperty("javax.net.debug");
-//		closeAllWind();
+		closeAllWind();
 	}
 
 }
