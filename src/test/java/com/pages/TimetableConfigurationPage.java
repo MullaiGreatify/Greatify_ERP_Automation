@@ -116,7 +116,7 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 	@FindBy(css = ".create_btn.update_subject_mapping")
 	private WebElement btnUpdate;
 
-	@FindBy(css = ".swal-button.swal-button--confirm")
+	@FindBy(xpath = "//button[contains(.,'OK')]")
 	private WebElement btnSuccess;
 
 	public WebElement getTable() {
