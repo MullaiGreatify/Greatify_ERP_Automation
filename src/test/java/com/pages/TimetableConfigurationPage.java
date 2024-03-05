@@ -865,6 +865,7 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 
 		String cell7 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTimetableCSV"), rowNum, 30);
 		System.out.println(cell7);
+		clickWithMultipleRetry(getDdnBreakAfter(), 30, 2000);
 		selectDdnByValue(getDdnBreakAfter(), cell7);
 
 		explicitWaitClickable(30, getBtnConfigNewTimetable());

@@ -51,7 +51,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Mar 5, 2024 01:26:53 pm</span>
+			<span class='label blue darken-3 suite-start-time'>Mar 5, 2024 01:32:25 pm</span>
 			</a>
 		</ul>
 	</div>
@@ -79,9 +79,9 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@FeeManage</a></li>
 					<li><a href='#'>@SchoolOnboard</a></li>
 					<li><a href='#'>@TimetableConfiguration</a></li>
+					<li><a href='#'>@FeeManage</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -123,12 +123,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$33%'>
-                    <span class='strong'>1</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$66%'>
+                    <span class='strong'>2</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='66%'>
-                    2</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='33%'>
+                    1</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -141,12 +141,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='33%'>
-                    <span class='strong'>1</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='66%'>
+                    <span class='strong'>2</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='66%'>
-                    2</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='33%'>
+                    1</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -161,14 +161,14 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='44%'>
-                    <span class='strong'>17</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='91%'>
+                    <span class='strong'>34</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='2%'>
+                    1</span> steps failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='5%'>
-                    2</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='50%'>
-                    19</span> skipped, 
+                    2</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
                 </div>
@@ -192,7 +192,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Generate a new school invite from Super Admin Dashboard. Onboard the new school and log in to School Admin Dashboard.</span>
-						<span class='test-time'>Mar 5, 2024 01:26:54 pm</span>
+						<span class='test-time'>Mar 5, 2024 01:32:26 pm</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -205,7 +205,7 @@
 
 <div class='scenario node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 18.609</span>
+	<span class='duration right label'>00 00 19.102</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Invite a new school, onboard the school, and log in to the School Admin Dashboard.</div>
 	</div>
@@ -268,7 +268,7 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='14'>
 					<div class='test-heading'>
 						<span class='test-name'>Timetable generation for all the classes in the newly onboarded school</span>
-						<span class='test-time'>Mar 5, 2024 01:27:13 pm</span>
+						<span class='test-time'>Mar 5, 2024 01:32:45 pm</span>
 						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -281,7 +281,7 @@
 
 <div class='scenario node' test-id='15' status='fail'>
 
-	<span class='duration right label'>00 01 28.619</span>
+	<span class='duration right label'>00 01 46.127</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: School Admin generates the timetable for all the classes in the newly onboarded school</div>
 	</div>
@@ -302,49 +302,29 @@
 
 
 		</li>
-		<li test-id='19' class='node and Fail' status='Fail'>
-			<div class="step-name" title="(com.stepdefinition.TC3_TimetableConfigurationStep.theUserConfiguresHolidayInformationForTheAcademicYearInThePage(java.lang.String))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>And the user configures holiday information for the academic year in the "Manage Calendar" page</div>
+		<li test-id='19' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC3_TimetableConfigurationStep.theUserConfiguresHolidayInformationForTheAcademicYearInThePage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the user configures holiday information for the academic year in the "Manage Calendar" page</div>
 
 
-					<textarea disabled class="code-block">org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : /Users/mullai/Documents/GitRepo/Git Repo Greatify/Greatify_ERP_Automation/File/Attachment/calendarCsv.csv
-  (Session info: chrome=122.0.6261.94)
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.3.1', java.version: '17.0.8.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [65a7eea0331df03c724d0ee1ef31d578, sendKeysToElement {id=f.785ACF0779F714BD7ECE3CE00D4EB7E0.d.C8F34F536E335BD988593B98CC0F7451.e.499, value=[Ljava.lang.CharSequence;@64a1116a}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51757}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51757/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[[[ChromeDriver: chrome on mac (65a7eea0331df03c724d0ee1ef31d578)] -> class name: year_btn]] -> xpath: //input[@type='file' and @id='upload_csv_upload']]
-Session ID: 65a7eea0331df03c724d0ee1ef31d578
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
-	at com.pages.TimetableConfigurationPage.ConfigureHolidays(TimetableConfigurationPage.java:753)
-	at com.stepdefinition.TC3_TimetableConfigurationStep.theUserConfiguresHolidayInformationForTheAcademicYearInThePage(TC3_TimetableConfigurationStep.java:43)
-	at ✽.the user configures holiday information for the academic year in the "Manage Calendar" page(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC3_TimetableConfiguration.feature:9)
+		</li>
+		<li test-id='20' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC3_TimetableConfigurationStep.theUserNavigatesToThePageInTheSchoolAdminDashboard(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the user navigates to the "Manage Timetable" page in the School Admin Dashboard</div>
+
+
+		</li>
+		<li test-id='21' class='node and Fail' status='Fail'>
+			<div class="step-name" title="(com.stepdefinition.TC3_TimetableConfigurationStep.theUserEntersAllTheRequiredCredentialsForCreatingTheTimetable())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>And the user enters all the required credentials for creating the timetable</div>
+
+
+					<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because "toEscape" is null
+	at org.openqa.selenium.support.ui.Quotes.escape(Quotes.java:38)
+	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:287)
+	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:194)
+	at com.base.BaseClass.selectDdnByValue(BaseClass.java:126)
+	at com.pages.TimetableConfigurationPage.RequiredCredentialsForTimetableCreation(TimetableConfigurationPage.java:868)
+	at com.stepdefinition.TC3_TimetableConfigurationStep.theUserEntersAllTheRequiredCredentialsForCreatingTheTimetable(TC3_TimetableConfigurationStep.java:59)
+	at ✽.the user enters all the required credentials for creating the timetable(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC3_TimetableConfiguration.feature:11)
 </textarea>
-		</li>
-		<li test-id='20' class='node and Skip' status='Skip'>
-			<div class="step-name" title="(com.stepdefinition.TC3_TimetableConfigurationStep.theUserNavigatesToThePageInTheSchoolAdminDashboard(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user navigates to the "Manage Timetable" page in the School Admin Dashboard</div>
-
-
-					<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='21' class='node and Skip' status='Skip'>
-			<div class="step-name" title="(com.stepdefinition.TC3_TimetableConfigurationStep.theUserEntersAllTheRequiredCredentialsForCreatingTheTimetable())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user enters all the required credentials for creating the timetable</div>
-
-
-					<div class="node-step">Step skipped</div>
 		</li>
 		<li test-id='22' class='node and Skip' status='Skip'>
 			<div class="step-name" title="(com.stepdefinition.TC3_TimetableConfigurationStep.theUserConfiguresAndPublishesTheTimetable())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And the user configures and publishes the timetable</div>
@@ -371,11 +351,11 @@ Session ID: 65a7eea0331df03c724d0ee1ef31d578
 </div>
 					</div>
 				</li>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='25'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='25'>
 					<div class='test-heading'>
 						<span class='test-name'>Manage School Fees, Add-On Fees, and Fee Discounts for newly Onboarded School</span>
-						<span class='test-time'>Mar 5, 2024 01:28:42 pm</span>
-						<span class='test-status right fail'>Fail</span>
+						<span class='test-time'>Mar 5, 2024 01:34:31 pm</span>
+						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -385,11 +365,11 @@ Session ID: 65a7eea0331df03c724d0ee1ef31d578
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 
-<div class='scenario node' test-id='26' status='fail'>
+<div class='scenario node' test-id='26' status='pass'>
 
-	<span class='duration right label'>00 00 32.283</span>
+	<span class='duration right label'>00 01 13.816</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Manage School Fees, Add-On Fees, Fee Discounts</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Manage School Fees, Add-On Fees, Fee Discounts</div>
 	</div>
 	
 	
@@ -418,136 +398,85 @@ Session ID: 65a7eea0331df03c724d0ee1ef31d578
 
 
 		</li>
-		<li test-id='32' class='node when Fail' status='Fail'>
-			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserCreatesNewAddOnFees())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When the user creates new Add-On Fees</div>
+		<li test-id='32' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserCreatesNewAddOnFees())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When the user creates new Add-On Fees</div>
 
 
-					<textarea disabled class="code-block">org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : /Users/mullai/Documents/GitRepo/Git Repo Greatify/Greatify_ERP_Automation/File/Attachment/addon_fee_students.csv
-  (Session info: chrome=122.0.6261.94)
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.3.1', java.version: '17.0.8.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [65a7eea0331df03c724d0ee1ef31d578, sendKeysToElement {id=f.785ACF0779F714BD7ECE3CE00D4EB7E0.d.745181410A58F2D3785FEEDA5D16BFB2.e.568, value=[Ljava.lang.CharSequence;@280d5a82}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51757}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51757/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[[[ChromeDriver: chrome on mac (65a7eea0331df03c724d0ee1ef31d578)] -> class name: upload_btn]] -> xpath: //input[@type='file' and @id='add_fee_csv_upload']]
-Session ID: 65a7eea0331df03c724d0ee1ef31d578
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
-	at com.pages.FeeManagementPage.CreatesNewAddOnFees(FeeManagementPage.java:1168)
-	at com.stepdefinition.TC4_FeeManagementStep.theUserCreatesNewAddOnFees(TC4_FeeManagementStep.java:68)
-	at ✽.the user creates new Add-On Fees(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC4_FeeManagement.feature:11)
-</textarea>
 		</li>
-		<li test-id='33' class='node then Skip' status='Skip'>
-			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserShouldSeeTheCreatedAddOnFees())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then the user should see the created Add-On Fees</div>
+		<li test-id='33' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserShouldSeeTheCreatedAddOnFees())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user should see the created Add-On Fees</div>
 
 
-					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='34' class='node when Skip' status='Skip'>
-			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserCreatesNewFeeDiscount())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user creates new Fee Discount</div>
+		<li test-id='34' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserCreatesNewFeeDiscount())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When the user creates new Fee Discount</div>
 
 
-					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='35' class='node then Skip' status='Skip'>
-			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserShouldSeeTheCreatedFeeDiscount())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then the user should see the created Fee Discount</div>
+		<li test-id='35' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserShouldSeeTheCreatedFeeDiscount())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user should see the created Fee Discount</div>
 
 
-					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='36' class='node when Skip' status='Skip'>
-			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserUpdatesTheSchoolFees())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user updates the School Fees</div>
+		<li test-id='36' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserUpdatesTheSchoolFees())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When the user updates the School Fees</div>
 
 
-					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='37' class='node then Skip' status='Skip'>
-			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserShouldSeeTheUpdatedSchoolFees())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then the user should see the updated School Fees</div>
+		<li test-id='37' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserShouldSeeTheUpdatedSchoolFees())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user should see the updated School Fees</div>
 
 
-					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='38' class='node when Skip' status='Skip'>
-			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserUpdatesTheAddOnFees())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user updates the Add-On Fees</div>
+		<li test-id='38' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserUpdatesTheAddOnFees())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When the user updates the Add-On Fees</div>
 
 
-					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='39' class='node then Skip' status='Skip'>
-			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserShouldSeeTheUpdatedAddOnFees())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then the user should see the updated Add-On Fees</div>
+		<li test-id='39' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserShouldSeeTheUpdatedAddOnFees())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user should see the updated Add-On Fees</div>
 
 
-					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='40' class='node when Skip' status='Skip'>
-			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserUpdatesTheFeeDiscount())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user updates the Fee Discount</div>
+		<li test-id='40' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserUpdatesTheFeeDiscount())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When the user updates the Fee Discount</div>
 
 
-					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='41' class='node then Skip' status='Skip'>
-			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserShouldSeeTheUpdatedFeeDiscount())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then the user should see the updated Fee Discount</div>
+		<li test-id='41' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserShouldSeeTheUpdatedFeeDiscount())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user should see the updated Fee Discount</div>
 
 
-					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='42' class='node when Skip' status='Skip'>
-			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserDeletesTheFeeDiscount())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user deletes the Fee Discount</div>
+		<li test-id='42' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserDeletesTheFeeDiscount())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When the user deletes the Fee Discount</div>
 
 
-					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='43' class='node then Skip' status='Skip'>
-			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserShouldVerifyThatTheFeeDiscountIsDeleted())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then the user should verify that the Fee Discount is deleted</div>
+		<li test-id='43' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserShouldVerifyThatTheFeeDiscountIsDeleted())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user should verify that the Fee Discount is deleted</div>
 
 
-					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='44' class='node when Skip' status='Skip'>
-			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserDeletesTheAddOnFees())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user deletes the Add-On Fees</div>
+		<li test-id='44' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserDeletesTheAddOnFees())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When the user deletes the Add-On Fees</div>
 
 
-					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='45' class='node then Skip' status='Skip'>
-			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserShouldVerifyThatTheAddOnFeeIsDeleted())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then the user should verify that the Add-On Fee is deleted</div>
+		<li test-id='45' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserShouldVerifyThatTheAddOnFeeIsDeleted())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user should verify that the Add-On Fee is deleted</div>
 
 
-					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='46' class='node when Skip' status='Skip'>
-			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserDeletesTheSchoolFees())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When the user deletes the School Fees</div>
+		<li test-id='46' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserDeletesTheSchoolFees())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When the user deletes the School Fees</div>
 
 
-					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='47' class='node then Skip' status='Skip'>
-			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserShouldVerifyThatTheSchoolFeesAreDeleted())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then the user should verify that the School Fees are deleted</div>
+		<li test-id='47' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.stepdefinition.TC4_FeeManagementStep.theUserShouldVerifyThatTheSchoolFeesAreDeleted())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user should verify that the School Fees are deleted</div>
 
 
-					<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='48' class='node * Pass' status='Pass'>
-			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.stepdefinition.HooksClass.afterScenario(io.cucumber.java.Scenario)</div>
-
-
-					<div class="node-step">Failed Scenario Screenshot</div>
-					<div class='screenshots'>
-						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../embedded2.png' src='../embedded2.png'>
-					</div>
 		</li>
 	</ul>
 </div>
@@ -595,39 +524,6 @@ Session ID: 65a7eea0331df03c724d0ee1ef31d578
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@FeeManage</span>
-						<span class='category-status right'>
-						<span class='label fail'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Mar 5, 2024 01:28:42 pm</td>
-										<td class='linked' test-id='26'>Manage School Fees, Add-On Fees, Fee Discounts</td>
-										<td><span class='test-status Fail'>Fail</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
 						<span class='category-name'>@SchoolOnboard</span>
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
@@ -650,7 +546,7 @@ Session ID: 65a7eea0331df03c724d0ee1ef31d578
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 5, 2024 01:26:54 pm</td>
+										<td>Mar 5, 2024 01:32:26 pm</td>
 										<td class='linked' test-id='2'>Invite a new school, onboard the school, and log in to the School Admin Dashboard.</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
@@ -683,9 +579,42 @@ Session ID: 65a7eea0331df03c724d0ee1ef31d578
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 5, 2024 01:27:13 pm</td>
+										<td>Mar 5, 2024 01:32:45 pm</td>
 										<td class='linked' test-id='15'>School Admin generates the timetable for all the classes in the newly onboarded school</td>
 										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@FeeManage</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 5, 2024 01:34:31 pm</td>
+										<td class='linked' test-id='26'>Manage School Fees, Add-On Fees, Fee Discounts</td>
+										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -721,8 +650,8 @@ Session ID: 65a7eea0331df03c724d0ee1ef31d578
 			<ul id='exception-collection' class='exception-collection'>
 				<li class='exception displayed active'>
 					<div class='exception-heading'>
-						<span class='exception-name'>org.openqa.selenium.InvalidArgumentException</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+						<span class='exception-name'>java.lang.NullPointerException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
 					</div>
 					<div class='exception-content hide'>
 						<div class='exception-tests'>
@@ -736,68 +665,17 @@ Session ID: 65a7eea0331df03c724d0ee1ef31d578
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 5, 2024 01:28:37 pm</td>
-										<td class='linked' test-id='19'>And the user configures holiday information for the academic year in the "Manage Calendar" page</td>
+										<td>Mar 5, 2024 01:34:25 pm</td>
+										<td class='linked' test-id='21'>And the user enters all the required credentials for creating the timetable</td>
 										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : /Users/mullai/Documents/GitRepo/Git Repo Greatify/Greatify_ERP_Automation/File/Attachment/calendarCsv.csv
-  (Session info: chrome=122.0.6261.94)
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.3.1', java.version: '17.0.8.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [65a7eea0331df03c724d0ee1ef31d578, sendKeysToElement {id=f.785ACF0779F714BD7ECE3CE00D4EB7E0.d.C8F34F536E335BD988593B98CC0F7451.e.499, value=[Ljava.lang.CharSequence;@64a1116a}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51757}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51757/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[[[ChromeDriver: chrome on mac (65a7eea0331df03c724d0ee1ef31d578)] -> class name: year_btn]] -> xpath: //input[@type='file' and @id='upload_csv_upload']]
-Session ID: 65a7eea0331df03c724d0ee1ef31d578
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
-	at com.pages.TimetableConfigurationPage.ConfigureHolidays(TimetableConfigurationPage.java:753)
-	at com.stepdefinition.TC3_TimetableConfigurationStep.theUserConfiguresHolidayInformationForTheAcademicYearInThePage(TC3_TimetableConfigurationStep.java:43)
-	at ✽.the user configures holiday information for the academic year in the "Manage Calendar" page(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC3_TimetableConfiguration.feature:9)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Mar 5, 2024 01:29:05 pm</td>
-										<td class='linked' test-id='32'>When the user creates new Add-On Fees</td>
-										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : /Users/mullai/Documents/GitRepo/Git Repo Greatify/Greatify_ERP_Automation/File/Attachment/calendarCsv.csv
-  (Session info: chrome=122.0.6261.94)
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.3.1', java.version: '17.0.8.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [65a7eea0331df03c724d0ee1ef31d578, sendKeysToElement {id=f.785ACF0779F714BD7ECE3CE00D4EB7E0.d.C8F34F536E335BD988593B98CC0F7451.e.499, value=[Ljava.lang.CharSequence;@64a1116a}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51757}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51757/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[[[ChromeDriver: chrome on mac (65a7eea0331df03c724d0ee1ef31d578)] -> class name: year_btn]] -> xpath: //input[@type='file' and @id='upload_csv_upload']]
-Session ID: 65a7eea0331df03c724d0ee1ef31d578
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
-	at com.pages.TimetableConfigurationPage.ConfigureHolidays(TimetableConfigurationPage.java:753)
-	at com.stepdefinition.TC3_TimetableConfigurationStep.theUserConfiguresHolidayInformationForTheAcademicYearInThePage(TC3_TimetableConfigurationStep.java:43)
-	at ✽.the user configures holiday information for the academic year in the "Manage Calendar" page(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC3_TimetableConfiguration.feature:9)
+											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because "toEscape" is null
+	at org.openqa.selenium.support.ui.Quotes.escape(Quotes.java:38)
+	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:287)
+	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:194)
+	at com.base.BaseClass.selectDdnByValue(BaseClass.java:126)
+	at com.pages.TimetableConfigurationPage.RequiredCredentialsForTimetableCreation(TimetableConfigurationPage.java:868)
+	at com.stepdefinition.TC3_TimetableConfigurationStep.theUserEntersAllTheRequiredCredentialsForCreatingTheTimetable(TC3_TimetableConfigurationStep.java:59)
+	at ✽.the user enters all the required credentials for creating the timetable(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC3_TimetableConfiguration.feature:11)
 </textarea>
 										</td>
 									</tr>
@@ -835,25 +713,25 @@ Session ID: 65a7eea0331df03c724d0ee1ef31d578
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>38</div>
+					<div class='panel-lead'>37</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Mar 5, 2024 01:26:53 pm</div>
+					<div class='panel-lead'>Mar 5, 2024 01:32:25 pm</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Mar 5, 2024 01:29:14 pm</div>
+			 		<div class='panel-lead'>Mar 5, 2024 01:35:45 pm</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 02 20.674</div>
+					<div class='panel-lead'>00 03 20.220</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -867,15 +745,6 @@ Session ID: 65a7eea0331df03c724d0ee1ef31d578
 							<th>Failed</th>
 							<th>Skipped</th>
 							<th>Passed %</th>
-						</tr>
-						<tr>
-							<td>@FeeManage</td>
-							<td>0</td>
-							<td>1</td>
-							<td>0</td>
-							<td>
-									0%
-							</td>
 						</tr>
 						<tr>
 							<td>@SchoolOnboard</td>
@@ -895,6 +764,15 @@ Session ID: 65a7eea0331df03c724d0ee1ef31d578
 									0%
 							</td>
 						</tr>
+						<tr>
+							<td>@FeeManage</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
 					</table>
 				</div>
 			</div>
@@ -907,34 +785,34 @@ Session ID: 65a7eea0331df03c724d0ee1ef31d578
 		<script>
 			var statusGroup = {
                 parentCount: 3,
-				passParent: 1,
-				failParent: 2,
+				passParent: 2,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
 				childCount: 3,
-				passChild: 1,
-				failChild: 2,
+				passChild: 2,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 38,
-				passGrandChild: 17,
-				failGrandChild: 2,
+				grandChildCount: 37,
+				passGrandChild: 34,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 19,
+				skipGrandChild: 2,
 				infoGrandChild: 0,
 			};
 			</script>
 		
 		<script>
 			var timeline = {
-			        "Generate a new school invite from Super Admin Dashboard. Onboard the new school and log in to School Admin Dashboard.":18.615,"Timetable generation for all the classes in the newly onboarded school":88.619,"Manage School Fees, Add-On Fees, and Fee Discounts for newly Onboarded School":32.283
+			        "Generate a new school invite from Super Admin Dashboard. Onboard the new school and log in to School Admin Dashboard.":19.105,"Timetable generation for all the classes in the newly onboarded school":106.127,"Manage School Fees, Add-On Fees, and Fee Discounts for newly Onboarded School":73.816
 			};
 		</script>
 		
