@@ -18,9 +18,9 @@ public class HooksClass extends BaseClass {
 		System.setProperty("https.protocols", "TLSv1.2,TLSv1.1,TLSv1");
 		System.setProperty("mail.smtp.ssl.ciphers", "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256");
 
-		getDriver(getPropertyFileValue("browser"));
-		implicitwait(30);
-		maxWindow();
+//		getDriver(getPropertyFileValue("browser"));
+//		implicitwait(30);
+//		maxWindow();
 
 	}
 
