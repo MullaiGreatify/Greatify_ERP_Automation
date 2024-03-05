@@ -434,7 +434,7 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 		explicitWaitClickable(30, getManageClassMainMenu());
 		clickWithMultipleRetry(getManageClassMainMenu(), 30, 2000);
 
-		Thread.sleep(20000);
+		Thread.sleep(2000);
 
 		explicitWaitClickable(30, getSchoolConfigurationMainMenu());
 		clickWithMultipleRetry(getSchoolConfigurationMainMenu(), 30, 2000);
@@ -696,7 +696,6 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 				} catch (Exception e) {
 					System.out.println("Exception occurred: " + e.getMessage() + attempt1);
 					e.printStackTrace();
-//					System.out.println("Handling stale element reference - Attempt " + attempt1);
 					Thread.sleep(500);
 				}
 			}
