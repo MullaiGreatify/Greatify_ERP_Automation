@@ -863,7 +863,7 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 		System.out.println(cell6);
 		EnterInTextbox(getTxtIntervalMins(), cell6);
 
-		String cell7 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTimetableCSV"), rowNum, 30);
+		String cell7 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTimetableCSV"), rowNum, 10);
 		System.out.println(cell7);
 		clickWithMultipleRetry(getDdnBreakAfter(), 30, 2000);
 		selectDdnByValue(getDdnBreakAfter(), cell7);
