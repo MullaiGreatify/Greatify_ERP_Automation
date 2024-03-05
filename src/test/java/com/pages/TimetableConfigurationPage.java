@@ -4,9 +4,11 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -20,7 +22,6 @@ import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.devtools.v120.systeminfo.model.Size;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
@@ -428,33 +429,144 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 	public void ConfigureSubjectHours() throws InterruptedException, FileNotFoundException, IOException, CsvException {
 
 		explicitWaitClickable(30, getSchoolOperationMainMenu());
-		clickWithMultipleRetry(getSchoolOperationMainMenu(), 100, 1000);
+		clickWithMultipleRetry(getSchoolOperationMainMenu(), 30, 2000);
 
-		explicitWaitClickable(20, getManageClassMainMenu());
-		clickWithRetry(getManageClassMainMenu());
+		explicitWaitClickable(30, getManageClassMainMenu());
+		clickWithMultipleRetry(getManageClassMainMenu(), 30, 2000);
 
-		Thread.sleep(3000);
+		Thread.sleep(20000);
 
-		explicitWaitClickable(20, getSchoolConfigurationMainMenu());
-		clickWithRetry(getSchoolConfigurationMainMenu());
+		explicitWaitClickable(30, getSchoolConfigurationMainMenu());
+		clickWithMultipleRetry(getSchoolConfigurationMainMenu(), 30, 2000);
 
-		explicitWaitClickable(20, getClassTab());
-		clickWithRetry(getClassTab());
+		explicitWaitClickable(30, getClassTab());
+		clickWithMultipleRetry(getClassTab(), 30, 2000);
 
-		explicitWaitClickable(20, getSubjectMappingTab());
-		clickWithRetry(getSubjectMappingTab());
+		explicitWaitClickable(30, getSubjectMappingTab());
+		clickWithMultipleRetry(getSubjectMappingTab(), 30, 2000);
 
 		/**
 		 * Verify the datas are available in the Table. Otherwise reload the page
 		 */
 
-		WebElement table = driver.findElement(By.id("DataTables_Table_9"));
-		List<WebElement> rowCounts = table.findElements(By.tagName("tr"));
-		int size = rowCounts.size();
-		System.out.println(size);
-		if (size == 0) {
+		int maxReloadAttempts = 30; // Maximum number of reload attempts
+		int reloadCount = 0; // Initialize reload count
+
+		while (true) {
+			WebElement table = driver.findElement(By.id("DataTables_Table_9"));
+			WebElement tBody = table.findElement(By.tagName("tbody"));
+			List<WebElement> rows = tBody.findElements(By.tagName("tr"));
+
+			int rowCount = rows.size();
+			System.out.println("Row Count: " + rowCount);
+
+			if (rowCount > 1) {
+				System.out.println("Table has data. Exiting reload loop.");
+				break;
+			}
+
+			if (reloadCount >= maxReloadAttempts) {
+				System.out.println("Exceeded maximum reload attempts. Exiting reload loop.");
+				break;
+			}
+
+			System.out.println("Table is empty. Reloading page...");
 			driver.navigate().refresh();
+			reloadCount++;
+
+			// Add a wait here to wait for the table to load after the refresh
+			// For example, you can use WebDriverWait
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.id("DataTables_Table_9")));
+
+			explicitWaitClickable(30, getSubjectMappingTab());
+			clickWithMultipleRetry(getSubjectMappingTab(), 30, 2000);
 		}
+
+		if (reloadCount == maxReloadAttempts) {
+			System.out.println("Table did not retrieve data after " + maxReloadAttempts + " reload attempts.");
+		}
+
+//		Method : 1
+//		WebElement table = driver.findElement(By.id("DataTables_Table_9"));
+//		WebElement tBody = table.findElement(By.tagName("tbody"));
+//		List<WebElement> rows = tBody.findElements(By.tagName("tr"));
+//
+//		int rowCount = rows.size();
+//		System.out.println("Row Count: " + rowCount);
+//
+//		if (rowCount == 1) {
+//			System.out.println("Table is empty. Reloading page...");
+//			driver.navigate().refresh();
+//			// Add a wait here to wait for the table to load after the refresh
+//			// For example, you can use WebDriverWait
+//			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+//			wait.until(ExpectedConditions.presenceOfElementLocated(By.id("DataTables_Table_9")));
+//		} else {
+//			System.out.println("Table is not empty.");
+//		}
+
+//		Method :2
+//		WebElement table = driver.findElement(By.id("DataTables_Table_9"));
+//		WebElement tBody = table.findElement(By.tagName("tbody"));
+//		List<WebElement> rowCounts = tBody.findElements(By.tagName("tr"));
+//
+//		int size = rowCounts.size();
+//		System.out.println("Size :" + size);
+//
+//		int maxRetries = 30;
+//		for (int attempt = 1; attempt <= maxRetries; attempt++) {
+//
+//			System.out.println(size);
+//
+//			WebElement emptyTable = driver.findElement(By.className("dataTables_empty"));
+////			boolean txt = emptyTable.getText().equalsIgnoreCase("No data available in table");
+//
+//			String emptyTableTxt = emptyTable.getText();
+//
+//			System.out.println(emptyTableTxt);
+//
+//			if (emptyTableTxt.equalsIgnoreCase("No data available in table")) {
+//
+//				driver.navigate().refresh();
+//				Thread.sleep(20000);
+//
+//			} else {
+//				break;
+//
+//			}
+
+//			Assert.assertEquals(emptyTableTxt, "No data available in table");
+
+//	}
+
+//		for (int i = 0; i >= 30; ++i) {
+//			System.out.println(size);
+//			size = size - 1;
+//			if (size == 1) {
+//				System.out.println("length :" + size);
+//				if(i == size) {
+//					
+//					System.out.println(i);
+//
+//					WebElement emptyTable = driver.findElement(By.className("dataTables_empty"));
+//					boolean txt = emptyTable.getText().equalsIgnoreCase("No data available in table");
+////				String emptyTableTxt2 = "No data available in table";
+//
+//					Assert.assertTrue(txt);
+//
+////				Assert.assertEquals("Assertion Failed","No data available in table", emptyTableTxt);
+//
+//					driver.navigate().refresh();
+//
+//					Thread.sleep(20000);
+//				}
+//
+//				
+//			} else {
+//				break;
+//			}
+//		}
 
 		/**
 		 * Scanner used to get the Subject Hours
@@ -484,70 +596,107 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 		 * Handling Dynamic Web Table
 		 */
 
-		List<WebElement> rows = getTable().findElements(By.tagName("tr"));
-		int numberOfRows = rows.size();
-//		System.out.println(numberOfRows);
+		List<WebElement> rows1 = getTable().findElements(By.tagName("tr"));
+		int numberOfRows = rows1.size();
+		System.out.println("Table Rows :" + numberOfRows);
 
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 
 		for (int rowIndex = 0; rowIndex < numberOfRows - 1; rowIndex++) {
+
 			WebElement actionColumn = getTable()
 					.findElement(By.xpath(".//tr[" + (rowIndex + 1) + "]/td[" + (columnIndex + 1) + "]"));
 
 			WebElement editButton = actionColumn.findElement(By.cssSelector(".edit_std_sub"));
 
-			explicitWaitClickable(10, editButton);
-			clickWithRetry(editButton);
+			explicitWaitClickable(30, editButton);
+			clickWithMultipleRetry(editButton, 30, 2000);
 
 			/*
 			 * Get Hours
 			 */
 
-			String subjectHour = readSpecificCell(getPropertyFileValue("manageTimetableCSV"), rowNum, 1);
+			String subjectHour = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTimetableCSV"), rowNum,
+					1);
 			System.out.println(subjectHour);
 
-			List<WebElement> hours = driver.findElements(By.xpath("//input[@placeholder=\"Hrs\"]"));
+			List<WebElement> hours = driver.findElements(By.xpath("//input[@type='number' and @placeholder='Hrs']"));
 
-			for (WebElement hour : hours) {
+			int size = hours.size();
+			for (int i = 1; i < size; i++) {
+				WebElement hour = hours.get(i);
 				try {
-					explicitWaitClickable(5, hour);
-					clickWithRetry(hour);
+					explicitWaitClickable(30, hour);
+					clickWithMultipleRetry(hour, 30, 2000);
 					eleClear(hour);
 					EnterInTextbox(hour, subjectHour);
 				} catch (Exception e) {
-					System.out.println("Handling stale element reference for minutes");
+					System.out.println("Exception occurred: " + e.getMessage());
+					e.printStackTrace();
 				}
 			}
+
+//			for (WebElement hour : hours) {
+//				try {
+//					explicitWaitClickable(30, hour);
+//					clickWithMultipleRetry(hour, 30, 2000);
+//					eleClear(hour);
+//					EnterInTextbox(hour, subjectHour);
+//				} catch (Exception e) {
+//
+//					System.out.println("Exception occurred: " + e.getMessage());
+//					e.printStackTrace();
+//
+//				}
+//			}
 
 			/*
 			 * Get Minutes
 			 */
 
-			String subjectMinutes = readSpecificCell(getPropertyFileValue("manageTimetableCSV"), rowNum, 2);
+			String subjectMinutes = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTimetableCSV"),
+					rowNum, 2);
 			System.out.println();
 
 			List<WebElement> minutes = driver.findElements(By.xpath("//input[@placeholder=\"Mins\"]"));
 
-			for (WebElement min : minutes) {
+			for (int i = 1; i < minutes.size(); i++) {
+				WebElement min = minutes.get(i);
 				try {
-					explicitWaitClickable(5, min);
-					clickWithRetry(min);
+					explicitWaitClickable(30, min);
+					clickWithMultipleRetry(min, 30, 2000);
 					eleClear(min);
 					EnterInTextbox(min, subjectMinutes);
 				} catch (Exception e) {
-					System.out.println("Handling stale element reference for minutes");
+					System.out.println("Exception occurred: " + e.getMessage());
+					e.printStackTrace();
 				}
 			}
 
+//
+//			for (WebElement min : minutes) {
+//				try {
+//					explicitWaitClickable(30, min);
+//					clickWithMultipleRetry(min, 30, 2000);
+//					eleClear(min);
+//					EnterInTextbox(min, subjectMinutes);
+//				} catch (Exception e) {
+//					System.out.println("Exception occurred: " + e.getMessage());
+//					e.printStackTrace();
+//				}
+//			}
+
 			getBtnUpdate().click();
 
-			int maxRetries = 3;
-			for (int attempt = 1; attempt <= maxRetries; attempt++) {
+			int maxRetries1 = 5;
+			for (int attempt1 = 1; attempt1 <= maxRetries1; attempt1++) {
 				try {
-					clickWithRetry(getBtnSuccess());
+					clickWithMultipleRetry(getBtnSuccess(), 30, 2000);
 					break;
-				} catch (StaleElementReferenceException e) {
-					System.out.println("Handling stale element reference - Attempt " + attempt);
+				} catch (Exception e) {
+					System.out.println("Exception occurred: " + e.getMessage() + attempt1);
+					e.printStackTrace();
+//					System.out.println("Handling stale element reference - Attempt " + attempt1);
 					Thread.sleep(500);
 				}
 			}
@@ -561,55 +710,65 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 
 		getCalendarMainMenu().click();
 
-		explicitWaitClickable(10, getBtnUploadCSV());
-		getBtnUploadCSV().click();
+		explicitWaitClickable(30, getBtnUploadCSV());
+//		getBtnUploadCSV().click();
 
 		/*
 		 * Upload Calendar CSV File from local machine
 		 */
 
-		String cell1 = readSpecificCell(getPropertyFileValue("manageTimetableCSV"), rowNum, 3);
-		System.out.println(cell1);
+//		String cell1 = readSpecificCell(getProjectPath()+getPropertyFileValue("manageTimetableCSV"), rowNum, 3);
+//		System.out.println(cell1);
+//
+//		Robot robot = new Robot();
+//
+//		robot.delay(2000);
+//
+//		command_TabRobot(robot);
+//		robot.delay(500);
+//
+//		openSearchTabRobot(robot);
+//		robot.delay(500);
+//
+//		StringSelection stringSelection = new StringSelection(cell1);
+//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+//
+//		pasteTextRobot(robot);
+//
+//		robot.delay(500);
+//
+//		EnterRobot(robot);
+//
+//		robot.delay(500);
+//
+//		EnterRobot(robot);
 
-		Robot robot = new Robot();
+		File uploadFile1 = new File(getProjectPath() + getPropertyFileValue("calendarCSV"));
 
-		robot.delay(1000);
+		WebElement labelElement = driver.findElement(By.className("year_btn"));
 
-		command_TabRobot(robot);
-		robot.delay(500);
+		WebElement fileInput1 = labelElement.findElement(By.xpath("//input[@type='file' and @id='upload_csv_upload']"));
 
-		openSearchTabRobot(robot);
-		robot.delay(500);
+//		WebElement fileInput1 = driver.findElement(By.xpath("//input[@type='file']"));
 
-		StringSelection stringSelection = new StringSelection(cell1);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+		fileInput1.sendKeys(uploadFile1.getAbsolutePath());
 
-		pasteTextRobot(robot);
-
-		robot.delay(500);
-
-		EnterRobot(robot);
-
-		robot.delay(500);
-
-		EnterRobot(robot);
-
-		explicitWaitClickable(10, getBtnSuccessPopup());
-		clickWithRetry(getBtnSuccessPopup());
+		explicitWaitClickable(30, getBtnSuccessPopup());
+		clickWithMultipleRetry(getBtnSuccessPopup(), 30, 2000);
 //		getBtnSuccessPopup().click();
 
 	}
 
 	public void NavigateToManageTimetable() throws FileNotFoundException, IOException, CsvException {
 
-//		explicitWaitClickable(20, getSchoolOperationMainMenu());
-//		clickWithRetry(getSchoolOperationMainMenu());
+//		explicitWaitClickable(30, getSchoolOperationMainMenu());
+//		clickWithMultipleRetry(getSchoolOperationMainMenu());
 
-		explicitWaitClickable(10, getManageTimetableMainMenu());
-		clickWithRetry(getManageTimetableMainMenu());
+		explicitWaitClickable(30, getManageTimetableMainMenu());
+		clickWithMultipleRetry(getManageTimetableMainMenu(), 30, 2000);
 
-		explicitWaitClickable(10, getBtnConfigureTimetable());
-		clickWithRetry(getBtnConfigureTimetable());
+		explicitWaitClickable(30, getBtnConfigureTimetable());
+		clickWithMultipleRetry(getBtnConfigureTimetable(), 30, 2000);
 
 	}
 
@@ -621,9 +780,9 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 //		rowNum = scanner.nextInt();
 //		System.out.println("You have entered " + rowNum + " as Row Number");
 
-		String cell1 = readSpecificCell(getPropertyFileValue("manageTimetableCSV"), rowNum, 4);
+		String cell1 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTimetableCSV"), rowNum, 4);
 		System.out.println(cell1);
-		explicitWaitClickable(10, getDdnCategories());
+		explicitWaitClickable(30, getDdnCategories());
 		selectDdnByText(getDdnCategories(), cell1);
 
 		/*
@@ -642,8 +801,10 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 						.findElement(By.xpath("(//label[@class=\"checkbox-custom-label\"])[" + i + "]"));
 				checkBox.click();
 
-			} catch (ElementClickInterceptedException e) {
-				System.out.println("Handling Element Click Intercepted Exception");
+			} catch (Exception e) {
+				System.out.println("Exception occurred: " + e.getMessage());
+				e.printStackTrace();
+//				System.out.println("Handling Element Click Intercepted Exception");
 				Thread.sleep(500);
 			}
 
@@ -664,51 +825,51 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 //			}
 //		}
 
-//		explicitWaitClickable(10, getCheckBoxMonday());
-//		clickWithRetry(getCheckBoxMonday());
-//		explicitWaitClickable(10, getCheckBoxTuesday());
-//		clickWithRetry(getCheckBoxTuesday());
-//		explicitWaitClickable(10, getCheckBoxWednesday());
-//		clickWithRetry(getCheckBoxWednesday());
-//		explicitWaitClickable(10, getCheckBoxThursday());
-//		clickWithRetry(getCheckBoxThursday());
-//		explicitWaitClickable(10, getCheckBoxFriday());
-//		clickWithRetry(getCheckBoxFriday());
+//		explicitWaitClickable(30, getCheckBoxMonday());
+//		clickWithMultipleRetry(getCheckBoxMonday());
+//		explicitWaitClickable(30, getCheckBoxTuesday());
+//		clickWithMultipleRetry(getCheckBoxTuesday());
+//		explicitWaitClickable(30, getCheckBoxWednesday());
+//		clickWithMultipleRetry(getCheckBoxWednesday());
+//		explicitWaitClickable(30, getCheckBoxThursday());
+//		clickWithMultipleRetry(getCheckBoxThursday());
+//		explicitWaitClickable(30, getCheckBoxFriday());
+//		clickWithMultipleRetry(getCheckBoxFriday());
 
-		String cell2 = readSpecificCell(getPropertyFileValue("manageTimetableCSV"), rowNum, 5);
+		String cell2 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTimetableCSV"), rowNum, 5);
 		System.out.println(cell2);
-		explicitWaitClickable(10, getTxtSchoolStartTime());
+		explicitWaitClickable(30, getTxtSchoolStartTime());
 
 		getTxtSchoolStartTime().click();
 		getTxtSchoolStartTime().clear();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].value='09:00';", getTxtSchoolStartTime());
 
-		Robot robot = new Robot();
-		tabRobot(robot);
+//		Robot robot = new Robot();
+//		tabRobot(robot);
 
-		String cell3 = readSpecificCell(getPropertyFileValue("manageTimetableCSV"), rowNum, 6);
+		String cell3 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTimetableCSV"), rowNum, 6);
 		System.out.println(cell3);
 		EnterInTextbox(getTxtTotalPeriod(), cell3);
 
-		String cell4 = readSpecificCell(getPropertyFileValue("manageTimetableCSV"), rowNum, 7);
+		String cell4 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTimetableCSV"), rowNum, 7);
 		System.out.println(cell4);
 		EnterInTextbox(getTxtPeriodDuration(), cell4);
 
-		String cell5 = readSpecificCell(getPropertyFileValue("manageTimetableCSV"), rowNum, 8);
+		String cell5 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTimetableCSV"), rowNum, 8);
 		System.out.println(cell5);
 		selectDdnByText(getDdnInterval(), cell5);
 
-		String cell6 = readSpecificCell(getPropertyFileValue("manageTimetableCSV"), rowNum, 9);
+		String cell6 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTimetableCSV"), rowNum, 9);
 		System.out.println(cell6);
 		EnterInTextbox(getTxtIntervalMins(), cell6);
 
-		String cell7 = readSpecificCell(getPropertyFileValue("manageTimetableCSV"), rowNum, 10);
+		String cell7 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTimetableCSV"), rowNum, 30);
 		System.out.println(cell7);
 		selectDdnByValue(getDdnBreakAfter(), cell7);
 
-		explicitWaitClickable(10, getBtnConfigNewTimetable());
-		clickWithRetry(getBtnConfigNewTimetable());
+		explicitWaitClickable(30, getBtnConfigNewTimetable());
+		clickWithMultipleRetry(getBtnConfigNewTimetable(), 30, 2000);
 	}
 
 	public void ConfiguresAndPublishesTheTimetable() throws InterruptedException {
@@ -717,33 +878,33 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 		 * For Reconfiguration
 		 * 
 		 * 
-		 * explicitWaitClickable(10, getBtnReconfigureBuild());
-		 * clickWithRetry(getBtnReconfigureBuild());
+		 * explicitWaitClickable(30, getBtnReconfigureBuild());
+		 * clickWithMultipleRetry(getBtnReconfigureBuild());
 		 */
 
-		explicitWaitClickable(10, getBtnBuildTimetable());
-		clickWithRetry(getBtnBuildTimetable());
+		explicitWaitClickable(30, getBtnBuildTimetable());
+		clickWithMultipleRetry(getBtnBuildTimetable(), 30, 2000);
 
-		String javascriptCode = "$('.home').animate({ scrollTop: parseInt($('html').scrollTop() + 10)} );";
+		String javascriptCode = "$('.home').animate({ scrollTop: parseInt($('html').scrollTop() + 30)} );";
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript(javascriptCode);
 
-		explicitWaitClickable(10, getBtnPublishTimetable());
-		clickWithRetry(getBtnPublishTimetable());
+		explicitWaitClickable(30, getBtnPublishTimetable());
+		clickWithMultipleRetry(getBtnPublishTimetable(), 30, 2000);
 
 	}
 
 	public void VerifiesTheSuccessfulPopupMessage() {
 
-		explicitWaitClickable(10, getBtnSuccessfullPopup());
+		explicitWaitClickable(30, getBtnSuccessfullPopup());
 
 		String successPopupMsz = getText(getTxtSuccessPopup());
 		System.out.println(successPopupMsz);
 		Assert.assertEquals("TimeTable Published Successfully", successPopupMsz);
 		HighlightOutput("Assertion Passed Success Popup Message is " + successPopupMsz);
 
-		clickWithRetry(getBtnSuccessfullPopup());
+		clickWithMultipleRetry(getBtnSuccessfullPopup(), 30, 2000);
 
 	}
 }

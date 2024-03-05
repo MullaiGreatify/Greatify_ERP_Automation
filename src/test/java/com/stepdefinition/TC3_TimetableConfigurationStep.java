@@ -20,15 +20,19 @@ public class TC3_TimetableConfigurationStep extends BaseClass {
 	public void theUserIsLoggedIntoTheSchoolAdminDashboard()
 			throws FileNotFoundException, IOException, InterruptedException, AWTException {
 
-		
-		pom.getStudentInformationPage().SchoolAdminLogin();
+//		getDriver(getPropertyFileValue("browser"));
+//		implicitwait(30);
+//		maxWindow();
+
+//		pom.getSchoolOnboardPage().LogIntoSchoolAdminDashboard();
+//		Thread.sleep(3000);
 
 	}
 
 	@When("the user configures subject hours in the {string} page")
 	public void theUserConfiguresSubjectHoursInThePage(String string)
 			throws FileNotFoundException, InterruptedException, IOException, CsvException {
-//		pom.getTimetableConfigurationPage().ConfigureSubjectHours();
+		pom.getTimetableConfigurationPage().ConfigureSubjectHours();
 
 	}
 

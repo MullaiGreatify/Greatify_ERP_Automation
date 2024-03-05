@@ -4,6 +4,7 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
@@ -528,19 +529,19 @@ public class ManageTransportPage extends BaseClass {
 	public void CreatesNewVehiclesManuallyAndUsingACSVFile()
 			throws InterruptedException, FileNotFoundException, IOException, CsvException, AWTException {
 
-		Robot robot = new Robot();
+//		Robot robot = new Robot();
 
-		robot.delay(1000);
+//		robot.delay(1000);
 
-		command_TabRobot(robot);
+//		command_TabRobot(robot);
 
-		robot.delay(1000);
+//		robot.delay(1000);
 
 		mouseOverActionMoveToElement(getVisitorMenuBar());
 
 		explicitWaitClickable(20, getTransportManagementMenuBar());
-		clickWithRetry(getTransportManagementMenuBar());
-		explicitWaitClickable(20, getTransportManagementMenuBar());
+		clickWithMultipleRetry(getTransportManagementMenuBar(), 10, 1000);
+		explicitWaitClickable(20, getManageTransportMenuBar());
 		clickWithMultipleRetry(getManageTransportMenuBar(), 10, 1000);
 
 		explicitWaitClickable(20, getBtnAddVehicles());
@@ -548,11 +549,11 @@ public class ManageTransportPage extends BaseClass {
 
 		explicitWaitClickable(20, getTxtVehicleID());
 		clickWithMultipleRetry(getTxtVehicleID(), 10, 1000);
-		String cell0 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 0);
+		String cell0 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 0);
 		System.out.println(cell0);
 		EnterInTextbox(getTxtVehicleID(), cell0);
 
-		String cell1 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 1);
+		String cell1 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 1);
 		System.out.println(cell1);
 		EnterInTextbox(getTxtVehicleRegNum(), cell1);
 
@@ -560,63 +561,63 @@ public class ManageTransportPage extends BaseClass {
 		 * Handling Vehicle Bought Date Date-Picker
 		 */
 
-		String desiredDate = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 2);
-		String desiredMonth = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 3);
-		String desiredYear = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 4);
+		String desiredDate = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 2);
+		String desiredMonth = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 3);
+		String desiredYear = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 4);
 		System.out.println(desiredDate + desiredMonth + desiredYear);
 		selectDate(desiredDate, desiredMonth, desiredYear, getTxtVehicleBoughtDate());
 
-		String cell5 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 5);
+		String cell5 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 5);
 		System.out.println(cell5);
 		selectDdnByText(getDdnManufacturerName(), cell5);
 
-		String cell6 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 6);
+		String cell6 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 6);
 		System.out.println(cell6);
 		EnterInTextbox(getTxtVehicleModel(), cell6);
 
-		String cell7 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 7);
+		String cell7 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 7);
 		System.out.println(cell7);
 		EnterInTextbox(getTxtVehicleGPSID(), cell7);
 
-		String cell8 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 8);
+		String cell8 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 8);
 		System.out.println(cell8);
 		EnterInTextbox(getTxtVehicleCapacity(), cell8);
 
 		explicitWaitClickable(20, getTxtVehicleFCNoNum());
 		clickWithMultipleRetry(getTxtVehicleFCNoNum(), 10, 1000);
-		String cell9 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 9);
+		String cell9 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 9);
 		System.out.println(cell9);
 		EnterInTextbox(getTxtVehicleFCNoNum(), cell9);
 
-		String desiredDate2 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 10);
-		String desiredMonth2 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 11);
-		String desiredYear2 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 12);
+		String desiredDate2 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 10);
+		String desiredMonth2 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 11);
+		String desiredYear2 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 12);
 		System.out.println(desiredDate2 + desiredMonth2 + desiredYear2);
 		selectDate(desiredDate2, desiredMonth2, desiredYear2, getTxtFcStartDate());
 
-		String desiredDate3 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 13);
-		String desiredMonth3 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 14);
-		String desiredYear3 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 15);
+		String desiredDate3 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 13);
+		String desiredMonth3 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 14);
+		String desiredYear3 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 15);
 		System.out.println(desiredDate3 + desiredMonth3 + desiredYear3);
 		selectDate(desiredDate3, desiredMonth3, desiredYear3, getTxtFcEndDate());
 
-		String cell16 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 16);
+		String cell16 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 16);
 		System.out.println(cell16);
 		EnterInTextbox(getTxtTotalFc(), cell16);
 
-		String cell17 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 17);
+		String cell17 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 17);
 		System.out.println(cell17);
 		EnterInTextbox(getTxtInsuranceNum(), cell17);
 
-		String desiredDate4 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 18);
-		String desiredMonth4 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 19);
-		String desiredYear4 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 20);
+		String desiredDate4 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 18);
+		String desiredMonth4 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 19);
+		String desiredYear4 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 20);
 		System.out.println(desiredDate4 + desiredMonth4 + desiredYear4);
 		selectDate(desiredDate4, desiredMonth4, desiredYear4, getTxtInsuranceStartDate());
 
-		String desiredDate5 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 21);
-		String desiredMonth5 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 22);
-		String desiredYear5 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 23);
+		String desiredDate5 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 21);
+		String desiredMonth5 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 22);
+		String desiredYear5 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 23);
 		System.out.println(desiredDate5 + desiredMonth5 + desiredYear5);
 		selectDate(desiredDate5, desiredMonth5, desiredYear5, getTxtInsuranceEndDate());
 
@@ -624,28 +625,38 @@ public class ManageTransportPage extends BaseClass {
 		 * Upload FC Document
 		 */
 
-		explicitWaitClickable(20, getAtcFCDoc());
-		clickWithRetry(getAtcFCDoc());
-		String cell24 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 24);
-		System.out.println(cell24);
+//		explicitWaitClickable(20, getAtcFCDoc());
+//		clickWithRetry(getAtcFCDoc());
+//		String cell24 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 24);
+//		System.out.println(cell24);
+//
+//		robot.delay(1500);
+//
+//		openSearchTabRobot(robot);
+//		robot.delay(1000);
+//
+//		StringSelection stringSelection1 = new StringSelection(cell24);
+//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection1, null);
+//
+//		pasteTextRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
 
-		robot.delay(1500);
+		File uploadFile = new File(getProjectPath() + getPropertyFileValue("fcDocPDF"));
 
-		openSearchTabRobot(robot);
-		robot.delay(1000);
+		WebElement labelElement = driver.findElement(By.className("upload_filed"));
 
-		StringSelection stringSelection1 = new StringSelection(cell24);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection1, null);
+		WebElement fileInput = labelElement.findElement(By.xpath("//input[@type='file' and @id='fc_doc']"));
 
-		pasteTextRobot(robot);
+//		WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
 
-		robot.delay(1000);
-
-		EnterRobot(robot);
-
-		robot.delay(1000);
-
-		EnterRobot(robot);
+		fileInput.sendKeys(uploadFile.getAbsolutePath());
 
 		explicitWaitClickable(20, getSuccessPopup());
 		clickWithMultipleRetry(getSuccessPopup(), 10, 1000);
@@ -654,28 +665,37 @@ public class ManageTransportPage extends BaseClass {
 		 * Upload Insurance Document
 		 */
 
-		explicitWaitClickable(20, getAtcInsuranceDoc());
-		clickWithRetry(getAtcInsuranceDoc());
-		String cell25 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 25);
-		System.out.println(cell25);
+//		explicitWaitClickable(20, getAtcInsuranceDoc());
+//		clickWithRetry(getAtcInsuranceDoc());
+//		String cell25 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 25);
+//		System.out.println(cell25);
+//
+//		robot.delay(1000);
+//
+//		openSearchTabRobot(robot);
+//		robot.delay(1000);
+//
+//		StringSelection stringSelection2 = new StringSelection(cell25);
+//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection2, null);
+//
+//		pasteTextRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
 
-		robot.delay(1000);
+		File uploadFile1 = new File(getProjectPath() + getPropertyFileValue("insuranceDocPDF"));
 
-		openSearchTabRobot(robot);
-		robot.delay(1000);
+		WebElement labelElement1 = driver.findElement(By.className("upload_filed"));
+		WebElement fileInput1 = labelElement1.findElement(By.xpath("//input[@type='file' and @id='insurance_doc']"));
 
-		StringSelection stringSelection2 = new StringSelection(cell25);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection2, null);
+//		WebElement fileInput1 = driver.findElement(By.xpath("//input[@type='file']"));
 
-		pasteTextRobot(robot);
-
-		robot.delay(1000);
-
-		EnterRobot(robot);
-
-		robot.delay(1000);
-
-		EnterRobot(robot);
+		fileInput1.sendKeys(uploadFile1.getAbsolutePath());
 
 //		explicitWaitClickable(20, getSuccessPopup());
 		clickWithMultipleRetry(getSuccessPopup(), 10, 1000);
@@ -684,58 +704,76 @@ public class ManageTransportPage extends BaseClass {
 		 * Upload RC Document
 		 */
 
-		explicitWaitClickable(20, getAtcRCDoc());
-		clickWithRetry(getAtcRCDoc());
-		String cell26 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 26);
-		System.out.println(cell26);
+//		explicitWaitClickable(20, getAtcRCDoc());
+//		clickWithRetry(getAtcRCDoc());
+//		String cell26 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 26);
+//		System.out.println(cell26);
+//
+//		robot.delay(1000);
+//
+//		openSearchTabRobot(robot);
+//		robot.delay(1000);
+//
+//		StringSelection stringSelection3 = new StringSelection(cell26);
+//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection3, null);
+//
+//		pasteTextRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
 
-		robot.delay(1000);
+		File uploadFile2 = new File(getProjectPath() + getPropertyFileValue("rcDocPDF"));
 
-		openSearchTabRobot(robot);
-		robot.delay(1000);
+		WebElement labelElement2 = driver.findElement(By.className("upload_filed"));
+		WebElement fileInput2 = labelElement2.findElement(By.xpath("//input[@type='file' and @id='rc_doc']"));
 
-		StringSelection stringSelection3 = new StringSelection(cell26);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection3, null);
+//		WebElement fileInput2 = driver.findElement(By.xpath("//input[@type='file']"));
 
-		pasteTextRobot(robot);
+		fileInput2.sendKeys(uploadFile2.getAbsolutePath());
 
-		robot.delay(1000);
-
-		EnterRobot(robot);
-
-		robot.delay(1000);
-
-		EnterRobot(robot);
-
-//		explicitWaitClickable(20, getSuccessPopup());
+		explicitWaitClickable(20, getSuccessPopup());
 		clickWithMultipleRetry(getSuccessPopup(), 10, 1000);
 
 		/*
 		 * Upload Pollution Document
 		 */
 
-		explicitWaitClickable(20, getAtcPollutionDocument());
-		clickWithRetry(getAtcPollutionDocument());
-		String cell27 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 27);
-		System.out.println(cell27);
+//		explicitWaitClickable(20, getAtcPollutionDocument());
+//		clickWithRetry(getAtcPollutionDocument());
+//		String cell27 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 27);
+//		System.out.println(cell27);
+//
+//		robot.delay(1000);
+//
+//		openSearchTabRobot(robot);
+//		robot.delay(1000);
+//
+//		StringSelection stringSelection4 = new StringSelection(cell27);
+//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection4, null);
+//
+//		pasteTextRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
 
-		robot.delay(1000);
+		File uploadFile3 = new File(getProjectPath() + getPropertyFileValue("pollutionDocPdf"));
 
-		openSearchTabRobot(robot);
-		robot.delay(1000);
+		WebElement labelElement3 = driver.findElement(By.className("upload_filed"));
+		WebElement fileInput3 = labelElement3.findElement(By.xpath("//input[@type='file' and @id='poll_cert']"));
 
-		StringSelection stringSelection4 = new StringSelection(cell27);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection4, null);
+//		WebElement fileInput3 = driver.findElement(By.xpath("//input[@type='file']"));
 
-		pasteTextRobot(robot);
-
-		robot.delay(1000);
-
-		EnterRobot(robot);
-
-		robot.delay(1000);
-
-		EnterRobot(robot);
+		fileInput3.sendKeys(uploadFile3.getAbsolutePath());
 
 //		explicitWaitClickable(20, getSuccessPopup());
 		clickWithMultipleRetry(getSuccessPopup(), 10, 1000);
@@ -744,82 +782,109 @@ public class ManageTransportPage extends BaseClass {
 		 * Upload Vehicle Image 1
 		 */
 
-		String cell28 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 28);
-		System.out.println(cell28);
-		explicitWaitClickable(20, getAtcVehicleImage1());
-		clickWithRetry(getAtcVehicleImage1());
+//		String cell28 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 28);
+//		System.out.println(cell28);
+//		explicitWaitClickable(20, getAtcVehicleImage1());
+//		clickWithRetry(getAtcVehicleImage1());
+//
+//		robot.delay(1000);
+//
+//		openSearchTabRobot(robot);
+//		robot.delay(1000);
+//
+//		StringSelection stringSelection5 = new StringSelection(cell28);
+//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection5, null);
+//
+//		pasteTextRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
 
-		robot.delay(1000);
+		File uploadFile4 = new File(getProjectPath() + getPropertyFileValue("vehicleImgDoc"));
 
-		openSearchTabRobot(robot);
-		robot.delay(1000);
+		WebElement labelElement4 = driver.findElement(By.className("upload_filed"));
+		WebElement fileInput4 = labelElement4.findElement(By.xpath("//input[@type='file' and @id='vehicle_1']"));
 
-		StringSelection stringSelection5 = new StringSelection(cell28);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection5, null);
+//		WebElement fileInput4 = driver.findElement(By.xpath("//input[@type='file']"));
 
-		pasteTextRobot(robot);
-
-		robot.delay(1000);
-
-		EnterRobot(robot);
-
-		robot.delay(1000);
-
-		EnterRobot(robot);
+		fileInput4.sendKeys(uploadFile4.getAbsolutePath());
 
 		/*
 		 * Upload Vehicle Image 2
 		 */
 
-		explicitWaitClickable(20, getAtcVehicleImage2());
-		clickWithRetry(getAtcVehicleImage2());
-		String cell29 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 29);
-		System.out.println(cell29);
+//		explicitWaitClickable(20, getAtcVehicleImage2());
+//		clickWithRetry(getAtcVehicleImage2());
+//		String cell29 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 29);
+//		System.out.println(cell29);
+//
+//		robot.delay(1000);
+//
+//		openSearchTabRobot(robot);
+//		robot.delay(1000);
+//
+//		StringSelection stringSelection6 = new StringSelection(cell29);
+//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection6, null);
+//
+//		pasteTextRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
 
-		robot.delay(1000);
+		File uploadFile5 = new File(getProjectPath() + getPropertyFileValue("vehicleImgDoc"));
 
-		openSearchTabRobot(robot);
-		robot.delay(1000);
+		WebElement labelElement5 = driver.findElement(By.className("upload_filed"));
+		WebElement fileInput5 = labelElement5.findElement(By.xpath("//input[@type='file' and @id='vehicle_2']"));
 
-		StringSelection stringSelection6 = new StringSelection(cell29);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection6, null);
+//		WebElement fileInput5 = driver.findElement(By.xpath("//input[@type='file']"));
 
-		pasteTextRobot(robot);
-
-		robot.delay(1000);
-
-		EnterRobot(robot);
-
-		robot.delay(1000);
-
-		EnterRobot(robot);
+		fileInput5.sendKeys(uploadFile5.getAbsolutePath());
 
 		/*
 		 * Upload Vehicle Image 3
 		 */
 
-		explicitWaitClickable(20, getAtcVehicleImage3());
-		clickWithRetry(getAtcVehicleImage3());
-		String cell30 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 30);
-		System.out.println(cell30);
+//		explicitWaitClickable(20, getAtcVehicleImage3());
+//		clickWithRetry(getAtcVehicleImage3());
+//		String cell30 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 30);
+//		System.out.println(cell30);
+//
+//		robot.delay(1000);
+//
+//		openSearchTabRobot(robot);
+//		robot.delay(1000);
+//
+//		StringSelection stringSelection7 = new StringSelection(cell30);
+//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection7, null);
+//
+//		pasteTextRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
 
-		robot.delay(1000);
+		File uploadFile6 = new File(getProjectPath() + getPropertyFileValue("vehicleImgDoc"));
 
-		openSearchTabRobot(robot);
-		robot.delay(1000);
+		WebElement labelElement6 = driver.findElement(By.className("upload_filed"));
+		WebElement fileInput6 = labelElement6.findElement(By.xpath("//input[@type='file' and @id='vehicle_2']"));
 
-		StringSelection stringSelection7 = new StringSelection(cell30);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection7, null);
+//		WebElement fileInput6 = driver.findElement(By.xpath("//input[@type='file']"));
 
-		pasteTextRobot(robot);
-
-		robot.delay(1000);
-
-		EnterRobot(robot);
-
-		robot.delay(1000);
-
-		EnterRobot(robot);
+		fileInput6.sendKeys(uploadFile6.getAbsolutePath());
 
 		int maxRetries = 5;
 		for (int attempt = 1; attempt <= maxRetries; attempt++) {
@@ -833,7 +898,7 @@ public class ManageTransportPage extends BaseClass {
 				System.out.println("Handling Exception - Attempt " + attempt);
 				Thread.sleep(500);
 
-				CancelRobot(robot);
+//				CancelRobot(robot);
 
 			}
 		}
@@ -853,28 +918,34 @@ public class ManageTransportPage extends BaseClass {
 
 		clickWithMultipleRetry(getBtnUploadCSV(), 10, 1000);
 
-		explicitWaitClickable(20, getUploadCSV());
-		clickWithRetry(getUploadCSV());
-		String cell31 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 31);
-		System.out.println(cell31);
+//		explicitWaitClickable(20, getUploadCSV());
+//		clickWithRetry(getUploadCSV());
+//		String cell31 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 31);
+//		System.out.println(cell31);
+//
+//		robot.delay(1000);
+//
+//		openSearchTabRobot(robot);
+//		robot.delay(1000);
+//
+//		StringSelection stringSelection8 = new StringSelection(cell31);
+//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection8, null);
+//
+//		pasteTextRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
 
-		robot.delay(1000);
+		File uploadFile7 = new File(getProjectPath() + getPropertyFileValue("vehicleBulkDoc"));
 
-		openSearchTabRobot(robot);
-		robot.delay(1000);
+		WebElement fileInput7 = driver.findElement(By.xpath("//input[@type='file']"));
 
-		StringSelection stringSelection8 = new StringSelection(cell31);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection8, null);
-
-		pasteTextRobot(robot);
-
-		robot.delay(1000);
-
-		EnterRobot(robot);
-
-		robot.delay(1000);
-
-		EnterRobot(robot);
+		fileInput7.sendKeys(uploadFile7.getAbsolutePath());
 
 		explicitWaitClickable(20, getSuccessPopup());
 		clickWithMultipleRetry(getSuccessPopup(), 10, 1000);
@@ -909,18 +980,18 @@ public class ManageTransportPage extends BaseClass {
 
 		explicitWaitClickable(20, getTxtRouteName());
 		clickWithMultipleRetry(getTxtRouteName(), 10, 1000);
-		String cell1 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 32);
+		String cell1 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 32);
 		System.out.println(cell1);
 		EnterInTextbox(getTxtRouteName(), cell1);
 
-		String cell2 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 33);
+		String cell2 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 33);
 		System.out.println(cell2);
 		selectDdnByText(getDdnVehicleName(), cell2);
 
 		explicitWaitClickable(20, getDatepickerStartTime());
 		clickWithMultipleRetry(getDatepickerStartTime(), 10, 1000);
 		clearText(getDatepickerStartTime());
-		String cell3 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 34);
+		String cell3 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 34);
 		System.out.println(cell3);
 		EnterInTextbox(getDatepickerStartTime(), cell3);
 
@@ -928,50 +999,50 @@ public class ManageTransportPage extends BaseClass {
 
 //		explicitWaitClickable(20, getRadiobtnPickup());
 //		clickWithMultipleRetry(getRadiobtnPickup(), 10, 1000);
-		String cell4 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 35);
+		String cell4 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 35);
 		System.out.println(cell4);
 
 		explicitWaitClickable(20, getTxtStartingPoint());
 		clickWithMultipleRetry(getTxtStartingPoint(), 10, 1000);
-		String cell5 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 36);
+		String cell5 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 36);
 		System.out.println(cell5);
 		EnterInTextbox(getTxtStartingPoint(), cell5);
 
 		explicitWaitClickable(20, getTxtEndingPoint());
 		clickWithMultipleRetry(getTxtEndingPoint(), 10, 1000);
-		String cell6 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 37);
+		String cell6 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 37);
 		System.out.println(cell6);
 		EnterInTextbox(getTxtEndingPoint(), cell6);
 
-		String cell7 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 38);
+		String cell7 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 38);
 		System.out.println(cell7);
 		selectDdnByIndex(getDdnDriverName(), rowNum);
 
-		String cell8 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 39);
+		String cell8 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 39);
 		System.out.println(cell8);
 		selectDdnByIndex(getDdnCaretakerName(), rowNum);
 
 //		explicitWaitClickable(20, getRadiobtnFeeType());
 //		clickWithMultipleRetry(getRadiobtnFeeType(), 10, 1000);
-		String cell9 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 40);
+		String cell9 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 40);
 		System.out.println(cell9);
 
 		explicitWaitClickable(20, getTxtFeeAmount());
 		clickWithMultipleRetry(getTxtFeeAmount(), 10, 1000);
-		String cell10 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 41);
+		String cell10 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 41);
 		System.out.println(cell10);
 		EnterInTextbox(getTxtFeeAmount(), cell10);
 
 		explicitWaitClickable(20, getTxtRouteLoc());
 		clickWithMultipleRetry(getTxtRouteLoc(), 10, 1000);
-		String cell11 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 42);
+		String cell11 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 42);
 		System.out.println(cell11);
 		EnterInTextbox(getTxtRouteLoc(), cell11);
 
 		explicitWaitClickable(20, getTxtRouteTime());
 		clickWithMultipleRetry(getTxtRouteTime(), 10, 1000);
 		clearText(getTxtRouteTime());
-		String cell12 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 43);
+		String cell12 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 43);
 		System.out.println(cell12);
 		EnterInTextbox(getTxtRouteTime(), cell12);
 
@@ -979,7 +1050,7 @@ public class ManageTransportPage extends BaseClass {
 
 		explicitWaitClickable(20, getTxtGPS());
 		clickWithMultipleRetry(getTxtGPS(), 10, 1000);
-		String cell13 = readSpecificCell(getPropertyFileValue("manageTransport"), rowNum, 44);
+		String cell13 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTransport"), rowNum, 44);
 		System.out.println(cell13);
 		EnterInTextbox(getTxtGPS(), cell13);
 

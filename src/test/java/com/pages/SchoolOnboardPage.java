@@ -8,6 +8,7 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.SocketException;
@@ -104,7 +105,7 @@ public class SchoolOnboardPage extends BaseClass {
 
 	// 3. Generates New School Profile Invite
 
-	@FindBy(css = ".invitebtn")
+	@FindBy(xpath = "//button[@class='invitebtn' and @data-target='#invit_modal']")
 	private WebElement btnInviteSchool;
 	@FindBy(id = "invite_schoolname")
 	private WebElement txtSchoolName;
@@ -671,6 +672,11 @@ public class SchoolOnboardPage extends BaseClass {
 
 	public void LogintoSuperAdminDashboard() throws FileNotFoundException, IOException, InterruptedException {
 
+		
+		
+		
+		enterUrl(getPropertyFileValue("superadminurl"));
+		
 		explicitWaitClickable(10, getTxtUserID());
 		clickWithRetry(getTxtUserID());
 		EnterInTextbox(getTxtUserID(), getPropertyFileValue("superadminusername"));
@@ -700,19 +706,19 @@ public class SchoolOnboardPage extends BaseClass {
 
 		explicitWaitClickable(20, getTxtSchoolName());
 		clickWithRetry(getTxtSchoolName());
-		schoolname = readSpecificCell(getPropertyFileValue("inviteschool"), rowNum, 0);
+		schoolname = readSpecificCell(getProjectPath()+getPropertyFileValue("inviteschool"), rowNum, 0);
 		EnterInTextbox(getTxtSchoolName(), schoolname);
 		System.out.println(schoolname);
 
 		explicitWaitClickable(20, getTxtSchoolSiteName());
 		clickWithRetry(getTxtSchoolSiteName());
-		String cell1 = readSpecificCell(getPropertyFileValue("inviteschool"), rowNum, 1);
+		String cell1 = readSpecificCell(getProjectPath()+getPropertyFileValue("inviteschool"), rowNum, 1);
 		EnterInTextbox(getTxtSchoolSiteName(), cell1);
 		System.out.println(cell1);
 
 		explicitWaitClickable(20, getTxtSchoolEmail());
 		clickWithRetry(getTxtSchoolEmail());
-		String cell2 = readSpecificCell(getPropertyFileValue("inviteschool"), rowNum, 2);
+		String cell2 = readSpecificCell(getProjectPath()+getPropertyFileValue("inviteschool"), rowNum, 2);
 		EnterInTextbox(getTxtSchoolEmail(), schoolname + cell2);
 		System.out.println(cell2);
 
@@ -721,31 +727,31 @@ public class SchoolOnboardPage extends BaseClass {
 
 		explicitWaitClickable(20, getTxtSchoolCommission());
 		clickWithRetry(getTxtSchoolCommission());
-		String cell3 = readSpecificCell(getPropertyFileValue("inviteschool"), rowNum, 3);
+		String cell3 = readSpecificCell(getProjectPath()+getPropertyFileValue("inviteschool"), rowNum, 3);
 		EnterInTextbox(getTxtSchoolCommission(), cell3);
 		System.out.println(cell3);
 
 		explicitWaitClickable(20, getTxtSMSCredit());
 		clickWithRetry(getTxtSMSCredit());
-		String cell4 = readSpecificCell(getPropertyFileValue("inviteschool"), rowNum, 4);
+		String cell4 = readSpecificCell(getProjectPath()+getPropertyFileValue("inviteschool"), rowNum, 4);
 		EnterInTextbox(getTxtSMSCredit(), cell4);
 		System.out.println(cell4);
 
 		explicitWaitClickable(20, getTxtWhatsappCredit());
 		clickWithRetry(getTxtWhatsappCredit());
-		String cell5 = readSpecificCell(getPropertyFileValue("inviteschool"), rowNum, 5);
+		String cell5 = readSpecificCell(getProjectPath()+getPropertyFileValue("inviteschool"), rowNum, 5);
 		EnterInTextbox(getTxtWhatsappCredit(), cell5);
 		System.out.println(cell5);
 
 		explicitWaitClickable(20, getTxtAccountID());
 		clickWithRetry(getTxtAccountID());
-		String cell6 = readSpecificCell(getPropertyFileValue("inviteschool"), rowNum, 6);
+		String cell6 = readSpecificCell(getProjectPath()+getPropertyFileValue("inviteschool"), rowNum, 6);
 		EnterInTextbox(getTxtAccountID(), cell6);
 		System.out.println(cell6);
 
 		explicitWaitClickable(20, getTxtCommisionAmount());
 		clickWithRetry(getTxtCommisionAmount());
-		String cell7 = readSpecificCell(getPropertyFileValue("inviteschool"), rowNum, 7);
+		String cell7 = readSpecificCell(getProjectPath()+getPropertyFileValue("inviteschool"), rowNum, 7);
 		EnterInTextbox(getTxtCommisionAmount(), cell7);
 		System.out.println(cell7);
 
@@ -753,7 +759,7 @@ public class SchoolOnboardPage extends BaseClass {
 		 * Delete used data from csv
 		 */
 
-		DeleteRowFromCSV(getPropertyFileValue("inviteschool"), rowNum);
+		DeleteRowFromCSV(getProjectPath()+getPropertyFileValue("inviteschool"), rowNum);
 
 		explicitWaitClickable(20, getBtnSendNow());
 		clickWithRetry(getBtnSendNow());
@@ -825,21 +831,26 @@ public class SchoolOnboardPage extends BaseClass {
 		}
 	}
 
-	public void LogIntoSchoolAdminDashboard() {
+	public void LogIntoSchoolAdminDashboard() throws FileNotFoundException, IOException {
 
+//		getDriver(getPropertyFileValue("browser"));
+//		implicitwait(30);
+//		maxWindow();
+		
+		
 //		enterUrl(schoolAdminURL);
-
-		enterUrl("https://abcd056.heycampus.in/school/login");
+		
+		enterUrl("https://abcd071.heycampus.in/school/login");
 
 		explicitWaitClickable(10, getUserID());
 		clickWithRetry(getUserID());
 //		EnterInTextbox(getUserID(), schoolID);
-		EnterInTextbox(getUserID(), "HCSCHOOL0380");
+		EnterInTextbox(getUserID(), "HCSCHOOL0413");
 
 		explicitWaitClickable(10, getUserPassword());
 		clickWithRetry(getUserPassword());
 //		EnterInTextbox(getUserPassword(), schoolPassword);
-		EnterInTextbox(getUserPassword(), "GX05MK1C#22");
+		EnterInTextbox(getUserPassword(), "9#69PGCPQ74");
 
 		explicitWaitClickable(10, getBtnLoginSA());
 		clickWithRetry(getBtnLoginSA());
@@ -876,34 +887,43 @@ public class SchoolOnboardPage extends BaseClass {
 		 * Upload Image From Local Machine
 		 */
 
-		explicitWaitClickable(20, getSchoolLogo());
-		clickWithRetry(getSchoolLogo());
+//		explicitWaitClickable(20, getSchoolLogo());
+//		clickWithRetry(getSchoolLogo());
+//
+//		String cell1 = readSpecificCell(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum, 0);
+//		System.out.println(cell1);
+//
+//		Robot robot = new Robot();
+//
+//		robot.delay(1000);
+//
+//		command_TabRobot(robot);
+//		robot.delay(500);
+//
+//		openSearchTabRobot(robot);
+//		robot.delay(500);
+//
+//		StringSelection stringSelection = new StringSelection(cell1);
+//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+//
+//		pasteTextRobot(robot);
+//
+//		robot.delay(500);
+//
+//		EnterRobot(robot);
+//
+//		robot.delay(500);
+//
+//		EnterRobot(robot);
 
-		String cell1 = readSpecificCell(getPropertyFileValue("onboardSchoolDetails"), rowNum, 0);
-		System.out.println(cell1);
+//		File uploadFile = new File(
+//				"/Users/mullai/eclipse-workspace/GreatifyWebAutomation1/File/Files/school logo 1 .jpg");
 
-		Robot robot = new Robot();
+		File uploadFile = new File(getProjectPath()+getPropertyFileValue("schoolLogo"));
 
-		robot.delay(1000);
+		WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
 
-		command_TabRobot(robot);
-		robot.delay(500);
-
-		openSearchTabRobot(robot);
-		robot.delay(500);
-
-		StringSelection stringSelection = new StringSelection(cell1);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
-
-		pasteTextRobot(robot);
-
-		robot.delay(500);
-
-		EnterRobot(robot);
-
-		robot.delay(500);
-
-		EnterRobot(robot);
+		fileInput.sendKeys(uploadFile.getAbsolutePath());
 
 //        driver.switchTo().defaultContent();
 
@@ -913,67 +933,67 @@ public class SchoolOnboardPage extends BaseClass {
 
 		explicitWaitClickable(20, getSyllabusDropdown());
 		clickWithRetry(getSyllabusDropdown());
-		String cell2 = readSpecificCell(getPropertyFileValue("onboardSchoolDetails"), rowNum, 1);
+		String cell2 = readSpecificCell(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum, 1);
 		selectDdnByText(getSyllabusDropdown(), cell2);
 		System.out.println(cell2);
 
-		String cell3 = readSpecificCell(getPropertyFileValue("onboardSchoolDetails"), rowNum, 2);
+		String cell3 = readSpecificCell(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum, 2);
 		EnterInTextbox(getAffiliationNumber(), cell3);
 		System.out.println(cell3);
 
 		explicitWaitClickable(20, getMediumofSchoolDropdown());
 		clickWithRetry(getMediumofSchoolDropdown());
-		String cell4 = readSpecificCell(getPropertyFileValue("onboardSchoolDetails"), rowNum, 3);
+		String cell4 = readSpecificCell(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum, 3);
 		selectDdnByValue(getMediumofSchoolDropdown(), cell4);
 		System.out.println(cell4);
 
-		String cell5 = readSpecificCell(getPropertyFileValue("onboardSchoolDetails"), rowNum, 4);
+		String cell5 = readSpecificCell(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum, 4);
 		EnterInTextbox(getContactPersonName(), cell5);
 		System.out.println(cell5);
 
-		String cell6 = readSpecificCell(getPropertyFileValue("onboardSchoolDetails"), rowNum, 5);
+		String cell6 = readSpecificCell(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum, 5);
 		EnterInTextbox(getMobileNumber(), cell6);
 		System.out.println(cell6);
 
-		String cell7 = readSpecificCell(getPropertyFileValue("onboardSchoolDetails"), rowNum, 6);
+		String cell7 = readSpecificCell(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum, 6);
 		EnterInTextbox(getWebsiteAddress(), cell7);
 		System.out.println(cell7);
 
-		String cell8 = readSpecificCell(getPropertyFileValue("onboardSchoolDetails"), rowNum, 7);
+		String cell8 = readSpecificCell(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum, 7);
 		EnterInTextbox(getLatitude(), cell8);
 		System.out.println(cell8);
 
-		String cell9 = readSpecificCell(getPropertyFileValue("onboardSchoolDetails"), rowNum, 8);
+		String cell9 = readSpecificCell(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum, 8);
 		EnterInTextbox(getLongitude(), cell9);
 		System.out.println(cell9);
 
-		String cell10 = readSpecificCell(getPropertyFileValue("onboardSchoolDetails"), rowNum, 9);
+		String cell10 = readSpecificCell(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum, 9);
 		EnterInTextbox(getAddress1(), cell10);
 		System.out.println(cell10);
 
-		String cell11 = readSpecificCell(getPropertyFileValue("onboardSchoolDetails"), rowNum, 10);
+		String cell11 = readSpecificCell(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum, 10);
 		EnterInTextbox(getAddress2(), cell11);
 		System.out.println(cell11);
 
 		explicitWaitClickable(20, getCountryDropdown());
 		clickWithRetry(getCountryDropdown());
-		String cell12 = readSpecificCell(getPropertyFileValue("onboardSchoolDetails"), rowNum, 11);
+		String cell12 = readSpecificCell(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum, 11);
 		selectDdnByText(getCountryDropdown(), cell12);
 		System.out.println(cell12);
 
 		explicitWaitClickable(20, getStateDropdown());
 		clickWithRetry(getStateDropdown());
-		String cell13 = readSpecificCell(getPropertyFileValue("onboardSchoolDetails"), rowNum, 12);
+		String cell13 = readSpecificCell(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum, 12);
 		selectDdnByText(getStateDropdown(), cell13);
 		System.out.println(cell13);
 
 		explicitWaitClickable(20, getCityDropdown());
 		clickWithRetry(getCityDropdown());
-		String cell14 = readSpecificCell(getPropertyFileValue("onboardSchoolDetails"), rowNum, 13);
+		String cell14 = readSpecificCell(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum, 13);
 		selectDdnByText(getCityDropdown(), cell14);
 		System.out.println(cell14);
 
-		String cell15 = readSpecificCell(getPropertyFileValue("onboardSchoolDetails"), rowNum, 14);
+		String cell15 = readSpecificCell(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum, 14);
 		EnterInTextbox(getPincode(), cell15);
 		System.out.println(cell15);
 
@@ -984,31 +1004,79 @@ public class SchoolOnboardPage extends BaseClass {
 		 * Subject CSV Upload From Local Machine
 		 */
 
-		explicitWaitClickable(20, getSubjectUploadField());
-		clickWithRetry(getSubjectUploadField());
-		String cell16 = readSpecificCell(getPropertyFileValue("onboardSchoolDetails"), rowNum, 15);
-		System.out.println(cell16);
+//		explicitWaitClickable(20, getSubjectUploadField());
+//		clickWithRetry(getSubjectUploadField());
+//		String cell16 = readSpecificCell(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum, 15);
+//		System.out.println(cell16);
 
 		// Robot robot = new Robot();
 
-		robot.delay(1000);
+//		robot.delay(1000);
+//
+//		openSearchTabRobot(robot);
+//		robot.delay(500);
+//
+//		StringSelection stringSelection1 = new StringSelection(cell16);
+//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection1, null);
+//
+//		pasteTextRobot(robot);
+//
+//		robot.delay(500);
+//
+//		EnterRobot(robot);
+//
+//		robot.delay(500);
+//
+//		EnterRobot(robot);
+//
+//		explicitWaitClickable(20, getOKBtnSubField());
+//		clickWithRetry(getOKBtnSubField());
+//
+//		Thread.sleep(500);
+//
+//		explicitWaitClickable(20, getBtnContinueSubField());
+//		clickWithRetry(getBtnContinueSubField());
+//
+//		Thread.sleep(500);
 
-		openSearchTabRobot(robot);
-		robot.delay(500);
+//		File uploadFile1 = new File(getProjectPath()+getPropertyFileValue("subjectCSV"));
+//
+////		WebElement fileInput1 = getSubjectUploadField();
+//		
+////		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+////		    WebElement fileInput1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type='file']")));
+////		    fileInput.sendKeys(uploadFile.getAbsolutePath());
+//
+//		
+//		
+//				
+//				
+//				
+//				WebElement parentClass = driver.findElement(By.className("upload_filed"));
+//		
+//		WebElement fileInput1 = parentClass.findElement(By.xpath("//input[@type='file']"));
+//
+//		fileInput1.sendKeys(uploadFile1.getAbsolutePath());
 
-		StringSelection stringSelection1 = new StringSelection(cell16);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection1, null);
+		
+		WebElement labelElement = driver.findElement(By.className("upload_filed"));
+		
+		WebElement fileInput1 = labelElement.findElement(By.xpath("//input[@type='file' and @id='csv_file_sub_upload']"));
 
-		pasteTextRobot(robot);
 
-		robot.delay(500);
+//		WebElement fileInputElement = labelElement.findElement(By.id("csv_file_sub_upload"));
 
-		EnterRobot(robot);
+		File uploadFile1 = new File(getProjectPath()+getPropertyFileValue("subjectCSV"));
+		
+		
+		fileInput1.sendKeys(uploadFile1.getAbsolutePath());
 
-		robot.delay(500);
-
-		EnterRobot(robot);
-
+		
+		
+		
+		
+		
+		
 		explicitWaitClickable(20, getOKBtnSubField());
 		clickWithRetry(getOKBtnSubField());
 
@@ -1025,28 +1093,45 @@ public class SchoolOnboardPage extends BaseClass {
 
 		scrollDownJs(getBtnContinueTeacherField());
 
-		explicitWaitClickable(20, getTeacherUploadField());
-		clickWithRetry(getTeacherUploadField());
-		String cell17 = readSpecificCell(getPropertyFileValue("onboardSchoolDetails"), rowNum, 16);
-		System.out.println(cell17);
+//		
+//		
+//		explicitWaitClickable(20, getTeacherUploadField());
+//		clickWithRetry(getTeacherUploadField());
+//		String cell17 = readSpecificCell(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum, 16);
+//		System.out.println(cell17);
+//
+//		robot.delay(1000);
+//
+//		openSearchTabRobot(robot);
+//		robot.delay(500);
+//
+//		StringSelection stringSelection2 = new StringSelection(cell17);
+//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection2, null);
+//
+//		pasteTextRobot(robot);
+//
+//		robot.delay(500);
+//
+//		EnterRobot(robot);
+//
+//		robot.delay(500);
+//
+//		EnterRobot(robot);
 
-		robot.delay(1000);
+		WebElement labelElement1 = driver.findElement(By.className("upload_filed"));
+		
+		WebElement fileInput2 = labelElement1.findElement(By.xpath("//input[@type='file'and @id='csv_file_teacher_upload']"));
+		
+//		WebElement fileInput2 = labelElement1.findElement(By.id("csv_file_teacher_upload"));
+		
+		
+		File uploadFile2 = new File(getProjectPath()+getPropertyFileValue("teacherCSV"));
 
-		openSearchTabRobot(robot);
-		robot.delay(500);
+//		WebElement fileInput2 = driver.findElement(By.xpath("//input[@type='file']"));
+		
+		
 
-		StringSelection stringSelection2 = new StringSelection(cell17);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection2, null);
-
-		pasteTextRobot(robot);
-
-		robot.delay(500);
-
-		EnterRobot(robot);
-
-		robot.delay(500);
-
-		EnterRobot(robot);
+		fileInput2.sendKeys(uploadFile2.getAbsolutePath());
 
 		explicitWaitClickable(20, getOKBtnTeacherField());
 		clickWithRetry(getOKBtnTeacherField());
@@ -1064,28 +1149,37 @@ public class SchoolOnboardPage extends BaseClass {
 
 		scrollDownJs(getBtnContinueClassField());
 
-		explicitWaitClickable(20, getClassUploadField());
-		clickWithRetry(getClassUploadField());
-		String cell18 = readSpecificCell(getPropertyFileValue("onboardSchoolDetails"), rowNum, 17);
-		System.out.println(cell18);
+//		explicitWaitClickable(20, getClassUploadField());
+//		clickWithRetry(getClassUploadField());
+//		String cell18 = readSpecificCell(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum, 17);
+//		System.out.println(cell18);
+//
+//		robot.delay(1000);
+//
+//		openSearchTabRobot(robot);
+//		robot.delay(500);
+//
+//		StringSelection stringSelection3 = new StringSelection(cell18);
+//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection3, null);
+//
+//		pasteTextRobot(robot);
+//
+//		robot.delay(500);
+//
+//		EnterRobot(robot);
+//
+//		robot.delay(500);
+//
+//		EnterRobot(robot);
 
-		robot.delay(1000);
+		File uploadFile3 = new File(getProjectPath()+getPropertyFileValue("classCSV"));
 
-		openSearchTabRobot(robot);
-		robot.delay(500);
+		WebElement labelElement2 = driver.findElement(By.className("upload_filed"));
+//		WebElement fileInput3 = labelElement2.findElement(By.id("csv_file_class_upload"));
+		
+		WebElement fileInput3 = labelElement2.findElement(By.xpath("//input[@type='file' and @id='csv_file_class_upload']"));
 
-		StringSelection stringSelection3 = new StringSelection(cell18);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection3, null);
-
-		pasteTextRobot(robot);
-
-		robot.delay(500);
-
-		EnterRobot(robot);
-
-		robot.delay(500);
-
-		EnterRobot(robot);
+		fileInput3.sendKeys(uploadFile3.getAbsolutePath());
 
 		explicitWaitClickable(20, getOKBtnClassField());
 		clickWithRetry(getOKBtnClassField());
@@ -1101,34 +1195,43 @@ public class SchoolOnboardPage extends BaseClass {
 		 * Student CSV Upload From Local Machine
 		 */
 
-		explicitWaitClickable(20, getStudentUploadField());
-		clickWithRetry(getStudentUploadField());
-		String cell19 = readSpecificCell(getPropertyFileValue("onboardSchoolDetails"), rowNum, 18);
-		System.out.println(cell19);
+//		explicitWaitClickable(20, getStudentUploadField());
+//		clickWithRetry(getStudentUploadField());
+//		String cell19 = readSpecificCell(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum, 18);
+//		System.out.println(cell19);
+//
+//		robot.delay(1000);
+//
+//		openSearchTabRobot(robot);
+//		robot.delay(500);
+//
+//		StringSelection stringSelection4 = new StringSelection(cell19);
+//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection4, null);
+//
+//		pasteTextRobot(robot);
+//
+//		robot.delay(500);
+//
+//		EnterRobot(robot);
+//
+//		robot.delay(500);
+//
+//		EnterRobot(robot);
 
-		robot.delay(1000);
+		File uploadFile4 = new File(getProjectPath()+getPropertyFileValue("studentCSV"));
 
-		openSearchTabRobot(robot);
-		robot.delay(500);
+		
+		WebElement labelElement3 = driver.findElement(By.className("upload_filed"));
+//		WebElement fileInput4 = labelElement3.findElement(By.id("csv_file_student_upload"));
+		WebElement fileInput4 = labelElement3.findElement(By.xpath("//input[@type='file' and @id='csv_file_student_upload']"));
 
-		StringSelection stringSelection4 = new StringSelection(cell19);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection4, null);
-
-		pasteTextRobot(robot);
-
-		robot.delay(500);
-
-		EnterRobot(robot);
-
-		robot.delay(500);
-
-		EnterRobot(robot);
+		fileInput4.sendKeys(uploadFile4.getAbsolutePath());
 
 		/*
 		 * Delete used data from csv
 		 */
 
-		DeleteRowFromCSV(getPropertyFileValue("onboardSchoolDetails"), rowNum);
+		DeleteRowFromCSV(getProjectPath()+getPropertyFileValue("onboardSchoolDetails"), rowNum);
 
 		explicitWaitClickable(20, getOKBtnStudentField());
 		clickWithRetry(getOKBtnStudentField());

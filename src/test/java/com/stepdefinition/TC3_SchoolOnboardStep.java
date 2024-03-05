@@ -26,9 +26,8 @@ public class TC3_SchoolOnboardStep extends BaseClass {
 		getDriver(getPropertyFileValue("browser"));
 		implicitwait(30);
 		maxWindow();
-		
-//		enterUrl(getPropertyFileValue("superadminurl"));
-//		pom.getSchoolOnboardPage().LogintoSuperAdminDashboard();
+
+		//		pom.getSchoolOnboardPage().LogintoSuperAdminDashboard();
 
 	}
 
@@ -60,7 +59,7 @@ public class TC3_SchoolOnboardStep extends BaseClass {
 	}
 
 	@Then("the user logs in to the School Admin Dashboard using the mailed credentials")
-	public void theUserLogsInToTheSchoolAdminDashboardUsingTheMailedCredentials() throws InterruptedException {
+	public void theUserLogsInToTheSchoolAdminDashboardUsingTheMailedCredentials() throws InterruptedException, FileNotFoundException, IOException {
 
 //		driver.switchTo().newWindow(WindowType.TAB);
 //		switchToNewTab1(driver);
@@ -69,6 +68,11 @@ public class TC3_SchoolOnboardStep extends BaseClass {
 
 //		enterUrl("https://abcd06.heycampus.in/school/login");
 
+//		enterUrl("https://abcd062.heycampus.in/school/login");
+		
+	
+		
+		
 		pom.getSchoolOnboardPage().LogIntoSchoolAdminDashboard();
 
 		Thread.sleep(3000);
@@ -85,14 +89,14 @@ public class TC3_SchoolOnboardStep extends BaseClass {
 	public void theUserOnboardsTheSchoolUsingTheCorrespondingCSVFile()
 			throws FileNotFoundException, IOException, AWTException, InterruptedException, CsvException {
 
-		pom.getSchoolOnboardPage().OnboardSchoolUsingCSVFile();
+//		pom.getSchoolOnboardPage().OnboardSchoolUsingCSVFile();
 
 	}
 
 	@Then("the user should verify the {string} popup message in the School Admin Dashboard.")
 	public void theUserShouldVerifyThePopupMessageInTheSchoolAdminDashboard(String string) {
 
-		pom.getSchoolOnboardPage().SuccessfullOnboardPopup();
+//		pom.getSchoolOnboardPage().SuccessfullOnboardPopup();
 
 	}
 

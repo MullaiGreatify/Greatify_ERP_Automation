@@ -4,6 +4,7 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
@@ -300,7 +301,7 @@ public class FeeManagementPage extends BaseClass {
 	public void setSchoolFeesTab(WebElement schoolFeesTab) {
 		this.schoolFeesTab = schoolFeesTab;
 	}
-	
+
 	public WebElement getBtnConfirm() {
 		return btnConfirm;
 	}
@@ -470,7 +471,7 @@ public class FeeManagementPage extends BaseClass {
 	private WebElement btnDeleteAddOnFee;
 	@FindBy(xpath = "//button[contains(.,'Yes, I am sure!')]")
 	private WebElement btnConfirm1;
-	
+
 	@FindBy(css = ".swal-text")
 	private WebElement txtSuccessMsz2;
 	@FindBy(xpath = "//button[contains(.,'OK')]")
@@ -715,13 +716,13 @@ public class FeeManagementPage extends BaseClass {
 		explicitWaitClickable(20, getBtnAddFee());
 		clickWithRetry(getBtnAddFee());
 
-		String cell = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 0);
+		String cell = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 0);
 		System.out.println(cell);
 		explicitWaitClickable(20, getTxtFeeName());
 		clickWithRetry(getTxtFeeName());
 		EnterInTextbox(getTxtFeeName(), cell);
 
-		String cell1 = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 1);
+		String cell1 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 1);
 		System.out.println(cell1);
 		explicitWaitClickable(20, getTxtFeeAmount());
 		clickWithRetry(getTxtFeeAmount());
@@ -730,7 +731,7 @@ public class FeeManagementPage extends BaseClass {
 		/**
 		 * Select the dropdown using text
 		 */
-		String cell2 = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 2);
+		String cell2 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 2);
 		System.out.println(cell2);
 
 		/**
@@ -771,11 +772,11 @@ public class FeeManagementPage extends BaseClass {
 		String desiredMonth;
 		String desiredYear;
 
-		desiredDate = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 3);
+		desiredDate = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 3);
 		System.out.println(desiredDate);
-		desiredMonth = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 4);
+		desiredMonth = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 4);
 		System.out.println(desiredMonth);
-		desiredYear = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 5);
+		desiredYear = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 5);
 		System.out.println(desiredYear);
 
 		// Assume 'driver' is your WebDriver instance
@@ -827,11 +828,11 @@ public class FeeManagementPage extends BaseClass {
 
 		getCheckboxGST().click();
 
-		String BreakdownFeeName = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 6);
+		String BreakdownFeeName = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 6);
 		System.out.println(BreakdownFeeName);
 		EnterInTextbox(getTxtBreakdownFeeName(), BreakdownFeeName);
 
-		String cell7 = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 7);
+		String cell7 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 7);
 		System.out.println(cell7);
 		EnterInTextbox(getTxtBreakdownFeeAmount(), cell7);
 
@@ -878,7 +879,9 @@ public class FeeManagementPage extends BaseClass {
 				break;
 
 			} catch (StaleElementReferenceException e) {
-				System.out.println("Handling stale element reference - Attempt " + attempt);
+				System.out.println("Exception occurred: " + e.getMessage() + attempt);
+				e.printStackTrace();
+//				System.out.println("Handling stale element reference - Attempt " + attempt);
 				Thread.sleep(500);
 			}
 		}
@@ -889,7 +892,7 @@ public class FeeManagementPage extends BaseClass {
 
 		explicitWaitClickable(20, getSchoolFeesTab());
 		clickWithRetry(getSchoolFeesTab());
-		
+
 		/**
 		 * Dynamic Web Table
 		 */
@@ -912,17 +915,19 @@ public class FeeManagementPage extends BaseClass {
 				break;
 
 			} catch (StaleElementReferenceException e) {
-				System.out.println("Handling stale element reference - Attempt " + attempt);
+				System.out.println("Exception occurred: " + e.getMessage() + attempt);
+				e.printStackTrace();
+//				System.out.println("Handling stale element reference - Attempt " + attempt);
 				Thread.sleep(500);
 			}
 		}
 
-		String cell = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 8);
+		String cell = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 8);
 		System.out.println(cell);
 		getTxtEditFeeName().clear();
 		EnterInTextbox(getTxtEditFeeName(), cell);
 
-		String cell1 = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 9);
+		String cell1 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 9);
 		System.out.println(cell1);
 		getTxtEditFeeAmount().clear();
 		EnterInTextbox(getTxtEditFeeAmount(), cell1);
@@ -934,11 +939,11 @@ public class FeeManagementPage extends BaseClass {
 		String desiredMonth;
 		String desiredYear;
 
-		desiredDate = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 10);
+		desiredDate = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 10);
 		System.out.println(desiredDate);
-		desiredMonth = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 11);
+		desiredMonth = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 11);
 		System.out.println(desiredMonth);
-		desiredYear = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 12);
+		desiredYear = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 12);
 		System.out.println(desiredYear);
 
 		// Assume 'driver' is your WebDriver instance
@@ -986,12 +991,12 @@ public class FeeManagementPage extends BaseClass {
 		 */
 		getRadiobtnEditGST().click();
 
-		String BreakdownFeeName = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 13);
+		String BreakdownFeeName = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 13);
 		System.out.println(BreakdownFeeName);
 		getTxtEditMandatoryFeeName().clear();
 		EnterInTextbox(getTxtEditMandatoryFeeName(), BreakdownFeeName);
 
-		String cell7 = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 14);
+		String cell7 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 14);
 		System.out.println(cell7);
 		getTxtEditMandatoryFeeAmount().clear();
 		EnterInTextbox(getTxtEditMandatoryFeeAmount(), cell7);
@@ -1015,7 +1020,7 @@ public class FeeManagementPage extends BaseClass {
 
 		explicitWaitClickable(20, getSchoolFeesTab());
 		clickWithRetry(getSchoolFeesTab());
-		
+
 		explicitWaitClickable(10, getBtnDelete());
 		clickWithRetry(getBtnDelete());
 		explicitWaitClickable(10, getBtnConfirm2());
@@ -1038,17 +1043,17 @@ public class FeeManagementPage extends BaseClass {
 
 		explicitWaitClickable(10, getTabAddOnFees());
 		clickWithRetry(getTabAddOnFees());
-		
+
 		explicitWaitClickable(10, getBtnAddFees());
 		clickWithRetry(getBtnAddFees());
 
-		String cell = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 15);
+		String cell = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 15);
 		System.out.println(cell);
 		explicitWaitClickable(10, getTxtAddOnFeeName());
 		clickWithRetry(getTxtAddOnFeeName());
 		EnterInTextbox(getTxtAddOnFeeName(), cell);
 
-		String cell1 = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 16);
+		String cell1 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 16);
 		System.out.println(cell1);
 		explicitWaitClickable(10, getTxtAddOnFeeAmount());
 		clickWithRetry(getTxtAddOnFeeAmount());
@@ -1062,11 +1067,11 @@ public class FeeManagementPage extends BaseClass {
 		String desiredMonth;
 		String desiredYear;
 
-		desiredDate = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 17);
+		desiredDate = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 17);
 		System.out.println(desiredDate);
-		desiredMonth = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 18);
+		desiredMonth = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 18);
 		System.out.println(desiredMonth);
-		desiredYear = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 19);
+		desiredYear = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 19);
 		System.out.println(desiredYear);
 
 		// Assume 'driver' is your WebDriver instance
@@ -1121,33 +1126,55 @@ public class FeeManagementPage extends BaseClass {
 		 * Handling Upload CSV
 		 */
 
-		explicitWaitClickable(20, getBtnUploadCSV());
-		clickWithRetry(getBtnUploadCSV());
-		String cell2 = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 20);
-		System.out.println(cell2);
+//		explicitWaitClickable(20, getBtnUploadCSV());
+//		clickWithRetry(getBtnUploadCSV());
+//		String cell2 = readSpecificCell(getProjectPath()+getPropertyFileValue("manageFee"), rowNum, 20);
+//		System.out.println(cell2);
+//
+//		Robot robot = new Robot();
+//
+//		robot.delay(1000);
+//
+//		command_TabRobot(robot);
+//		robot.delay(1000);
+//
+//		openSearchTabRobot(robot);
+//		robot.delay(1000);
+//
+//		StringSelection stringSelection = new StringSelection(cell2);
+//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+//
+//		pasteTextRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
+//
+//		explicitWaitClickable(20, getBtnSuccessOk());
+//		clickWithRetry(getBtnSuccessOk());
 
-		Robot robot = new Robot();
+		File uploadFile = new File(getProjectPath() + getPropertyFileValue("addOnFee"));
 
-		robot.delay(1000);
+		WebElement labelElement = driver.findElement(By.className("upload_btn"));
 
-		command_TabRobot(robot);
-		robot.delay(1000);
+		WebElement fileInput = labelElement.findElement(By.xpath("//input[@type='file' and @id='add_fee_csv_upload']"));
 
-		openSearchTabRobot(robot);
-		robot.delay(1000);
+//		WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
 
-		StringSelection stringSelection = new StringSelection(cell2);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+		fileInput.sendKeys(uploadFile.getAbsolutePath());
 
-		pasteTextRobot(robot);
-
-		robot.delay(1000);
-
-		EnterRobot(robot);
-
-		robot.delay(1000);
-
-		EnterRobot(robot);
+//		Robot robot = new Robot();
+//		
+//		robot.delay(1000);
+//		EnterRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
 
 		explicitWaitClickable(20, getBtnSuccessOk());
 		clickWithRetry(getBtnSuccessOk());
@@ -1175,7 +1202,7 @@ public class FeeManagementPage extends BaseClass {
 
 		explicitWaitClickable(10, getTabAddOnFees());
 		clickWithRetry(getTabAddOnFees());
-		
+
 		explicitWaitClickable(20, getBtnDeleteAddOnFee());
 		clickWithRetry(getBtnDeleteAddOnFee());
 		explicitWaitClickable(20, getBtnConfirm1());
@@ -1200,7 +1227,7 @@ public class FeeManagementPage extends BaseClass {
 
 		explicitWaitClickable(20, getConcessionTab());
 		clickWithRetry(getConcessionTab());
-		
+
 		explicitWaitClickable(20, getBtnAddDiscount());
 		clickWithRetry(getBtnAddDiscount());
 
@@ -1211,15 +1238,15 @@ public class FeeManagementPage extends BaseClass {
 		selectDdnByIndex(getDdnClassName(), ddnClassName);
 		selectDdnByIndex(getDdnFeeName(), ddnFeeName);
 
-		String cell = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 21);
+		String cell = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 21);
 		System.out.println(cell);
 		EnterInTextbox(getTxtDiscountName(), cell);
 
-		String cell1 = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 22);
+		String cell1 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 22);
 		System.out.println(cell1);
 		EnterInTextbox(getTxtDiscountPercent(), cell1);
 
-		String cell2 = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 23);
+		String cell2 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 23);
 		System.out.println(cell2);
 		EnterInTextbox(getTxtDiscountAmount(), cell2);
 
@@ -1231,11 +1258,11 @@ public class FeeManagementPage extends BaseClass {
 		String desiredMonth;
 		String desiredYear;
 
-		desiredDate = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 24);
+		desiredDate = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 24);
 		System.out.println(desiredDate);
-		desiredMonth = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 25);
+		desiredMonth = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 25);
 		System.out.println(desiredMonth);
-		desiredYear = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 26);
+		desiredYear = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 26);
 		System.out.println(desiredYear);
 
 		// Assume 'driver' is your WebDriver instance
@@ -1282,34 +1309,45 @@ public class FeeManagementPage extends BaseClass {
 		/*
 		 * Handling Upload CSV
 		 */
+//
+//		explicitWaitClickable(20, getUploadCSV());
+//		clickWithRetry(getUploadCSV());
+//		String cell3 = readSpecificCell(getProjectPath()+getPropertyFileValue("manageFee"), rowNum, 27);
+//		System.out.println(cell3);
+//
+//		Robot robot = new Robot();
+//
+//		robot.delay(1000);
+//
+//		command_TabRobot(robot);
+//		robot.delay(500);
+//
+//		openSearchTabRobot(robot);
+//		robot.delay(1000);
+//
+//		StringSelection stringSelection = new StringSelection(cell3);
+//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+//
+//		pasteTextRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
+//
+//		robot.delay(1000);
+//
+//		EnterRobot(robot);
 
-		explicitWaitClickable(20, getUploadCSV());
-		clickWithRetry(getUploadCSV());
-		String cell3 = readSpecificCell(getPropertyFileValue("manageFee"), rowNum, 27);
-		System.out.println(cell3);
+		File uploadFile = new File(getProjectPath() + getPropertyFileValue("addOnFee"));
 
-		Robot robot = new Robot();
+		WebElement labelElement = driver.findElement(By.className("upload_btn"));
 
-		robot.delay(1000);
+		WebElement fileInput = labelElement
+				.findElement(By.xpath("//input[@type='file' and @id='discount_csv_upload']"));
 
-		command_TabRobot(robot);
-		robot.delay(500);
+//		WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
 
-		openSearchTabRobot(robot);
-		robot.delay(1000);
-
-		StringSelection stringSelection = new StringSelection(cell3);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
-
-		pasteTextRobot(robot);
-
-		robot.delay(1000);
-
-		EnterRobot(robot);
-
-		robot.delay(1000);
-
-		EnterRobot(robot);
+		fileInput.sendKeys(uploadFile.getAbsolutePath());
 
 		explicitWaitClickable(20, getBtnAlertOk1());
 		clickWithRetry(getBtnAlertOk1());
@@ -1332,7 +1370,7 @@ public class FeeManagementPage extends BaseClass {
 
 		explicitWaitClickable(20, getConcessionTab());
 		clickWithRetry(getConcessionTab());
-		
+
 		List<WebElement> deleteBtns = driver
 
 				.findElements(By.cssSelector(".odd:nth-child(1) > td:nth-child(7) .delete-add"));
