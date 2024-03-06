@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.runner.TestRunner" time="42.88" tests="29" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.runner.TestRunner" time="236.666" tests="39" errors="6" skipped="24" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="webdriver.chrome.driver" value="/Users/mullai/.cache/selenium/chromedriver/mac-arm64/122.0.6261.94/chromedriver"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/mullai/Documents/GitRepo/Git Repo Greatify/Greatify_ERP_Automation/target/test-classes:/Users/mullai/Documents/GitRepo/Git Repo Greatify/Greatify_ERP_Automation/target/classes:/Users/mullai/.m2/repository/com/mailosaur/mailosaur-java/7.0.8/mailosaur-java-7.0.8.jar:/Users/mullai/.m2/repository/com/google/http-client/google-http-client/1.44.1/google-http-client-1.44.1.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/Users/mullai/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/mullai/.m2/repository/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0.jar:/Users/mullai/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/Users/mullai/.m2/repository/io/grpc/grpc-context/1.60.1/grpc-context-1.60.1.jar:/Users/mullai/.m2/repository/io/grpc/grpc-api/1.60.1/grpc-api-1.60.1.jar:/Users/mullai/.m2/repository/io/opencensus/opencensus-api/0.31.1/opencensus-api-0.31.1.jar:/Users/mullai/.m2/repository/io/opencensus/opencensus-contrib-http-util/0.31.1/opencensus-contrib-http-util-0.31.1.jar:/Users/mullai/.m2/repository/com/google/http-client/google-http-client-gson/1.44.1/google-http-client-gson-1.44.1.jar:/Users/mullai/.m2/repository/com/google/guava/guava/33.0.0-jre/guava-33.0.0-jre.jar:/Users/mullai/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/mullai/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/mullai/.m2/repository/org/checkerframework/checker-qual/3.41.0/checker-qual-3.41.0.jar:/Users/mullai/.m2/repository/org/apache/maven/plugins/maven-compiler-plugin/3.12.1/maven-compiler-plugin-3.12.1.jar:/Users/mullai/.m2/repository/org/apache/maven/shared/maven-shared-utils/3.4.2/maven-shared-utils-3.4.2.jar:/Users/mullai/.m2/repository/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-java/1.2.0/plexus-java-1.2.0.jar:/Users/mullai/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/Users/mullai/.m2/repository/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-compiler-api/2.14.2/plexus-compiler-api-2.14.2.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-compiler-manager/2.14.2/plexus-compiler-manager-2.14.2.jar:/Users/mullai/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-xml/4.0.1/plexus-xml-4.0.1.jar:/Users/mullai/.m2/repository/org/apache/maven/maven-xml-impl/4.0.0-alpha-5/maven-xml-impl-4.0.0-alpha-5.jar:/Users/mullai/.m2/repository/org/apache/maven/maven-api-xml/4.0.0-alpha-5/maven-api-xml-4.0.0-alpha-5.jar:/Users/mullai/.m2/repository/org/apache/maven/maven-api-meta/4.0.0-alpha-5/maven-api-meta-4.0.0-alpha-5.jar:/Users/mullai/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.plexus/0.3.5/org.eclipse.sisu.plexus-0.3.5.jar:/Users/mullai/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/Users/mullai/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.5/org.eclipse.sisu.inject-0.3.5.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.5.2/plexus-classworlds-2.5.2.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-compiler-javac/2.14.2/plexus-compiler-javac-2.14.2.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-utils/4.0.0/plexus-utils-4.0.0.jar:/Users/mullai/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/mullai/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/mullai/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/mullai/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/mullai/.m2/repository/io/github/bonigarcia/webdrivermanager/5.6.2/webdrivermanager-5.6.2.jar:/Users/mullai/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/mullai/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java/3.3.4/docker-java-3.3.4.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java-core/3.3.4/docker-java-core-3.3.4.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java-api/3.3.4/docker-java-api-3.3.4.jar:/Users/mullai/.m2/repository/org/bouncycastle/bcpkix-jdk18on/1.76/bcpkix-jdk18on-1.76.jar:/Users/mullai/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.76/bcprov-jdk18on-1.76.jar:/Users/mullai/.m2/repository/org/bouncycastle/bcutil-jdk18on/1.76/bcutil-jdk18on-1.76.jar:/Users/mullai/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.3.4/docker-java-transport-httpclient5-3.3.4.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java-transport/3.3.4/docker-java-transport-3.3.4.jar:/Users/mullai/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/mullai/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/Users/mullai/.m2/repository/com/squareup/okhttp/okhttp/2.7.5/okhttp-2.7.5.jar:/Users/mullai/.m2/repository/com/squareup/okio/okio/1.6.0/okio-1.6.0.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-csv/1.10.0/commons-csv-1.10.0.jar:/Users/mullai/.m2/repository/com/opencsv/opencsv/5.7.1/opencsv-5.7.1.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/Users/mullai/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/Users/mullai/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/mullai/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-java/7.15.0/cucumber-java-7.15.0.jar:/Users/mullai/.m2/repository/net/masterthought/cucumber-reporting/5.7.7/cucumber-reporting-5.7.7.jar:/Users/mullai/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/Users/mullai/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/mullai/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/mullai/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.2/jackson-datatype-jsr310-2.15.2.jar:/Users/mullai/.m2/repository/org/apache/velocity/velocity-engine-core/2.3/velocity-engine-core-2.3.jar:/Users/mullai/.m2/repository/joda-time/joda-time/2.12.5/joda-time-2.12.5.jar:/Users/mullai/.m2/repository/commons-io/commons-io/2.7/commons-io-2.7.jar:/Users/mullai/.m2/repository/org/jsoup/jsoup/1.16.1/jsoup-1.16.1.jar:/Users/mullai/.m2/repository/com/googlecode/owasp-java-html-sanitizer/owasp-java-html-sanitizer/20220608.1/owasp-java-html-sanitizer-20220608.1.jar:/Users/mullai/.m2/repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/Users/mullai/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/mullai/.m2/repository/tech/grasshopper/extentreports-cucumber7-adapter/1.9.2/extentreports-cucumber7-adapter-1.9.2.jar:/Users/mullai/.m2/repository/tech/grasshopper/extent-pdf-report/2.9.1/extent-pdf-report-2.9.1.jar:/Users/mullai/.m2/repository/tech/grasshopper/cucumber-pdf-report/2.11.1/cucumber-pdf-report-2.11.1.jar:/Users/mullai/.m2/repository/org/apache/pdfbox/pdfbox/2.0.26/pdfbox-2.0.26.jar:/Users/mullai/.m2/repository/org/apache/pdfbox/fontbox/2.0.26/fontbox-2.0.26.jar:/Users/mullai/.m2/repository/org/knowm/xchart/xchart/3.8.0/xchart-3.8.0.jar:/Users/mullai/.m2/repository/de/erichseifert/vectorgraphics2d/VectorGraphics2D/0.13/VectorGraphics2D-0.13.jar:/Users/mullai/.m2/repository/de/rototor/pdfbox/graphics2d/0.30/graphics2d-0.30.jar:/Users/mullai/.m2/repository/com/madgag/animated-gif-lib/1.4/animated-gif-lib-1.4.jar:/Users/mullai/.m2/repository/org/yaml/snakeyaml/1.28/snakeyaml-1.28.jar:/Users/mullai/.m2/repository/tech/grasshopper/table-layout/1.5.1/table-layout-1.5.1.jar:/Users/mullai/.m2/repository/tech/grasshopper/rest-assured-cucumber-pdf-report/1.4.1/rest-assured-cucumber-pdf-report-1.4.1.jar:/Users/mullai/.m2/repository/com/aventstack/klov-reporter/5.0.9/klov-reporter-5.0.9.jar:/Users/mullai/.m2/repository/org/mongodb/mongodb-driver/3.6.4/mongodb-driver-3.6.4.jar:/Users/mullai/.m2/repository/org/mongodb/mongodb-driver-core/3.6.4/mongodb-driver-core-3.6.4.jar:/Users/mullai/.m2/repository/org/mongodb/bson/3.6.4/bson-3.6.4.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/mullai/.m2/repository/tech/grasshopper/htmlextentreporter/1.0.1/htmlextentreporter-1.0.1.jar:/Users/mullai/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar:/Users/mullai/.m2/repository/io/reactivex/rxjava3/rxjava/3.1.6/rxjava-3.1.6.jar:/Users/mullai/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/mullai/.m2/repository/org/freemarker/freemarker/2.3.32/freemarker-2.3.32.jar:/Users/mullai/.m2/repository/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar:/Users/mullai/.m2/repository/org/apache/poi/poi/5.2.5/poi-5.2.5.jar:/Users/mullai/.m2/repository/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/mullai/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/Users/mullai/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-junit/7.15.0/cucumber-junit-7.15.0.jar:/Users/mullai/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/mullai/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-core/7.15.0/cucumber-core-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-gherkin/7.15.0/cucumber-gherkin-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.15.0/cucumber-gherkin-messages-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/Users/mullai/.m2/repository/io/cucumber/tag-expressions/6.0.0/tag-expressions-6.0.0.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-expressions/17.0.1/cucumber-expressions-17.0.1.jar:/Users/mullai/.m2/repository/io/cucumber/datatable/7.15.0/datatable-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-plugin/7.15.0/cucumber-plugin-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/docstring/7.15.0/docstring-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/Users/mullai/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/Users/mullai/.m2/repository/io/cucumber/ci-environment/10.0.0/ci-environment-10.0.0.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-java/4.16.1/selenium-java-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-api/4.16.1/selenium-api-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.16.1/selenium-chrome-driver-4.16.1.jar:/Users/mullai/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.16.1/selenium-chromium-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-json/4.16.1/selenium-json-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.16.1/selenium-manager-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v118/4.16.1/selenium-devtools-v118-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v119/4.16.1/selenium-devtools-v119-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v120/4.16.1/selenium-devtools-v120-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.16.1/selenium-devtools-v85-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.16.1/selenium-edge-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.16.1/selenium-firefox-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-http/4.16.1/selenium-http-4.16.1.jar:/Users/mullai/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.16.1/selenium-ie-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.16.1/selenium-remote-driver-4.16.1.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-api/1.28.0/opentelemetry-api-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-context/1.28.0/opentelemetry-context-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.28.0/opentelemetry-exporter-logging-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.28.0/opentelemetry-sdk-metrics-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-extension-incubator/1.28.0-alpha/opentelemetry-extension-incubator-1.28.0-alpha.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.28.0/opentelemetry-sdk-logs-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.28.0/opentelemetry-sdk-common-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.28.0/opentelemetry-sdk-extension-autoconfigure-spi-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.28.0/opentelemetry-sdk-extension-autoconfigure-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-api-events/1.28.0-alpha/opentelemetry-api-events-1.28.0-alpha.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.28.0/opentelemetry-sdk-trace-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.28.0/opentelemetry-sdk-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha.jar:/Users/mullai/.m2/repository/net/bytebuddy/byte-buddy/1.14.5/byte-buddy-1.14.5.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-os/4.16.1/selenium-os-4.16.1.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.16.1/selenium-safari-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-support/4.16.1/selenium-support-4.16.1.jar:/Users/mullai/.m2/repository/org/json/json/20210307/json-20210307.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-cucumber7-jvm/2.25.0/allure-cucumber7-jvm-2.25.0.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-java-commons/2.25.0/allure-java-commons-2.25.0.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-model/2.25.0/allure-model-2.25.0.jar:/Users/mullai/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-junit-platform/2.25.0/allure-junit-platform-2.25.0.jar:/Users/mullai/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.2/junit-platform-launcher-1.9.2.jar:/Users/mullai/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-test-filter/2.25.0/allure-test-filter-2.25.0.jar:/Users/mullai/.m2/repository/com/sun/mail/javax.mail/1.6.2/javax.mail-1.6.2.jar:/Users/mullai/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-email/1.3.1/commons-email-1.3.1.jar:/Users/mullai/.m2/repository/javax/mail/mail/1.4.5/mail-1.4.5.jar:"/>
+    <property name="java.class.path" value="/Users/mullai/Documents/GitRepo/Git Repo Greatify/Greatify_ERP_Automation/target/test-classes:/Users/mullai/Documents/GitRepo/Git Repo Greatify/Greatify_ERP_Automation/target/classes:/Users/mullai/.m2/repository/com/mailosaur/mailosaur-java/7.0.8/mailosaur-java-7.0.8.jar:/Users/mullai/.m2/repository/com/google/http-client/google-http-client/1.44.1/google-http-client-1.44.1.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/Users/mullai/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/mullai/.m2/repository/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0.jar:/Users/mullai/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/Users/mullai/.m2/repository/io/grpc/grpc-context/1.60.1/grpc-context-1.60.1.jar:/Users/mullai/.m2/repository/io/grpc/grpc-api/1.60.1/grpc-api-1.60.1.jar:/Users/mullai/.m2/repository/io/opencensus/opencensus-api/0.31.1/opencensus-api-0.31.1.jar:/Users/mullai/.m2/repository/io/opencensus/opencensus-contrib-http-util/0.31.1/opencensus-contrib-http-util-0.31.1.jar:/Users/mullai/.m2/repository/com/google/http-client/google-http-client-gson/1.44.1/google-http-client-gson-1.44.1.jar:/Users/mullai/.m2/repository/com/google/guava/guava/33.0.0-jre/guava-33.0.0-jre.jar:/Users/mullai/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/mullai/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/mullai/.m2/repository/org/checkerframework/checker-qual/3.41.0/checker-qual-3.41.0.jar:/Users/mullai/.m2/repository/org/apache/maven/plugins/maven-compiler-plugin/3.12.1/maven-compiler-plugin-3.12.1.jar:/Users/mullai/.m2/repository/org/apache/maven/shared/maven-shared-utils/3.4.2/maven-shared-utils-3.4.2.jar:/Users/mullai/.m2/repository/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-java/1.2.0/plexus-java-1.2.0.jar:/Users/mullai/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/Users/mullai/.m2/repository/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-compiler-api/2.14.2/plexus-compiler-api-2.14.2.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-compiler-manager/2.14.2/plexus-compiler-manager-2.14.2.jar:/Users/mullai/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-xml/4.0.1/plexus-xml-4.0.1.jar:/Users/mullai/.m2/repository/org/apache/maven/maven-xml-impl/4.0.0-alpha-5/maven-xml-impl-4.0.0-alpha-5.jar:/Users/mullai/.m2/repository/org/apache/maven/maven-api-xml/4.0.0-alpha-5/maven-api-xml-4.0.0-alpha-5.jar:/Users/mullai/.m2/repository/org/apache/maven/maven-api-meta/4.0.0-alpha-5/maven-api-meta-4.0.0-alpha-5.jar:/Users/mullai/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.plexus/0.3.5/org.eclipse.sisu.plexus-0.3.5.jar:/Users/mullai/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/Users/mullai/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.5/org.eclipse.sisu.inject-0.3.5.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.5.2/plexus-classworlds-2.5.2.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-compiler-javac/2.14.2/plexus-compiler-javac-2.14.2.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-utils/4.0.0/plexus-utils-4.0.0.jar:/Users/mullai/.m2/repository/io/github/bonigarcia/webdrivermanager/5.6.2/webdrivermanager-5.6.2.jar:/Users/mullai/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/mullai/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java/3.3.4/docker-java-3.3.4.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java-core/3.3.4/docker-java-core-3.3.4.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java-api/3.3.4/docker-java-api-3.3.4.jar:/Users/mullai/.m2/repository/org/bouncycastle/bcpkix-jdk18on/1.76/bcpkix-jdk18on-1.76.jar:/Users/mullai/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.76/bcprov-jdk18on-1.76.jar:/Users/mullai/.m2/repository/org/bouncycastle/bcutil-jdk18on/1.76/bcutil-jdk18on-1.76.jar:/Users/mullai/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.3.4/docker-java-transport-httpclient5-3.3.4.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java-transport/3.3.4/docker-java-transport-3.3.4.jar:/Users/mullai/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/mullai/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/Users/mullai/.m2/repository/com/squareup/okhttp/okhttp/2.7.5/okhttp-2.7.5.jar:/Users/mullai/.m2/repository/com/squareup/okio/okio/1.6.0/okio-1.6.0.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-csv/1.10.0/commons-csv-1.10.0.jar:/Users/mullai/.m2/repository/com/opencsv/opencsv/5.7.1/opencsv-5.7.1.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/Users/mullai/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/Users/mullai/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/mullai/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-java/7.15.0/cucumber-java-7.15.0.jar:/Users/mullai/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/mullai/.m2/repository/net/masterthought/cucumber-reporting/5.7.7/cucumber-reporting-5.7.7.jar:/Users/mullai/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/Users/mullai/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/mullai/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/mullai/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.2/jackson-datatype-jsr310-2.15.2.jar:/Users/mullai/.m2/repository/org/apache/velocity/velocity-engine-core/2.3/velocity-engine-core-2.3.jar:/Users/mullai/.m2/repository/joda-time/joda-time/2.12.5/joda-time-2.12.5.jar:/Users/mullai/.m2/repository/commons-io/commons-io/2.7/commons-io-2.7.jar:/Users/mullai/.m2/repository/org/jsoup/jsoup/1.16.1/jsoup-1.16.1.jar:/Users/mullai/.m2/repository/com/googlecode/owasp-java-html-sanitizer/owasp-java-html-sanitizer/20220608.1/owasp-java-html-sanitizer-20220608.1.jar:/Users/mullai/.m2/repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/Users/mullai/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/mullai/.m2/repository/tech/grasshopper/extentreports-cucumber7-adapter/1.9.2/extentreports-cucumber7-adapter-1.9.2.jar:/Users/mullai/.m2/repository/tech/grasshopper/extent-pdf-report/2.9.1/extent-pdf-report-2.9.1.jar:/Users/mullai/.m2/repository/tech/grasshopper/cucumber-pdf-report/2.11.1/cucumber-pdf-report-2.11.1.jar:/Users/mullai/.m2/repository/org/apache/pdfbox/pdfbox/2.0.26/pdfbox-2.0.26.jar:/Users/mullai/.m2/repository/org/apache/pdfbox/fontbox/2.0.26/fontbox-2.0.26.jar:/Users/mullai/.m2/repository/org/knowm/xchart/xchart/3.8.0/xchart-3.8.0.jar:/Users/mullai/.m2/repository/de/erichseifert/vectorgraphics2d/VectorGraphics2D/0.13/VectorGraphics2D-0.13.jar:/Users/mullai/.m2/repository/de/rototor/pdfbox/graphics2d/0.30/graphics2d-0.30.jar:/Users/mullai/.m2/repository/com/madgag/animated-gif-lib/1.4/animated-gif-lib-1.4.jar:/Users/mullai/.m2/repository/org/yaml/snakeyaml/1.28/snakeyaml-1.28.jar:/Users/mullai/.m2/repository/tech/grasshopper/table-layout/1.5.1/table-layout-1.5.1.jar:/Users/mullai/.m2/repository/tech/grasshopper/rest-assured-cucumber-pdf-report/1.4.1/rest-assured-cucumber-pdf-report-1.4.1.jar:/Users/mullai/.m2/repository/com/aventstack/klov-reporter/5.0.9/klov-reporter-5.0.9.jar:/Users/mullai/.m2/repository/org/mongodb/mongodb-driver/3.6.4/mongodb-driver-3.6.4.jar:/Users/mullai/.m2/repository/org/mongodb/mongodb-driver-core/3.6.4/mongodb-driver-core-3.6.4.jar:/Users/mullai/.m2/repository/org/mongodb/bson/3.6.4/bson-3.6.4.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/mullai/.m2/repository/tech/grasshopper/htmlextentreporter/1.0.1/htmlextentreporter-1.0.1.jar:/Users/mullai/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar:/Users/mullai/.m2/repository/io/reactivex/rxjava3/rxjava/3.1.6/rxjava-3.1.6.jar:/Users/mullai/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/mullai/.m2/repository/org/freemarker/freemarker/2.3.32/freemarker-2.3.32.jar:/Users/mullai/.m2/repository/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar:/Users/mullai/.m2/repository/org/apache/poi/poi/5.2.5/poi-5.2.5.jar:/Users/mullai/.m2/repository/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/mullai/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/Users/mullai/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-junit/7.15.0/cucumber-junit-7.15.0.jar:/Users/mullai/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/mullai/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-core/7.15.0/cucumber-core-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-gherkin/7.15.0/cucumber-gherkin-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.15.0/cucumber-gherkin-messages-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/Users/mullai/.m2/repository/io/cucumber/tag-expressions/6.0.0/tag-expressions-6.0.0.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-expressions/17.0.1/cucumber-expressions-17.0.1.jar:/Users/mullai/.m2/repository/io/cucumber/datatable/7.15.0/datatable-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-plugin/7.15.0/cucumber-plugin-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/docstring/7.15.0/docstring-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/Users/mullai/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/Users/mullai/.m2/repository/io/cucumber/ci-environment/10.0.0/ci-environment-10.0.0.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-java/4.16.1/selenium-java-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-api/4.16.1/selenium-api-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.16.1/selenium-chrome-driver-4.16.1.jar:/Users/mullai/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.16.1/selenium-chromium-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-json/4.16.1/selenium-json-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.16.1/selenium-manager-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v118/4.16.1/selenium-devtools-v118-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v119/4.16.1/selenium-devtools-v119-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v120/4.16.1/selenium-devtools-v120-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.16.1/selenium-devtools-v85-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.16.1/selenium-edge-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.16.1/selenium-firefox-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-http/4.16.1/selenium-http-4.16.1.jar:/Users/mullai/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.16.1/selenium-ie-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.16.1/selenium-remote-driver-4.16.1.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-api/1.28.0/opentelemetry-api-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-context/1.28.0/opentelemetry-context-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.28.0/opentelemetry-exporter-logging-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.28.0/opentelemetry-sdk-metrics-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-extension-incubator/1.28.0-alpha/opentelemetry-extension-incubator-1.28.0-alpha.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.28.0/opentelemetry-sdk-logs-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.28.0/opentelemetry-sdk-common-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.28.0/opentelemetry-sdk-extension-autoconfigure-spi-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.28.0/opentelemetry-sdk-extension-autoconfigure-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-api-events/1.28.0-alpha/opentelemetry-api-events-1.28.0-alpha.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.28.0/opentelemetry-sdk-trace-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.28.0/opentelemetry-sdk-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha.jar:/Users/mullai/.m2/repository/net/bytebuddy/byte-buddy/1.14.5/byte-buddy-1.14.5.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-os/4.16.1/selenium-os-4.16.1.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.16.1/selenium-safari-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-support/4.16.1/selenium-support-4.16.1.jar:/Users/mullai/.m2/repository/org/json/json/20210307/json-20210307.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-cucumber7-jvm/2.25.0/allure-cucumber7-jvm-2.25.0.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-java-commons/2.25.0/allure-java-commons-2.25.0.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-model/2.25.0/allure-model-2.25.0.jar:/Users/mullai/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-junit-platform/2.25.0/allure-junit-platform-2.25.0.jar:/Users/mullai/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/mullai/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/mullai/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/mullai/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.2/junit-platform-launcher-1.9.2.jar:/Users/mullai/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-test-filter/2.25.0/allure-test-filter-2.25.0.jar:/Users/mullai/.m2/repository/com/sun/mail/javax.mail/1.6.2/javax.mail-1.6.2.jar:/Users/mullai/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-email/1.3.1/commons-email-1.3.1.jar:/Users/mullai/.m2/repository/javax/mail/mail/1.4.5/mail-1.4.5.jar:"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="mail.smtp.ssl.ciphers" value="TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"/>
@@ -15,10 +15,10 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/mullai/Documents/GitRepo/Git Repo Greatify/Greatify_ERP_Automation/target/surefire/surefirebooter-20240305184322376_3.jar /Users/mullai/Documents/GitRepo/Git Repo Greatify/Greatify_ERP_Automation/target/surefire 2024-03-05T18-43-22_335-jvmRun1 surefire-20240305184322376_1tmp surefire_0-20240305184322376_2tmp"/>
+    <property name="sun.java.command" value="/Users/mullai/Documents/GitRepo/Git Repo Greatify/Greatify_ERP_Automation/target/surefire/surefirebooter-20240306174904737_3.jar /Users/mullai/Documents/GitRepo/Git Repo Greatify/Greatify_ERP_Automation/target/surefire 2024-03-06T17-49-04_643-jvmRun1 surefire-20240306174904737_1tmp surefire_0-20240306174904737_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/Users/mullai/Documents/GitRepo/Git Repo Greatify/Greatify_ERP_Automation/target/test-classes:/Users/mullai/Documents/GitRepo/Git Repo Greatify/Greatify_ERP_Automation/target/classes:/Users/mullai/.m2/repository/com/mailosaur/mailosaur-java/7.0.8/mailosaur-java-7.0.8.jar:/Users/mullai/.m2/repository/com/google/http-client/google-http-client/1.44.1/google-http-client-1.44.1.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/Users/mullai/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/mullai/.m2/repository/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0.jar:/Users/mullai/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/Users/mullai/.m2/repository/io/grpc/grpc-context/1.60.1/grpc-context-1.60.1.jar:/Users/mullai/.m2/repository/io/grpc/grpc-api/1.60.1/grpc-api-1.60.1.jar:/Users/mullai/.m2/repository/io/opencensus/opencensus-api/0.31.1/opencensus-api-0.31.1.jar:/Users/mullai/.m2/repository/io/opencensus/opencensus-contrib-http-util/0.31.1/opencensus-contrib-http-util-0.31.1.jar:/Users/mullai/.m2/repository/com/google/http-client/google-http-client-gson/1.44.1/google-http-client-gson-1.44.1.jar:/Users/mullai/.m2/repository/com/google/guava/guava/33.0.0-jre/guava-33.0.0-jre.jar:/Users/mullai/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/mullai/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/mullai/.m2/repository/org/checkerframework/checker-qual/3.41.0/checker-qual-3.41.0.jar:/Users/mullai/.m2/repository/org/apache/maven/plugins/maven-compiler-plugin/3.12.1/maven-compiler-plugin-3.12.1.jar:/Users/mullai/.m2/repository/org/apache/maven/shared/maven-shared-utils/3.4.2/maven-shared-utils-3.4.2.jar:/Users/mullai/.m2/repository/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-java/1.2.0/plexus-java-1.2.0.jar:/Users/mullai/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/Users/mullai/.m2/repository/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-compiler-api/2.14.2/plexus-compiler-api-2.14.2.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-compiler-manager/2.14.2/plexus-compiler-manager-2.14.2.jar:/Users/mullai/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-xml/4.0.1/plexus-xml-4.0.1.jar:/Users/mullai/.m2/repository/org/apache/maven/maven-xml-impl/4.0.0-alpha-5/maven-xml-impl-4.0.0-alpha-5.jar:/Users/mullai/.m2/repository/org/apache/maven/maven-api-xml/4.0.0-alpha-5/maven-api-xml-4.0.0-alpha-5.jar:/Users/mullai/.m2/repository/org/apache/maven/maven-api-meta/4.0.0-alpha-5/maven-api-meta-4.0.0-alpha-5.jar:/Users/mullai/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.plexus/0.3.5/org.eclipse.sisu.plexus-0.3.5.jar:/Users/mullai/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/Users/mullai/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.5/org.eclipse.sisu.inject-0.3.5.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.5.2/plexus-classworlds-2.5.2.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-compiler-javac/2.14.2/plexus-compiler-javac-2.14.2.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-utils/4.0.0/plexus-utils-4.0.0.jar:/Users/mullai/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/mullai/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/mullai/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/mullai/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/mullai/.m2/repository/io/github/bonigarcia/webdrivermanager/5.6.2/webdrivermanager-5.6.2.jar:/Users/mullai/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/mullai/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java/3.3.4/docker-java-3.3.4.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java-core/3.3.4/docker-java-core-3.3.4.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java-api/3.3.4/docker-java-api-3.3.4.jar:/Users/mullai/.m2/repository/org/bouncycastle/bcpkix-jdk18on/1.76/bcpkix-jdk18on-1.76.jar:/Users/mullai/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.76/bcprov-jdk18on-1.76.jar:/Users/mullai/.m2/repository/org/bouncycastle/bcutil-jdk18on/1.76/bcutil-jdk18on-1.76.jar:/Users/mullai/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.3.4/docker-java-transport-httpclient5-3.3.4.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java-transport/3.3.4/docker-java-transport-3.3.4.jar:/Users/mullai/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/mullai/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/Users/mullai/.m2/repository/com/squareup/okhttp/okhttp/2.7.5/okhttp-2.7.5.jar:/Users/mullai/.m2/repository/com/squareup/okio/okio/1.6.0/okio-1.6.0.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-csv/1.10.0/commons-csv-1.10.0.jar:/Users/mullai/.m2/repository/com/opencsv/opencsv/5.7.1/opencsv-5.7.1.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/Users/mullai/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/Users/mullai/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/mullai/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-java/7.15.0/cucumber-java-7.15.0.jar:/Users/mullai/.m2/repository/net/masterthought/cucumber-reporting/5.7.7/cucumber-reporting-5.7.7.jar:/Users/mullai/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/Users/mullai/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/mullai/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/mullai/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.2/jackson-datatype-jsr310-2.15.2.jar:/Users/mullai/.m2/repository/org/apache/velocity/velocity-engine-core/2.3/velocity-engine-core-2.3.jar:/Users/mullai/.m2/repository/joda-time/joda-time/2.12.5/joda-time-2.12.5.jar:/Users/mullai/.m2/repository/commons-io/commons-io/2.7/commons-io-2.7.jar:/Users/mullai/.m2/repository/org/jsoup/jsoup/1.16.1/jsoup-1.16.1.jar:/Users/mullai/.m2/repository/com/googlecode/owasp-java-html-sanitizer/owasp-java-html-sanitizer/20220608.1/owasp-java-html-sanitizer-20220608.1.jar:/Users/mullai/.m2/repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/Users/mullai/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/mullai/.m2/repository/tech/grasshopper/extentreports-cucumber7-adapter/1.9.2/extentreports-cucumber7-adapter-1.9.2.jar:/Users/mullai/.m2/repository/tech/grasshopper/extent-pdf-report/2.9.1/extent-pdf-report-2.9.1.jar:/Users/mullai/.m2/repository/tech/grasshopper/cucumber-pdf-report/2.11.1/cucumber-pdf-report-2.11.1.jar:/Users/mullai/.m2/repository/org/apache/pdfbox/pdfbox/2.0.26/pdfbox-2.0.26.jar:/Users/mullai/.m2/repository/org/apache/pdfbox/fontbox/2.0.26/fontbox-2.0.26.jar:/Users/mullai/.m2/repository/org/knowm/xchart/xchart/3.8.0/xchart-3.8.0.jar:/Users/mullai/.m2/repository/de/erichseifert/vectorgraphics2d/VectorGraphics2D/0.13/VectorGraphics2D-0.13.jar:/Users/mullai/.m2/repository/de/rototor/pdfbox/graphics2d/0.30/graphics2d-0.30.jar:/Users/mullai/.m2/repository/com/madgag/animated-gif-lib/1.4/animated-gif-lib-1.4.jar:/Users/mullai/.m2/repository/org/yaml/snakeyaml/1.28/snakeyaml-1.28.jar:/Users/mullai/.m2/repository/tech/grasshopper/table-layout/1.5.1/table-layout-1.5.1.jar:/Users/mullai/.m2/repository/tech/grasshopper/rest-assured-cucumber-pdf-report/1.4.1/rest-assured-cucumber-pdf-report-1.4.1.jar:/Users/mullai/.m2/repository/com/aventstack/klov-reporter/5.0.9/klov-reporter-5.0.9.jar:/Users/mullai/.m2/repository/org/mongodb/mongodb-driver/3.6.4/mongodb-driver-3.6.4.jar:/Users/mullai/.m2/repository/org/mongodb/mongodb-driver-core/3.6.4/mongodb-driver-core-3.6.4.jar:/Users/mullai/.m2/repository/org/mongodb/bson/3.6.4/bson-3.6.4.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/mullai/.m2/repository/tech/grasshopper/htmlextentreporter/1.0.1/htmlextentreporter-1.0.1.jar:/Users/mullai/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar:/Users/mullai/.m2/repository/io/reactivex/rxjava3/rxjava/3.1.6/rxjava-3.1.6.jar:/Users/mullai/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/mullai/.m2/repository/org/freemarker/freemarker/2.3.32/freemarker-2.3.32.jar:/Users/mullai/.m2/repository/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar:/Users/mullai/.m2/repository/org/apache/poi/poi/5.2.5/poi-5.2.5.jar:/Users/mullai/.m2/repository/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/mullai/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/Users/mullai/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-junit/7.15.0/cucumber-junit-7.15.0.jar:/Users/mullai/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/mullai/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-core/7.15.0/cucumber-core-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-gherkin/7.15.0/cucumber-gherkin-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.15.0/cucumber-gherkin-messages-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/Users/mullai/.m2/repository/io/cucumber/tag-expressions/6.0.0/tag-expressions-6.0.0.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-expressions/17.0.1/cucumber-expressions-17.0.1.jar:/Users/mullai/.m2/repository/io/cucumber/datatable/7.15.0/datatable-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-plugin/7.15.0/cucumber-plugin-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/docstring/7.15.0/docstring-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/Users/mullai/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/Users/mullai/.m2/repository/io/cucumber/ci-environment/10.0.0/ci-environment-10.0.0.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-java/4.16.1/selenium-java-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-api/4.16.1/selenium-api-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.16.1/selenium-chrome-driver-4.16.1.jar:/Users/mullai/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.16.1/selenium-chromium-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-json/4.16.1/selenium-json-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.16.1/selenium-manager-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v118/4.16.1/selenium-devtools-v118-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v119/4.16.1/selenium-devtools-v119-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v120/4.16.1/selenium-devtools-v120-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.16.1/selenium-devtools-v85-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.16.1/selenium-edge-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.16.1/selenium-firefox-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-http/4.16.1/selenium-http-4.16.1.jar:/Users/mullai/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.16.1/selenium-ie-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.16.1/selenium-remote-driver-4.16.1.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-api/1.28.0/opentelemetry-api-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-context/1.28.0/opentelemetry-context-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.28.0/opentelemetry-exporter-logging-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.28.0/opentelemetry-sdk-metrics-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-extension-incubator/1.28.0-alpha/opentelemetry-extension-incubator-1.28.0-alpha.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.28.0/opentelemetry-sdk-logs-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.28.0/opentelemetry-sdk-common-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.28.0/opentelemetry-sdk-extension-autoconfigure-spi-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.28.0/opentelemetry-sdk-extension-autoconfigure-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-api-events/1.28.0-alpha/opentelemetry-api-events-1.28.0-alpha.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.28.0/opentelemetry-sdk-trace-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.28.0/opentelemetry-sdk-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha.jar:/Users/mullai/.m2/repository/net/bytebuddy/byte-buddy/1.14.5/byte-buddy-1.14.5.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-os/4.16.1/selenium-os-4.16.1.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.16.1/selenium-safari-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-support/4.16.1/selenium-support-4.16.1.jar:/Users/mullai/.m2/repository/org/json/json/20210307/json-20210307.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-cucumber7-jvm/2.25.0/allure-cucumber7-jvm-2.25.0.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-java-commons/2.25.0/allure-java-commons-2.25.0.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-model/2.25.0/allure-model-2.25.0.jar:/Users/mullai/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-junit-platform/2.25.0/allure-junit-platform-2.25.0.jar:/Users/mullai/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.2/junit-platform-launcher-1.9.2.jar:/Users/mullai/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-test-filter/2.25.0/allure-test-filter-2.25.0.jar:/Users/mullai/.m2/repository/com/sun/mail/javax.mail/1.6.2/javax.mail-1.6.2.jar:/Users/mullai/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-email/1.3.1/commons-email-1.3.1.jar:/Users/mullai/.m2/repository/javax/mail/mail/1.4.5/mail-1.4.5.jar:"/>
+    <property name="surefire.test.class.path" value="/Users/mullai/Documents/GitRepo/Git Repo Greatify/Greatify_ERP_Automation/target/test-classes:/Users/mullai/Documents/GitRepo/Git Repo Greatify/Greatify_ERP_Automation/target/classes:/Users/mullai/.m2/repository/com/mailosaur/mailosaur-java/7.0.8/mailosaur-java-7.0.8.jar:/Users/mullai/.m2/repository/com/google/http-client/google-http-client/1.44.1/google-http-client-1.44.1.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/Users/mullai/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/mullai/.m2/repository/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0.jar:/Users/mullai/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/Users/mullai/.m2/repository/io/grpc/grpc-context/1.60.1/grpc-context-1.60.1.jar:/Users/mullai/.m2/repository/io/grpc/grpc-api/1.60.1/grpc-api-1.60.1.jar:/Users/mullai/.m2/repository/io/opencensus/opencensus-api/0.31.1/opencensus-api-0.31.1.jar:/Users/mullai/.m2/repository/io/opencensus/opencensus-contrib-http-util/0.31.1/opencensus-contrib-http-util-0.31.1.jar:/Users/mullai/.m2/repository/com/google/http-client/google-http-client-gson/1.44.1/google-http-client-gson-1.44.1.jar:/Users/mullai/.m2/repository/com/google/guava/guava/33.0.0-jre/guava-33.0.0-jre.jar:/Users/mullai/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/mullai/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/mullai/.m2/repository/org/checkerframework/checker-qual/3.41.0/checker-qual-3.41.0.jar:/Users/mullai/.m2/repository/org/apache/maven/plugins/maven-compiler-plugin/3.12.1/maven-compiler-plugin-3.12.1.jar:/Users/mullai/.m2/repository/org/apache/maven/shared/maven-shared-utils/3.4.2/maven-shared-utils-3.4.2.jar:/Users/mullai/.m2/repository/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-java/1.2.0/plexus-java-1.2.0.jar:/Users/mullai/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/Users/mullai/.m2/repository/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-compiler-api/2.14.2/plexus-compiler-api-2.14.2.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-compiler-manager/2.14.2/plexus-compiler-manager-2.14.2.jar:/Users/mullai/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-xml/4.0.1/plexus-xml-4.0.1.jar:/Users/mullai/.m2/repository/org/apache/maven/maven-xml-impl/4.0.0-alpha-5/maven-xml-impl-4.0.0-alpha-5.jar:/Users/mullai/.m2/repository/org/apache/maven/maven-api-xml/4.0.0-alpha-5/maven-api-xml-4.0.0-alpha-5.jar:/Users/mullai/.m2/repository/org/apache/maven/maven-api-meta/4.0.0-alpha-5/maven-api-meta-4.0.0-alpha-5.jar:/Users/mullai/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.plexus/0.3.5/org.eclipse.sisu.plexus-0.3.5.jar:/Users/mullai/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/Users/mullai/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.5/org.eclipse.sisu.inject-0.3.5.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.5.2/plexus-classworlds-2.5.2.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-compiler-javac/2.14.2/plexus-compiler-javac-2.14.2.jar:/Users/mullai/.m2/repository/org/codehaus/plexus/plexus-utils/4.0.0/plexus-utils-4.0.0.jar:/Users/mullai/.m2/repository/io/github/bonigarcia/webdrivermanager/5.6.2/webdrivermanager-5.6.2.jar:/Users/mullai/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/mullai/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java/3.3.4/docker-java-3.3.4.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java-core/3.3.4/docker-java-core-3.3.4.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java-api/3.3.4/docker-java-api-3.3.4.jar:/Users/mullai/.m2/repository/org/bouncycastle/bcpkix-jdk18on/1.76/bcpkix-jdk18on-1.76.jar:/Users/mullai/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.76/bcprov-jdk18on-1.76.jar:/Users/mullai/.m2/repository/org/bouncycastle/bcutil-jdk18on/1.76/bcutil-jdk18on-1.76.jar:/Users/mullai/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.3.4/docker-java-transport-httpclient5-3.3.4.jar:/Users/mullai/.m2/repository/com/github/docker-java/docker-java-transport/3.3.4/docker-java-transport-3.3.4.jar:/Users/mullai/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/mullai/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/Users/mullai/.m2/repository/com/squareup/okhttp/okhttp/2.7.5/okhttp-2.7.5.jar:/Users/mullai/.m2/repository/com/squareup/okio/okio/1.6.0/okio-1.6.0.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-csv/1.10.0/commons-csv-1.10.0.jar:/Users/mullai/.m2/repository/com/opencsv/opencsv/5.7.1/opencsv-5.7.1.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/Users/mullai/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/Users/mullai/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/mullai/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-java/7.15.0/cucumber-java-7.15.0.jar:/Users/mullai/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/mullai/.m2/repository/net/masterthought/cucumber-reporting/5.7.7/cucumber-reporting-5.7.7.jar:/Users/mullai/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/Users/mullai/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/mullai/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/mullai/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.2/jackson-datatype-jsr310-2.15.2.jar:/Users/mullai/.m2/repository/org/apache/velocity/velocity-engine-core/2.3/velocity-engine-core-2.3.jar:/Users/mullai/.m2/repository/joda-time/joda-time/2.12.5/joda-time-2.12.5.jar:/Users/mullai/.m2/repository/commons-io/commons-io/2.7/commons-io-2.7.jar:/Users/mullai/.m2/repository/org/jsoup/jsoup/1.16.1/jsoup-1.16.1.jar:/Users/mullai/.m2/repository/com/googlecode/owasp-java-html-sanitizer/owasp-java-html-sanitizer/20220608.1/owasp-java-html-sanitizer-20220608.1.jar:/Users/mullai/.m2/repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/Users/mullai/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/mullai/.m2/repository/tech/grasshopper/extentreports-cucumber7-adapter/1.9.2/extentreports-cucumber7-adapter-1.9.2.jar:/Users/mullai/.m2/repository/tech/grasshopper/extent-pdf-report/2.9.1/extent-pdf-report-2.9.1.jar:/Users/mullai/.m2/repository/tech/grasshopper/cucumber-pdf-report/2.11.1/cucumber-pdf-report-2.11.1.jar:/Users/mullai/.m2/repository/org/apache/pdfbox/pdfbox/2.0.26/pdfbox-2.0.26.jar:/Users/mullai/.m2/repository/org/apache/pdfbox/fontbox/2.0.26/fontbox-2.0.26.jar:/Users/mullai/.m2/repository/org/knowm/xchart/xchart/3.8.0/xchart-3.8.0.jar:/Users/mullai/.m2/repository/de/erichseifert/vectorgraphics2d/VectorGraphics2D/0.13/VectorGraphics2D-0.13.jar:/Users/mullai/.m2/repository/de/rototor/pdfbox/graphics2d/0.30/graphics2d-0.30.jar:/Users/mullai/.m2/repository/com/madgag/animated-gif-lib/1.4/animated-gif-lib-1.4.jar:/Users/mullai/.m2/repository/org/yaml/snakeyaml/1.28/snakeyaml-1.28.jar:/Users/mullai/.m2/repository/tech/grasshopper/table-layout/1.5.1/table-layout-1.5.1.jar:/Users/mullai/.m2/repository/tech/grasshopper/rest-assured-cucumber-pdf-report/1.4.1/rest-assured-cucumber-pdf-report-1.4.1.jar:/Users/mullai/.m2/repository/com/aventstack/klov-reporter/5.0.9/klov-reporter-5.0.9.jar:/Users/mullai/.m2/repository/org/mongodb/mongodb-driver/3.6.4/mongodb-driver-3.6.4.jar:/Users/mullai/.m2/repository/org/mongodb/mongodb-driver-core/3.6.4/mongodb-driver-core-3.6.4.jar:/Users/mullai/.m2/repository/org/mongodb/bson/3.6.4/bson-3.6.4.jar:/Users/mullai/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/mullai/.m2/repository/tech/grasshopper/htmlextentreporter/1.0.1/htmlextentreporter-1.0.1.jar:/Users/mullai/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar:/Users/mullai/.m2/repository/io/reactivex/rxjava3/rxjava/3.1.6/rxjava-3.1.6.jar:/Users/mullai/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/mullai/.m2/repository/org/freemarker/freemarker/2.3.32/freemarker-2.3.32.jar:/Users/mullai/.m2/repository/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar:/Users/mullai/.m2/repository/org/apache/poi/poi/5.2.5/poi-5.2.5.jar:/Users/mullai/.m2/repository/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/mullai/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/Users/mullai/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-junit/7.15.0/cucumber-junit-7.15.0.jar:/Users/mullai/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/mullai/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-core/7.15.0/cucumber-core-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-gherkin/7.15.0/cucumber-gherkin-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.15.0/cucumber-gherkin-messages-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/Users/mullai/.m2/repository/io/cucumber/tag-expressions/6.0.0/tag-expressions-6.0.0.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-expressions/17.0.1/cucumber-expressions-17.0.1.jar:/Users/mullai/.m2/repository/io/cucumber/datatable/7.15.0/datatable-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/cucumber-plugin/7.15.0/cucumber-plugin-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/docstring/7.15.0/docstring-7.15.0.jar:/Users/mullai/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/Users/mullai/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/Users/mullai/.m2/repository/io/cucumber/ci-environment/10.0.0/ci-environment-10.0.0.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-java/4.16.1/selenium-java-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-api/4.16.1/selenium-api-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.16.1/selenium-chrome-driver-4.16.1.jar:/Users/mullai/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.16.1/selenium-chromium-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-json/4.16.1/selenium-json-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.16.1/selenium-manager-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v118/4.16.1/selenium-devtools-v118-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v119/4.16.1/selenium-devtools-v119-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v120/4.16.1/selenium-devtools-v120-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.16.1/selenium-devtools-v85-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.16.1/selenium-edge-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.16.1/selenium-firefox-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-http/4.16.1/selenium-http-4.16.1.jar:/Users/mullai/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.16.1/selenium-ie-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.16.1/selenium-remote-driver-4.16.1.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-api/1.28.0/opentelemetry-api-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-context/1.28.0/opentelemetry-context-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.28.0/opentelemetry-exporter-logging-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.28.0/opentelemetry-sdk-metrics-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-extension-incubator/1.28.0-alpha/opentelemetry-extension-incubator-1.28.0-alpha.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.28.0/opentelemetry-sdk-logs-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.28.0/opentelemetry-sdk-common-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.28.0/opentelemetry-sdk-extension-autoconfigure-spi-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.28.0/opentelemetry-sdk-extension-autoconfigure-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-api-events/1.28.0-alpha/opentelemetry-api-events-1.28.0-alpha.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.28.0/opentelemetry-sdk-trace-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.28.0/opentelemetry-sdk-1.28.0.jar:/Users/mullai/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha.jar:/Users/mullai/.m2/repository/net/bytebuddy/byte-buddy/1.14.5/byte-buddy-1.14.5.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-os/4.16.1/selenium-os-4.16.1.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.16.1/selenium-safari-driver-4.16.1.jar:/Users/mullai/.m2/repository/org/seleniumhq/selenium/selenium-support/4.16.1/selenium-support-4.16.1.jar:/Users/mullai/.m2/repository/org/json/json/20210307/json-20210307.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-cucumber7-jvm/2.25.0/allure-cucumber7-jvm-2.25.0.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-java-commons/2.25.0/allure-java-commons-2.25.0.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-model/2.25.0/allure-model-2.25.0.jar:/Users/mullai/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-junit-platform/2.25.0/allure-junit-platform-2.25.0.jar:/Users/mullai/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/mullai/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/mullai/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/mullai/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.2/junit-platform-launcher-1.9.2.jar:/Users/mullai/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/mullai/.m2/repository/io/qameta/allure/allure-test-filter/2.25.0/allure-test-filter-2.25.0.jar:/Users/mullai/.m2/repository/com/sun/mail/javax.mail/1.6.2/javax.mail-1.6.2.jar:/Users/mullai/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/Users/mullai/.m2/repository/org/apache/commons/commons-email/1.3.1/commons-email-1.3.1.jar:/Users/mullai/.m2/repository/javax/mail/mail/1.4.5/mail-1.4.5.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/mullai"/>
     <property name="user.language" value="en"/>
@@ -32,7 +32,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/mullai/Documents/GitRepo/Git Repo Greatify/Greatify_ERP_Automation/target/surefire/surefirebooter-20240305184322376_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/mullai/Documents/GitRepo/Git Repo Greatify/Greatify_ERP_Automation/target/surefire/surefirebooter-20240306174904737_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.1+12-LTS-29"/>
@@ -61,167 +61,1133 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="the user is logged into the Super Admin Dashboard" classname="Invite a new school, onboard the school, and log in to the School Admin Dashboard." time="1.588">
+  <testcase name="the user is logged into the Super Admin Dashboard" classname="Invite a new school, onboard the school, and log in to the School Admin Dashboard." time="8.89">
     <system-out><![CDATA[
 @SchoolOnboard
 Scenario: Invite a new school, onboard the school, and log in to the School Admin Dashboard.  # src/test/resources/Features/TC2_SchoolAdminOnboard.feature:4
 ]]></system-out>
-    <system-err><![CDATA[javax.net.ssl|DEBUG|10|main|2024-03-05 18:43:23.270 IST|SSLCipher.java:432|jdk.tls.keyLimits:  entry = AES/GCM/NoPadding KeyUpdate 2^37. AES/GCM/NOPADDING:KEYUPDATE = 137438953472
-javax.net.ssl|DEBUG|10|main|2024-03-05 18:43:23.276 IST|SSLCipher.java:432|jdk.tls.keyLimits:  entry =  ChaCha20-Poly1305 KeyUpdate 2^37. CHACHA20-POLY1305:KEYUPDATE = 137438953472
-Mar 05, 2024 6:43:24 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+javax.net.ssl|DEBUG|10|main|2024-03-06 17:49:06.667 IST|SSLCipher.java:432|jdk.tls.keyLimits:  entry = AES/GCM/NoPadding KeyUpdate 2^37. AES/GCM/NOPADDING:KEYUPDATE = 137438953472
+javax.net.ssl|DEBUG|10|main|2024-03-06 17:49:06.677 IST|SSLCipher.java:432|jdk.tls.keyLimits:  entry =  ChaCha20-Poly1305 KeyUpdate 2^37. CHACHA20-POLY1305:KEYUPDATE = 137438953472
+Mar 06, 2024 5:49:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 122, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 122
 ]]></system-err>
   </testcase>
-  <testcase name="the user navigates to the &quot;Manage Schools&quot; page in the Super Admin Dashboard" classname="Invite a new school, onboard the school, and log in to the School Admin Dashboard." time="0.001">
+  <testcase name="the user navigates to the &quot;Manage Schools&quot; page in the Super Admin Dashboard" classname="Invite a new school, onboard the school, and log in to the School Admin Dashboard." time="0.883">
     <system-out><![CDATA[  Given the user is logged into the Super Admin Dashboard                                     # com.stepdefinition.TC3_SchoolOnboardStep.theUserIsLoggedIntoTheSuperAdminDashboard()
 ]]></system-out>
   </testcase>
-  <testcase name="the user generates a new School Profile invite from the Super Admin Dashboard" classname="Invite a new school, onboard the school, and log in to the School Admin Dashboard." time="0.002">
+  <testcase name="the user generates a new School Profile invite from the Super Admin Dashboard" classname="Invite a new school, onboard the school, and log in to the School Admin Dashboard." time="4.617">
     <system-out><![CDATA[  When the user navigates to the "Manage Schools" page in the Super Admin Dashboard           # com.stepdefinition.TC3_SchoolOnboardStep.theUserNavigatesToThePageInTheSuperAdminDashboard(java.lang.String)
+Handling Exception - Attempt 1
+NewSchool1004
+ABCD1004
+@khpkhklj.mailosaur.net
+5
+100
+100
+12345432
+100
+Row 1 deleted successfully.
 ]]></system-out>
   </testcase>
-  <testcase name="the user should verify the &quot;Success&quot; popup message in the Super Admin Dashboard." classname="Invite a new school, onboard the school, and log in to the School Admin Dashboard." time="0.001">
+  <testcase name="the user should verify the &quot;Success&quot; popup message in the Super Admin Dashboard." classname="Invite a new school, onboard the school, and log in to the School Admin Dashboard." time="68.979">
     <system-out><![CDATA[  And the user generates a new School Profile invite from the Super Admin Dashboard           # com.stepdefinition.TC3_SchoolOnboardStep.theUserGeneratesANewSchoolProfileInviteFromTheSuperAdminDashboard()
+&amp#27;[38;5;118;1mSchool Invite sent successfully&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="the user fetch &quot;username&quot; and &quot;password&quot; from Mailosaur portal" classname="Invite a new school, onboard the school, and log in to the School Admin Dashboard." time="0.002">
+  <testcase name="the user fetch &quot;username&quot; and &quot;password&quot; from Mailosaur portal" classname="Invite a new school, onboard the school, and log in to the School Admin Dashboard." time="1.216">
     <system-out><![CDATA[  Then the user should verify the "Success" popup message in the Super Admin Dashboard.       # com.stepdefinition.TC3_SchoolOnboardStep.theUserShouldVerifyThePopupMessageInTheSuperAdminDashboard(java.lang.String)
+Extracted Password: SY0J4GM7L96
+User Name: HCSCHOOL0422
+Extracted URL: https://abcd1004.heycampus.in/school/login
 ]]></system-out>
+    <system-err><![CDATA[javax.net.ssl|DEBUG|10|main|2024-03-06 17:50:30.061 IST|Utilities.java:74|the previous server name in SNI (type=host_name (0), value=mailosaur.com) was replaced with (type=host_name (0), value=mailosaur.com)
+javax.net.ssl|DEBUG|10|main|2024-03-06 17:50:30.162 IST|SSLCipher.java:2234|algorithm = ChaCha20-Poly1305:KEYUPDATE
+countdown value = 137438953472
+javax.net.ssl|DEBUG|10|main|2024-03-06 17:50:30.553 IST|SSLSocketImpl.java:577|duplex close of SSLSocket
+javax.net.ssl|DEBUG|10|main|2024-03-06 17:50:30.555 IST|SSLSocketImpl.java:1749|close the underlying socket
+javax.net.ssl|DEBUG|10|main|2024-03-06 17:50:30.556 IST|SSLSocketImpl.java:1775|close the SSL connection (initiative)
+javax.net.ssl|DEBUG|10|main|2024-03-06 17:50:30.556 IST|SSLSocketImpl.java:834|close inbound of SSLSocket
+javax.net.ssl|WARNING|10|main|2024-03-06 17:50:30.557 IST|SSLSocketImpl.java:595|SSLSocket duplex close failed. Debug info only. Exception details: (
+"throwable" : {
+  java.net.SocketException: Socket is closed
+  	at java.base/java.net.Socket.shutdownInput(Socket.java:1756)
+  	at java.base/sun.security.ssl.BaseSSLSocketImpl.shutdownInput(BaseSSLSocketImpl.java:224)
+  	at java.base/sun.security.ssl.SSLSocketImpl.shutdownInput(SSLSocketImpl.java:850)
+  	at java.base/sun.security.ssl.SSLSocketImpl.bruteForceCloseInput(SSLSocketImpl.java:799)
+  	at java.base/sun.security.ssl.SSLSocketImpl.duplexCloseOutput(SSLSocketImpl.java:664)
+  	at java.base/sun.security.ssl.SSLSocketImpl.close(SSLSocketImpl.java:584)
+  	at java.base/sun.net.www.http.HttpClient.closeServer(HttpClient.java:1139)
+  	at java.base/sun.net.www.protocol.https.HttpsClient.closeServer(HttpsClient.java:442)
+  	at java.base/sun.net.www.http.ChunkedInputStream.closeUnderlying(ChunkedInputStream.java:222)
+  	at java.base/sun.net.www.http.ChunkedInputStream.close(ChunkedInputStream.java:769)
+  	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:170)
+  	at java.base/sun.net.www.protocol.http.HttpURLConnection$HttpInputStream.close(HttpURLConnection.java:3750)
+  	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:170)
+  	at java.base/java.io.BufferedInputStream.close(BufferedInputStream.java:618)
+  	at java.base/sun.nio.cs.StreamDecoder.implClose(StreamDecoder.java:424)
+  	at java.base/sun.nio.cs.StreamDecoder.lockedClose(StreamDecoder.java:264)
+  	at java.base/sun.nio.cs.StreamDecoder.close(StreamDecoder.java:249)
+  	at java.base/java.io.InputStreamReader.close(InputStreamReader.java:203)
+  	at com.google.gson.stream.JsonReader.close(JsonReader.java:1233)
+  	at com.google.api.client.json.gson.GsonParser.close(GsonParser.java:51)
+  	at com.google.api.client.json.JsonParser.parse(JsonParser.java:363)
+  	at com.google.api.client.json.JsonParser.parse(JsonParser.java:335)
+  	at com.google.api.client.json.JsonObjectParser.parseAndClose(JsonObjectParser.java:79)
+  	at com.google.api.client.json.JsonObjectParser.parseAndClose(JsonObjectParser.java:73)
+  	at com.google.api.client.http.HttpResponse.parseAs(HttpResponse.java:460)
+  	at com.mailosaur.Messages.search(Messages.java:348)
+  	at com.mailosaur.Messages.get(Messages.java:98)
+  	at com.mailosaur.Messages.get(Messages.java:44)
+  	at com.pages.SchoolOnboardPage.FetchUsernameAndPasswordFromMailosaur(SchoolOnboardPage.java:788)
+  	at com.stepdefinition.TC3_SchoolOnboardStep.theUserFetchAndFromMailosaurPortal(TC3_SchoolOnboardStep.java:58)
+  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+  	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+  	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+  	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+  	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+  	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+  	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+  	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+  	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+  	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+  	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+  	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+  	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+  	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+  	at io.cucumber.junit.PickleRunners$WithStepDescriptions.lambda$run$1(PickleRunners.java:109)
+  	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+  	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+  	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+  	at io.cucumber.junit.PickleRunners$WithStepDescriptions.run(PickleRunners.java:106)
+  	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+  	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+  	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+  	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+  	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+  	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+  	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+  	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+  	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+  	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+  	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+  	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+  	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+  	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+  	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+  	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+  	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+  	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+  	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+  	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+  	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+  	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+  	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+  	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+  	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+  	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+  	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
+  	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
+  	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
+  	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+  	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+  	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+  	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+  	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+  	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+  	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+  	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+  	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+  	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+  	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+  	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+  	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+  	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+  	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+  	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+  	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)}
+
+)
+javax.net.ssl|DEBUG|10|main|2024-03-06 17:50:30.569 IST|Utilities.java:74|the previous server name in SNI (type=host_name (0), value=mailosaur.com) was replaced with (type=host_name (0), value=mailosaur.com)
+javax.net.ssl|DEBUG|10|main|2024-03-06 17:50:30.614 IST|SSLCipher.java:2234|algorithm = ChaCha20-Poly1305:KEYUPDATE
+countdown value = 137438953472
+]]></system-err>
   </testcase>
-  <testcase name="the user logs in to the School Admin Dashboard using the mailed credentials" classname="Invite a new school, onboard the school, and log in to the School Admin Dashboard." time="6.988">
+  <testcase name="the user logs in to the School Admin Dashboard using the mailed credentials" classname="Invite a new school, onboard the school, and log in to the School Admin Dashboard." time="7.527">
     <system-out><![CDATA[  Then the user fetch "username" and "password" from Mailosaur portal                         # com.stepdefinition.TC3_SchoolOnboardStep.theUserFetchAndFromMailosaurPortal(java.lang.String,java.lang.String)
 ]]></system-out>
+    <system-err><![CDATA[javax.net.ssl|DEBUG|13|Keep-Alive-Timer|2024-03-06 17:50:36.133 IST|SSLSocketImpl.java:577|duplex close of SSLSocket
+javax.net.ssl|DEBUG|13|Keep-Alive-Timer|2024-03-06 17:50:36.134 IST|SSLSocketImpl.java:1749|close the underlying socket
+javax.net.ssl|DEBUG|13|Keep-Alive-Timer|2024-03-06 17:50:36.135 IST|SSLSocketImpl.java:1775|close the SSL connection (initiative)
+javax.net.ssl|DEBUG|13|Keep-Alive-Timer|2024-03-06 17:50:36.135 IST|SSLSocketImpl.java:834|close inbound of SSLSocket
+javax.net.ssl|WARNING|13|Keep-Alive-Timer|2024-03-06 17:50:36.136 IST|SSLSocketImpl.java:595|SSLSocket duplex close failed. Debug info only. Exception details: (
+"throwable" : {
+  java.net.SocketException: Socket is closed
+  	at java.base/java.net.Socket.shutdownInput(Socket.java:1756)
+  	at java.base/sun.security.ssl.BaseSSLSocketImpl.shutdownInput(BaseSSLSocketImpl.java:224)
+  	at java.base/sun.security.ssl.SSLSocketImpl.shutdownInput(SSLSocketImpl.java:850)
+  	at java.base/sun.security.ssl.SSLSocketImpl.bruteForceCloseInput(SSLSocketImpl.java:799)
+  	at java.base/sun.security.ssl.SSLSocketImpl.duplexCloseOutput(SSLSocketImpl.java:664)
+  	at java.base/sun.security.ssl.SSLSocketImpl.close(SSLSocketImpl.java:584)
+  	at java.base/sun.net.www.http.HttpClient.closeServer(HttpClient.java:1139)
+  	at java.base/sun.net.www.protocol.https.HttpsClient.closeServer(HttpsClient.java:442)
+  	at java.base/sun.net.www.http.KeepAliveCache.run(KeepAliveCache.java:282)
+  	at java.base/java.lang.Thread.run(Thread.java:1583)
+  	at java.base/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:186)}
+
+)
+]]></system-err>
   </testcase>
-  <testcase name="the user should verify the School Admin Mail-ID on the Onboard page." classname="Invite a new school, onboard the school, and log in to the School Admin Dashboard." time="0.002">
+  <testcase name="the user should verify the School Admin Mail-ID on the Onboard page." classname="Invite a new school, onboard the school, and log in to the School Admin Dashboard." time="0.018">
     <system-out><![CDATA[  And the user logs in to the School Admin Dashboard using the mailed credentials             # com.stepdefinition.TC3_SchoolOnboardStep.theUserLogsInToTheSchoolAdminDashboardUsingTheMailedCredentials()
+&amp#27;[38;5;118;1mNewSchool1004&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="the user onboards the school using the corresponding CSV file" classname="Invite a new school, onboard the school, and log in to the School Admin Dashboard." time="0.002">
+  <testcase name="the user onboards the school using the corresponding CSV file" classname="Invite a new school, onboard the school, and log in to the School Admin Dashboard." time="16.465">
+    <error message="element click intercepted: Element &lt;button class=&quot;Continue-btn submit&quot;&gt;...&lt;/button&gt; is not clickable at point (615, 628). Other element would receive the click: &lt;div class=&quot;swal-overlay swal-overlay--show-modal&quot; tabindex=&quot;-1&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=122.0.6261.94)&#10;Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;&#10;System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.3.1&apos;, java.version: &apos;21.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [34437c2c05a2b01152ddb38385e485b8, clickElement {id=f.529E2EAEF6A0507564440DFD3B50AFB3.d.82325AEFDCCB4E4377E83B68E3BE6777.e.135}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58496}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58496/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on mac (34437c2c05a2b01152ddb38385e485b8)] -&gt; xpath: //button[contains(text(),&apos;Submit&apos;)]]&#10;Session ID: 34437c2c05a2b01152ddb38385e485b8" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <button class="Continue-btn submit">...</button> is not clickable at point (615, 628). Other element would receive the click: <div class="swal-overlay swal-overlay--show-modal" tabindex="-1">...</div>
+  (Session info: chrome=122.0.6261.94)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34437c2c05a2b01152ddb38385e485b8, clickElement {id=f.529E2EAEF6A0507564440DFD3B50AFB3.d.82325AEFDCCB4E4377E83B68E3BE6777.e.135}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58496}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58496/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (34437c2c05a2b01152ddb38385e485b8)] -> xpath: //button[contains(text(),'Submit')]]
+Session ID: 34437c2c05a2b01152ddb38385e485b8
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.click(Unknown Source)
+	at com.base.BaseClass.clickWithRetry(BaseClass.java:492)
+	at com.pages.SchoolOnboardPage.OnboardSchoolUsingCSVFile(SchoolOnboardPage.java:1229)
+	at com.stepdefinition.TC3_SchoolOnboardStep.theUserOnboardsTheSchoolUsingTheCorrespondingCSVFile(TC3_SchoolOnboardStep.java:90)
+	at ✽.the user onboards the school using the corresponding CSV file(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC2_SchoolAdminOnboard.feature:12)
+]]></error>
     <system-out><![CDATA[  Then the user should verify the School Admin Mail-ID on the Onboard page.                   # com.stepdefinition.TC3_SchoolOnboardStep.theUserShouldVerifyTheSchoolAdminMailIDOnTheOnboardPage()
+Matriculation
+1000001
+English
+Mullai
+9001100001
+Web1001
+12.1234
+19.1872
+Address
+Address
+India
+Tamil Nadu
+Chennai
+6000
+Row 1 deleted successfully.
 ]]></system-out>
   </testcase>
-  <testcase name="the user should verify the &quot;Successfully&quot; popup message in the School Admin Dashboard." classname="Invite a new school, onboard the school, and log in to the School Admin Dashboard." time="0.001">
+  <testcase name="the user should verify the &quot;Successfully&quot; popup message in the School Admin Dashboard." classname="Invite a new school, onboard the school, and log in to the School Admin Dashboard." time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
     <system-out><![CDATA[  And the user onboards the school using the corresponding CSV file                           # com.stepdefinition.TC3_SchoolOnboardStep.theUserOnboardsTheSchoolUsingTheCorrespondingCSVFile()
+      org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="Continue-btn submit">...</button> is not clickable at point (615, 628). Other element would receive the click: <div class="swal-overlay swal-overlay--show-modal" tabindex="-1">...</div>
+  (Session info: chrome=122.0.6261.94)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34437c2c05a2b01152ddb38385e485b8, clickElement {id=f.529E2EAEF6A0507564440DFD3B50AFB3.d.82325AEFDCCB4E4377E83B68E3BE6777.e.135}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58496}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58496/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (34437c2c05a2b01152ddb38385e485b8)] -> xpath: //button[contains(text(),'Submit')]]
+Session ID: 34437c2c05a2b01152ddb38385e485b8
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.click(Unknown Source)
+	at com.base.BaseClass.clickWithRetry(BaseClass.java:492)
+	at com.pages.SchoolOnboardPage.OnboardSchoolUsingCSVFile(SchoolOnboardPage.java:1229)
+	at com.stepdefinition.TC3_SchoolOnboardStep.theUserOnboardsTheSchoolUsingTheCorrespondingCSVFile(TC3_SchoolOnboardStep.java:90)
+	at ✽.the user onboards the school using the corresponding CSV file(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC2_SchoolAdminOnboard.feature:12)
+
+]]></system-out>
+  </testcase>
+  <testcase name="Invite a new school, onboard the school, and log in to the School Admin Dashboard." classname="Generate a new school invite from Super Admin Dashboard. Onboard the new school and log in to School Admin Dashboard." time="0.723">
+    <error message="element click intercepted: Element &lt;button class=&quot;Continue-btn submit&quot;&gt;...&lt;/button&gt; is not clickable at point (615, 628). Other element would receive the click: &lt;div class=&quot;swal-overlay swal-overlay--show-modal&quot; tabindex=&quot;-1&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=122.0.6261.94)&#10;Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;&#10;System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.3.1&apos;, java.version: &apos;21.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [34437c2c05a2b01152ddb38385e485b8, clickElement {id=f.529E2EAEF6A0507564440DFD3B50AFB3.d.82325AEFDCCB4E4377E83B68E3BE6777.e.135}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58496}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58496/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on mac (34437c2c05a2b01152ddb38385e485b8)] -&gt; xpath: //button[contains(text(),&apos;Submit&apos;)]]&#10;Session ID: 34437c2c05a2b01152ddb38385e485b8" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <button class="Continue-btn submit">...</button> is not clickable at point (615, 628). Other element would receive the click: <div class="swal-overlay swal-overlay--show-modal" tabindex="-1">...</div>
+  (Session info: chrome=122.0.6261.94)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34437c2c05a2b01152ddb38385e485b8, clickElement {id=f.529E2EAEF6A0507564440DFD3B50AFB3.d.82325AEFDCCB4E4377E83B68E3BE6777.e.135}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58496}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58496/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (34437c2c05a2b01152ddb38385e485b8)] -> xpath: //button[contains(text(),'Submit')]]
+Session ID: 34437c2c05a2b01152ddb38385e485b8
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.click(Unknown Source)
+	at com.base.BaseClass.clickWithRetry(BaseClass.java:492)
+	at com.pages.SchoolOnboardPage.OnboardSchoolUsingCSVFile(SchoolOnboardPage.java:1229)
+	at com.stepdefinition.TC3_SchoolOnboardStep.theUserOnboardsTheSchoolUsingTheCorrespondingCSVFile(TC3_SchoolOnboardStep.java:90)
+	at ✽.the user onboards the school using the corresponding CSV file(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC2_SchoolAdminOnboard.feature:12)
+]]></error>
+    <system-out><![CDATA[  Then the user should verify the "Successfully" popup message in the School Admin Dashboard. # com.stepdefinition.TC3_SchoolOnboardStep.theUserShouldVerifyThePopupMessageInTheSchoolAdminDashboard(java.lang.String)
+
+    Embedding Failed Scenario Screenshot [image/png 239993 bytes]
+
+]]></system-out>
+  </testcase>
+  <testcase name="the user is logged into the School Admin Dashboard" classname="School Admin generates the timetable for all the classes in the newly onboarded school" time="0.001">
+    <system-out><![CDATA[
+@Timetable
+Scenario: School Admin generates the timetable for all the classes in the newly onboarded school  # src/test/resources/Features/TC3_TimetableConfiguration.feature:7
+]]></system-out>
+  </testcase>
+  <testcase name="the user configures subject hours in the &quot;Subject Mapping&quot; page" classname="School Admin generates the timetable for all the classes in the newly onboarded school" time="60.084">
+    <error message="Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.cssSelector: #schoolManagementSection&apos; (tried for 30 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException"><![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.cssSelector: #schoolManagementSection' (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.base.BaseClass.explicitWaitClickable(BaseClass.java:334)
+	at com.pages.TimetableConfigurationPage.ConfigureSubjectHours(TimetableConfigurationPage.java:431)
+	at com.stepdefinition.TC3_TimetableConfigurationStep.theUserConfiguresSubjectHoursInThePage(TC3_TimetableConfigurationStep.java:35)
+	at ✽.the user configures subject hours in the "Subject Mapping" page(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC3_TimetableConfiguration.feature:8)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#schoolManagementSection"}
+  (Session info: chrome=122.0.6261.94)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34437c2c05a2b01152ddb38385e485b8, findElement {using=css selector, value=#schoolManagementSection}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58496}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58496/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 34437c2c05a2b01152ddb38385e485b8
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at com.base.BaseClass.explicitWaitClickable(BaseClass.java:334)
+	at com.pages.TimetableConfigurationPage.ConfigureSubjectHours(TimetableConfigurationPage.java:431)
+	at com.stepdefinition.TC3_TimetableConfigurationStep.theUserConfiguresSubjectHoursInThePage(TC3_TimetableConfigurationStep.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$WithStepDescriptions.lambda$run$1(PickleRunners.java:109)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$WithStepDescriptions.run(PickleRunners.java:106)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
+	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
+	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></error>
+    <system-out><![CDATA[  Given the user is logged into the School Admin Dashboard                                        # com.stepdefinition.TC3_TimetableConfigurationStep.theUserIsLoggedIntoTheSchoolAdminDashboard()
+]]></system-out>
+  </testcase>
+  <testcase name="the user configures holiday information for the academic year in the &quot;Manage Calendar&quot; page" classname="School Admin generates the timetable for all the classes in the newly onboarded school" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
+    <system-out><![CDATA[  When the user configures subject hours in the "Subject Mapping" page                            # com.stepdefinition.TC3_TimetableConfigurationStep.theUserConfiguresSubjectHoursInThePage(java.lang.String)
+      org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.cssSelector: #schoolManagementSection' (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.base.BaseClass.explicitWaitClickable(BaseClass.java:334)
+	at com.pages.TimetableConfigurationPage.ConfigureSubjectHours(TimetableConfigurationPage.java:431)
+	at com.stepdefinition.TC3_TimetableConfigurationStep.theUserConfiguresSubjectHoursInThePage(TC3_TimetableConfigurationStep.java:35)
+	at ✽.the user configures subject hours in the "Subject Mapping" page(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC3_TimetableConfiguration.feature:8)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#schoolManagementSection"}
+  (Session info: chrome=122.0.6261.94)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34437c2c05a2b01152ddb38385e485b8, findElement {using=css selector, value=#schoolManagementSection}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58496}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58496/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 34437c2c05a2b01152ddb38385e485b8
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at com.base.BaseClass.explicitWaitClickable(BaseClass.java:334)
+	at com.pages.TimetableConfigurationPage.ConfigureSubjectHours(TimetableConfigurationPage.java:431)
+	at com.stepdefinition.TC3_TimetableConfigurationStep.theUserConfiguresSubjectHoursInThePage(TC3_TimetableConfigurationStep.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$WithStepDescriptions.lambda$run$1(PickleRunners.java:109)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$WithStepDescriptions.run(PickleRunners.java:106)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
+	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
+	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
+]]></system-out>
+  </testcase>
+  <testcase name="the user navigates to the &quot;Manage Timetable&quot; page in the School Admin Dashboard" classname="School Admin generates the timetable for all the classes in the newly onboarded school" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
+    <system-out><![CDATA[  And the user configures holiday information for the academic year in the "Manage Calendar" page # com.stepdefinition.TC3_TimetableConfigurationStep.theUserConfiguresHolidayInformationForTheAcademicYearInThePage(java.lang.String)
+]]></system-out>
+  </testcase>
+  <testcase name="the user enters all the required credentials for creating the timetable" classname="School Admin generates the timetable for all the classes in the newly onboarded school" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
+    <system-out><![CDATA[  And the user navigates to the "Manage Timetable" page in the School Admin Dashboard             # com.stepdefinition.TC3_TimetableConfigurationStep.theUserNavigatesToThePageInTheSchoolAdminDashboard(java.lang.String)
+]]></system-out>
+  </testcase>
+  <testcase name="the user configures and publishes the timetable" classname="School Admin generates the timetable for all the classes in the newly onboarded school" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
+    <system-out><![CDATA[  And the user enters all the required credentials for creating the timetable                     # com.stepdefinition.TC3_TimetableConfigurationStep.theUserEntersAllTheRequiredCredentialsForCreatingTheTimetable()
+]]></system-out>
+  </testcase>
+  <testcase name="the user verifies the successful popup message" classname="School Admin generates the timetable for all the classes in the newly onboarded school" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
+    <system-out><![CDATA[  And the user configures and publishes the timetable                                             # com.stepdefinition.TC3_TimetableConfigurationStep.theUserConfiguresAndPublishesTheTimetable()
+]]></system-out>
+  </testcase>
+  <testcase name="School Admin generates the timetable for all the classes in the newly onboarded school" classname="Timetable generation for all the classes in the newly onboarded school" time="0.71">
+    <error message="Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.cssSelector: #schoolManagementSection&apos; (tried for 30 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException"><![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.cssSelector: #schoolManagementSection' (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.base.BaseClass.explicitWaitClickable(BaseClass.java:334)
+	at com.pages.TimetableConfigurationPage.ConfigureSubjectHours(TimetableConfigurationPage.java:431)
+	at com.stepdefinition.TC3_TimetableConfigurationStep.theUserConfiguresSubjectHoursInThePage(TC3_TimetableConfigurationStep.java:35)
+	at ✽.the user configures subject hours in the "Subject Mapping" page(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC3_TimetableConfiguration.feature:8)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#schoolManagementSection"}
+  (Session info: chrome=122.0.6261.94)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34437c2c05a2b01152ddb38385e485b8, findElement {using=css selector, value=#schoolManagementSection}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58496}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58496/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 34437c2c05a2b01152ddb38385e485b8
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at com.base.BaseClass.explicitWaitClickable(BaseClass.java:334)
+	at com.pages.TimetableConfigurationPage.ConfigureSubjectHours(TimetableConfigurationPage.java:431)
+	at com.stepdefinition.TC3_TimetableConfigurationStep.theUserConfiguresSubjectHoursInThePage(TC3_TimetableConfigurationStep.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$WithStepDescriptions.lambda$run$1(PickleRunners.java:109)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$WithStepDescriptions.run(PickleRunners.java:106)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
+	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
+	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></error>
+    <system-out><![CDATA[  Then the user verifies the successful popup message                                             # com.stepdefinition.TC3_TimetableConfigurationStep.theUserVerifiesTheSuccessfulPopupMessage()
+
+    Embedding Failed Scenario Screenshot [image/png 239993 bytes]
+
 ]]></system-out>
   </testcase>
   <testcase name="the user is logged into the School Admin Dashboard" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.001">
-    <system-out><![CDATA[  Then the user should verify the "Successfully" popup message in the School Admin Dashboard. # com.stepdefinition.TC3_SchoolOnboardStep.theUserShouldVerifyThePopupMessageInTheSchoolAdminDashboard(java.lang.String)
-
+    <system-out><![CDATA[
 @FeeManage
 Scenario: Manage School Fees, Add-On Fees, Fee Discounts       # src/test/resources/Features/TC4_FeeManagement.feature:7
 ]]></system-out>
   </testcase>
-  <testcase name="the user creates new School Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="2.857">
+  <testcase name="the user creates new School Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="60.077">
+    <error message="Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.id: leadManagementSection&apos; (tried for 20 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException"><![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.id: leadManagementSection' (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.base.BaseClass.explicitWaitClickable(BaseClass.java:334)
+	at com.pages.FeeManagementPage.CreatesNewSchoolFees(FeeManagementPage.java:711)
+	at com.stepdefinition.TC4_FeeManagementStep.theUserCreatesNewSchoolFees(TC4_FeeManagementStep.java:20)
+	at ✽.the user creates new School Fees(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC4_FeeManagement.feature:8)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#leadManagementSection"}
+  (Session info: chrome=122.0.6261.94)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34437c2c05a2b01152ddb38385e485b8, findElement {using=id, value=leadManagementSection}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58496}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58496/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 34437c2c05a2b01152ddb38385e485b8
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at com.base.BaseClass.explicitWaitClickable(BaseClass.java:334)
+	at com.pages.FeeManagementPage.CreatesNewSchoolFees(FeeManagementPage.java:711)
+	at com.stepdefinition.TC4_FeeManagementStep.theUserCreatesNewSchoolFees(TC4_FeeManagementStep.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$WithStepDescriptions.lambda$run$1(PickleRunners.java:109)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$WithStepDescriptions.run(PickleRunners.java:106)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
+	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
+	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></error>
     <system-out><![CDATA[  Given the user is logged into the School Admin Dashboard     # com.stepdefinition.TC3_TimetableConfigurationStep.theUserIsLoggedIntoTheSchoolAdminDashboard()
-Exam Fees
-10000
-Class 1th
-4
-25
-Nov
-2028
-Exam Fees
-10000
 ]]></system-out>
   </testcase>
-  <testcase name="the user should see the created School Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.552">
+  <testcase name="the user should see the created School Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
     <system-out><![CDATA[  When the user creates new School Fees                        # com.stepdefinition.TC4_FeeManagementStep.theUserCreatesNewSchoolFees()
-&amp#27;[38;5;118;1mMandatory fee created successfully&amp#27;[0m
+      org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.id: leadManagementSection' (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.base.BaseClass.explicitWaitClickable(BaseClass.java:334)
+	at com.pages.FeeManagementPage.CreatesNewSchoolFees(FeeManagementPage.java:711)
+	at com.stepdefinition.TC4_FeeManagementStep.theUserCreatesNewSchoolFees(TC4_FeeManagementStep.java:20)
+	at ✽.the user creates new School Fees(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC4_FeeManagement.feature:8)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#leadManagementSection"}
+  (Session info: chrome=122.0.6261.94)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34437c2c05a2b01152ddb38385e485b8, findElement {using=id, value=leadManagementSection}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58496}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58496/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 34437c2c05a2b01152ddb38385e485b8
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at com.base.BaseClass.explicitWaitClickable(BaseClass.java:334)
+	at com.pages.FeeManagementPage.CreatesNewSchoolFees(FeeManagementPage.java:711)
+	at com.stepdefinition.TC4_FeeManagementStep.theUserCreatesNewSchoolFees(TC4_FeeManagementStep.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$WithStepDescriptions.lambda$run$1(PickleRunners.java:109)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$WithStepDescriptions.run(PickleRunners.java:106)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
+	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
+	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
 ]]></system-out>
   </testcase>
-  <testcase name="the user publish the School fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="1.017">
+  <testcase name="the user publish the School fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
     <system-out><![CDATA[  Then the user should see the created School Fees             # com.stepdefinition.TC4_FeeManagementStep.theUserShouldSeeTheCreatedSchoolFees()
-1
 ]]></system-out>
   </testcase>
-  <testcase name="the user creates new Add-On Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="6.368">
+  <testcase name="the user creates new Add-On Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
     <system-out><![CDATA[  And the user publish the School fees                         # com.stepdefinition.TC4_FeeManagementStep.theUserPublishTheSchoolFees()
-Yoga Fees
-1000
-25
-Nov
-2028
-Handling Exception - Attempt 1
 ]]></system-out>
   </testcase>
-  <testcase name="the user should see the created Add-On Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.997">
+  <testcase name="the user should see the created Add-On Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
     <system-out><![CDATA[  When the user creates new Add-On Fees                        # com.stepdefinition.TC4_FeeManagementStep.theUserCreatesNewAddOnFees()
-&amp#27;[38;5;118;1mAddon fee created successfully&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="the user creates new Fee Discount" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="3.99">
+  <testcase name="the user creates new Fee Discount" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
     <system-out><![CDATA[  Then the user should see the created Add-On Fees             # com.stepdefinition.TC4_FeeManagementStep.theUserShouldSeeTheCreatedAddOnFees()
-Special Discount
-10
-2500
-25
-Nov
-2028
 ]]></system-out>
   </testcase>
-  <testcase name="the user should see the created Fee Discount" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="1.038">
+  <testcase name="the user should see the created Fee Discount" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
     <system-out><![CDATA[  When the user creates new Fee Discount                       # com.stepdefinition.TC4_FeeManagementStep.theUserCreatesNewFeeDiscount()
-&amp#27;[38;5;118;1mDiscount added successfully&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="the user updates the School Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="1.828">
+  <testcase name="the user updates the School Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
     <system-out><![CDATA[  Then the user should see the created Fee Discount            # com.stepdefinition.TC4_FeeManagementStep.theUserShouldSeeTheCreatedFeeDiscount()
-10
-Exam Fees 1
-10001
-15
-Jan
-2028
-Exam Fees 1
-10001
 ]]></system-out>
   </testcase>
-  <testcase name="the user should see the updated School Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="1.722">
+  <testcase name="the user should see the updated School Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
     <system-out><![CDATA[  When the user updates the School Fees                        # com.stepdefinition.TC4_FeeManagementStep.theUserUpdatesTheSchoolFees()
-&amp#27;[38;5;118;1mFee Updated Successfully&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="the user updates the Add-On Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.002">
+  <testcase name="the user updates the Add-On Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
     <system-out><![CDATA[  Then the user should see the updated School Fees             # com.stepdefinition.TC4_FeeManagementStep.theUserShouldSeeTheUpdatedSchoolFees()
 ]]></system-out>
   </testcase>
-  <testcase name="the user should see the updated Add-On Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.002">
+  <testcase name="the user should see the updated Add-On Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
     <system-out><![CDATA[  When the user updates the Add-On Fees                        # com.stepdefinition.TC4_FeeManagementStep.theUserUpdatesTheAddOnFees()
 ]]></system-out>
   </testcase>
-  <testcase name="the user updates the Fee Discount" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.001">
+  <testcase name="the user updates the Fee Discount" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
     <system-out><![CDATA[  Then the user should see the updated Add-On Fees             # com.stepdefinition.TC4_FeeManagementStep.theUserShouldSeeTheUpdatedAddOnFees()
 ]]></system-out>
   </testcase>
-  <testcase name="the user should see the updated Fee Discount" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.001">
+  <testcase name="the user should see the updated Fee Discount" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
     <system-out><![CDATA[  When the user updates the Fee Discount                       # com.stepdefinition.TC4_FeeManagementStep.theUserUpdatesTheFeeDiscount()
 ]]></system-out>
   </testcase>
-  <testcase name="the user deletes the Fee Discount" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="2.556">
+  <testcase name="the user deletes the Fee Discount" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
     <system-out><![CDATA[  Then the user should see the updated Fee Discount            # com.stepdefinition.TC4_FeeManagementStep.theUserShouldSeeTheUpdatedFeeDiscount()
 ]]></system-out>
   </testcase>
-  <testcase name="the user should verify that the Fee Discount is deleted" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="1.245">
+  <testcase name="the user should verify that the Fee Discount is deleted" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
     <system-out><![CDATA[  When the user deletes the Fee Discount                       # com.stepdefinition.TC4_FeeManagementStep.theUserDeletesTheFeeDiscount()
-&amp#27;[38;5;118;1mFee discount deleted successfully&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="the user deletes the Add-On Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="1.776">
+  <testcase name="the user deletes the Add-On Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
     <system-out><![CDATA[  Then the user should verify that the Fee Discount is deleted # com.stepdefinition.TC4_FeeManagementStep.theUserShouldVerifyThatTheFeeDiscountIsDeleted()
 ]]></system-out>
   </testcase>
-  <testcase name="the user should verify that the Add-On Fee is deleted" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="1.298">
+  <testcase name="the user should verify that the Add-On Fee is deleted" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
     <system-out><![CDATA[  When the user deletes the Add-On Fees                        # com.stepdefinition.TC4_FeeManagementStep.theUserDeletesTheAddOnFees()
-&amp#27;[38;5;118;1mAdd on fee deleted successfully&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="the user deletes the School Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="1.275">
+  <testcase name="the user deletes the School Fees" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
     <system-out><![CDATA[  Then the user should verify that the Add-On Fee is deleted   # com.stepdefinition.TC4_FeeManagementStep.theUserShouldVerifyThatTheAddOnFeeIsDeleted()
 ]]></system-out>
   </testcase>
-  <testcase name="the user should verify that the School Fees are deleted" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.544">
+  <testcase name="the user should verify that the School Fees are deleted" classname="Manage School Fees, Add-On Fees, Fee Discounts" time="0.0">
+    <skipped type="io.cucumber.junit.SkippedThrowable"><![CDATA[io.cucumber.junit.SkippedThrowable: This step is skipped
+]]></skipped>
     <system-out><![CDATA[  When the user deletes the School Fees                        # com.stepdefinition.TC4_FeeManagementStep.theUserDeletesTheSchoolFees()
-&amp#27;[38;5;118;1mFee deleted successfully&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Manage School Fees, Add-On Fees, Fee Discounts" classname="Manage School Fees, Add-On Fees, and Fee Discounts for newly Onboarded School" time="0.738">
+    <error message="Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.id: leadManagementSection&apos; (tried for 20 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException"><![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.id: leadManagementSection' (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.base.BaseClass.explicitWaitClickable(BaseClass.java:334)
+	at com.pages.FeeManagementPage.CreatesNewSchoolFees(FeeManagementPage.java:711)
+	at com.stepdefinition.TC4_FeeManagementStep.theUserCreatesNewSchoolFees(TC4_FeeManagementStep.java:20)
+	at ✽.the user creates new School Fees(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC4_FeeManagement.feature:8)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#leadManagementSection"}
+  (Session info: chrome=122.0.6261.94)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34437c2c05a2b01152ddb38385e485b8, findElement {using=id, value=leadManagementSection}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58496}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58496/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 34437c2c05a2b01152ddb38385e485b8
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at com.base.BaseClass.explicitWaitClickable(BaseClass.java:334)
+	at com.pages.FeeManagementPage.CreatesNewSchoolFees(FeeManagementPage.java:711)
+	at com.stepdefinition.TC4_FeeManagementStep.theUserCreatesNewSchoolFees(TC4_FeeManagementStep.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$WithStepDescriptions.lambda$run$1(PickleRunners.java:109)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$WithStepDescriptions.run(PickleRunners.java:106)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
+	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
+	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></error>
+    <system-out><![CDATA[  Then the user should verify that the School Fees are deleted # com.stepdefinition.TC4_FeeManagementStep.theUserShouldVerifyThatTheSchoolFeesAreDeleted()
+
+    Embedding Failed Scenario Screenshot [image/png 239993 bytes]
+
 ]]></system-out>
   </testcase>
 </testsuite>
