@@ -944,49 +944,48 @@ public class FeeManagementPage extends BaseClass {
 		desiredYear = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 12);
 		System.out.println(desiredYear);
 
-		// Assume 'driver' is your WebDriver instance
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-
-		// Locate the datepicker input field and click on it
-		getDatepickerEditDate().click();
-
-		// Wait for the DateTimePicker widget to be visible
-		WebElement dateTimePickerWidget = wait.until(
-				ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".bootstrap-datetimepicker-widget")));
-
-		WebElement pickerswitch = dateTimePickerWidget.findElement(By.className("picker-switch"));
-		pickerswitch.click();
-
-		WebElement monthSelector = dateTimePickerWidget.findElement(By.className("datepicker-months"));
-		WebElement findElement = monthSelector.findElement(By.className("picker-switch"));
-		findElement.click();
-
-		// Select the desired year
-		WebElement yearSelector = dateTimePickerWidget.findElement(By.className("datepicker-years"));
-
-		WebElement yearOption = yearSelector.findElement(By.xpath("//span[text()='" + desiredYear + "']"));
-
-		explicitWaitClickable(10, yearOption);
-		clickWithMultipleRetry(yearOption, 20, 2000);
-//		clickWithRetry(yearOption);
-
-		// Select the desired month
-
-		WebElement monthOption = monthSelector.findElement(By.xpath("//span[text()='" + desiredMonth + "']"));
-
-		explicitWaitClickable(10, monthOption);
-		clickWithMultipleRetry(monthOption, 20, 2000);
-//		clickWithRetry(monthOption);
-
-		// Select the desired date
-		WebElement dateSelector = dateTimePickerWidget.findElement(By.className("datepicker-days"));
-
-		WebElement dateOption = dateSelector.findElement(By.xpath("//td[text()='" + desiredDate + "']"));
-//				"//td[contains(@class, 'day') and contains(@class, 'weekend') and text()='" + desiredDate + "']"));
-
 		int maxRetries1 = 3;
 		for (int attempt = 1; attempt <= maxRetries1; attempt++) {
 			try {
+
+				// Assume 'driver' is your WebDriver instance
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
+				// Locate the datepicker input field and click on it
+				getDatepickerEditDate().click();
+
+				// Wait for the DateTimePicker widget to be visible
+				WebElement dateTimePickerWidget = wait.until(ExpectedConditions
+						.visibilityOfElementLocated(By.cssSelector(".bootstrap-datetimepicker-widget")));
+
+				WebElement pickerswitch = dateTimePickerWidget.findElement(By.className("picker-switch"));
+				pickerswitch.click();
+
+				WebElement monthSelector = dateTimePickerWidget.findElement(By.className("datepicker-months"));
+				WebElement findElement = monthSelector.findElement(By.className("picker-switch"));
+				findElement.click();
+
+				// Select the desired year
+				WebElement yearSelector = dateTimePickerWidget.findElement(By.className("datepicker-years"));
+
+				WebElement yearOption = yearSelector.findElement(By.xpath("//span[text()='" + desiredYear + "']"));
+
+				explicitWaitClickable(10, yearOption);
+				clickWithMultipleRetry(yearOption, 20, 2000);
+
+				// Select the desired month
+
+				WebElement monthOption = monthSelector.findElement(By.xpath("//span[text()='" + desiredMonth + "']"));
+
+				explicitWaitClickable(10, monthOption);
+				clickWithMultipleRetry(monthOption, 20, 2000);
+
+				// Select the desired date
+				WebElement dateSelector = dateTimePickerWidget.findElement(By.className("datepicker-days"));
+
+				WebElement dateOption = dateSelector.findElement(By.xpath("//td[text()='" + desiredDate + "']"));
+//				"//td[contains(@class, 'day') and contains(@class, 'weekend') and text()='" + desiredDate + "']"));
+
 				explicitWaitClickable(10, dateOption);
 				clickWithMultipleRetry(dateOption, 20, 2000);
 
