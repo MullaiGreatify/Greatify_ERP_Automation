@@ -16,13 +16,13 @@ import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(tags = "@SchoolOnboard or @FeeManage", stepNotifications = true, dryRun = (false), monochrome = true, snippets = SnippetType.CAMELCASE, plugin = {
+@CucumberOptions(tags = "@SchoolOnboard or @Timetable or @FeeManage", stepNotifications = true, dryRun = (false), monochrome = true, snippets = SnippetType.CAMELCASE, plugin = {
 		"pretty", "html:target//output.html",
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }, features = "src/test/resources", glue = "com.stepdefinition")
-public class TestRunner extends BaseClass{
+public class TestRunner extends BaseClass {
 
-	//@SchoolOnboard or @TimetableConfiguration or @FeeManage
-	
+	// @SchoolOnboard or @TimetableConfiguration or @FeeManage
+
 	@AfterClass
 	public static void afterClass() throws FileNotFoundException, IOException {
 
@@ -32,7 +32,6 @@ public class TestRunner extends BaseClass{
 	}
 
 }
-
 
 /*
  * Allure Report Plugin: io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm Extent
