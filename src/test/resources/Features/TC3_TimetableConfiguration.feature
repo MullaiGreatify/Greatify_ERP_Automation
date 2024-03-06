@@ -1,4 +1,4 @@
-@TimetableConfiguration
+@Timetable
 Feature: Timetable generation for all the classes in the newly onboarded school
 
   Background: 

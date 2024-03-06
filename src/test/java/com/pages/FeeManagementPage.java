@@ -881,7 +881,6 @@ public class FeeManagementPage extends BaseClass {
 			} catch (StaleElementReferenceException e) {
 				System.out.println("Exception occurred: " + e.getMessage() + attempt);
 				e.printStackTrace();
-//				System.out.println("Handling stale element reference - Attempt " + attempt);
 				Thread.sleep(500);
 			}
 		}
@@ -917,7 +916,6 @@ public class FeeManagementPage extends BaseClass {
 			} catch (Exception e) {
 				System.out.println("Exception occurred: " + e.getMessage() + attempt);
 				e.printStackTrace();
-//				System.out.println("Handling stale element reference - Attempt " + attempt);
 				Thread.sleep(500);
 			}
 		}
@@ -985,12 +983,21 @@ public class FeeManagementPage extends BaseClass {
 
 		WebElement dateOption = dateSelector.findElement(By.xpath("//td[text()='" + desiredDate + "']"));
 //				"//td[contains(@class, 'day') and contains(@class, 'weekend') and text()='" + desiredDate + "']"));
-		
-				
 
-		explicitWaitClickable(10, dateOption);
-		clickWithMultipleRetry(dateOption, 20, 2000);
-//		clickWithRetry(dateOption);
+		int maxRetries1 = 3;
+		for (int attempt = 1; attempt <= maxRetries1; attempt++) {
+			try {
+				explicitWaitClickable(10, dateOption);
+				clickWithMultipleRetry(dateOption, 20, 2000);
+
+				break;
+
+			} catch (Exception e) {
+				System.out.println("Exception occurred: " + e.getMessage() + attempt);
+				e.printStackTrace();
+				Thread.sleep(500);
+			}
+		}
 
 		/**
 		 * GST Radio Button
@@ -1395,7 +1402,10 @@ public class FeeManagementPage extends BaseClass {
 				clickWithRetry(deleteBtn);
 
 			} catch (Exception e) {
-				System.out.println("Handling stale element reference for delete button");
+
+				System.out.println("Exception occurred: " + e.getMessage());
+				e.printStackTrace();
+
 			}
 		}
 
