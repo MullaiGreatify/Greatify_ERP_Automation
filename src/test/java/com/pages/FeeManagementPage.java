@@ -908,7 +908,6 @@ public class FeeManagementPage extends BaseClass {
 					WebElement editButton = getTable().findElement(By.cssSelector(".edit_text.edit_year"));
 					explicitWaitClickable(10, editButton);
 					clickWithRetry(editButton);
-
 				}
 
 				break;
@@ -970,12 +969,16 @@ public class FeeManagementPage extends BaseClass {
 
 				WebElement yearOption = yearSelector.findElement(By.xpath("//span[text()='" + desiredYear + "']"));
 
-				explicitWaitClickable(10, yearOption);
-				clickWithMultipleRetry(yearOption, 20, 2000);
+				yearOption.click();
+
+//				explicitWaitClickable(10, yearOption);
+//				clickWithMultipleRetry(yearOption, 20, 2000);
 
 				// Select the desired month
 
 				WebElement monthOption = monthSelector.findElement(By.xpath("//span[text()='" + desiredMonth + "']"));
+
+				monthOption.click();
 
 				explicitWaitClickable(10, monthOption);
 				clickWithMultipleRetry(monthOption, 20, 2000);
@@ -986,8 +989,10 @@ public class FeeManagementPage extends BaseClass {
 				WebElement dateOption = dateSelector.findElement(By.xpath("//td[text()='" + desiredDate + "']"));
 //				"//td[contains(@class, 'day') and contains(@class, 'weekend') and text()='" + desiredDate + "']"));
 
-				explicitWaitClickable(10, dateOption);
-				clickWithMultipleRetry(dateOption, 20, 2000);
+				dateOption.click();
+
+//				explicitWaitClickable(10, dateOption);
+//				clickWithMultipleRetry(dateOption, 20, 2000);
 
 				break;
 
