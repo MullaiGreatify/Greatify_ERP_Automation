@@ -965,34 +965,34 @@ public class FeeManagementPage extends BaseClass {
 				findElement.click();
 
 				// Select the desired year
-//				WebElement yearSelector = dateTimePickerWidget.findElement(By.className("datepicker-years"));
-//
-//				WebElement yearOption = yearSelector.findElement(By.xpath("//span[text()='" + desiredYear + "']"));
-//
+
+				WebElement yearSelector = dateTimePickerWidget.findElement(By.className("datepicker-years"));
+
+				WebElement yearOption = yearSelector.findElement(By.xpath("//span[text()='" + desiredYear + "']"));
+
 //				yearOption.click();
 
-//				explicitWaitClickable(10, yearOption);
-//				clickWithMultipleRetry(yearOption, 20, 2000);
+				explicitWaitClickable(10, yearOption);
+				clickWithMultipleRetry(yearOption, 20, 2000);
 
 				// Select the desired month
 
 				WebElement monthOption = monthSelector.findElement(By.xpath("//span[text()='" + desiredMonth + "']"));
 
-				monthOption.click();
+//				monthOption.click();
 
-//				explicitWaitClickable(10, monthOption);
-//				clickWithMultipleRetry(monthOption, 20, 2000);
+				explicitWaitClickable(10, monthOption);
+				clickWithMultipleRetry(monthOption, 20, 2000);
 
 				// Select the desired date
 				WebElement dateSelector = dateTimePickerWidget.findElement(By.className("datepicker-days"));
 
 				WebElement dateOption = dateSelector.findElement(By.xpath("//td[text()='" + desiredDate + "']"));
-//				"//td[contains(@class, 'day') and contains(@class, 'weekend') and text()='" + desiredDate + "']"));
 
-				dateOption.click();
+//				dateOption.click();
 
-//				explicitWaitClickable(10, dateOption);
-//				clickWithMultipleRetry(dateOption, 20, 2000);
+				explicitWaitClickable(10, dateOption);
+				clickWithMultipleRetry(dateOption, 20, 2000);
 
 				break;
 
