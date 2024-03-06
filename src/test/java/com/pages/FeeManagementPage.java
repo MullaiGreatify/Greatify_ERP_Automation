@@ -965,11 +965,11 @@ public class FeeManagementPage extends BaseClass {
 				findElement.click();
 
 				// Select the desired year
-				WebElement yearSelector = dateTimePickerWidget.findElement(By.className("datepicker-years"));
-
-				WebElement yearOption = yearSelector.findElement(By.xpath("//span[text()='" + desiredYear + "']"));
-
-				yearOption.click();
+//				WebElement yearSelector = dateTimePickerWidget.findElement(By.className("datepicker-years"));
+//
+//				WebElement yearOption = yearSelector.findElement(By.xpath("//span[text()='" + desiredYear + "']"));
+//
+//				yearOption.click();
 
 //				explicitWaitClickable(10, yearOption);
 //				clickWithMultipleRetry(yearOption, 20, 2000);
