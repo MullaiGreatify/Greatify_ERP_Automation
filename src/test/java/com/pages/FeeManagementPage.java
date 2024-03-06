@@ -980,8 +980,8 @@ public class FeeManagementPage extends BaseClass {
 
 				monthOption.click();
 
-				explicitWaitClickable(10, monthOption);
-				clickWithMultipleRetry(monthOption, 20, 2000);
+//				explicitWaitClickable(10, monthOption);
+//				clickWithMultipleRetry(monthOption, 20, 2000);
 
 				// Select the desired date
 				WebElement dateSelector = dateTimePickerWidget.findElement(By.className("datepicker-days"));
