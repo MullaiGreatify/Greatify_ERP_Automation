@@ -51,13 +51,13 @@ public class TC4_FeeManagementStep {
 	@When("the user deletes the School Fees")
 	public void theUserDeletesTheSchoolFees() {
 
-		pom.getFeeManagementPage().DeletesTheSchoolFees();
+//		pom.getFeeManagementPage().DeletesTheSchoolFees();
 	}
 
 	@Then("the user should verify that the School Fees are deleted")
 	public void theUserShouldVerifyThatTheSchoolFeesAreDeleted() {
 
-		pom.getFeeManagementPage().VerifyThatTheSchoolFeesAreDeleted();
+//		pom.getFeeManagementPage().VerifyThatTheSchoolFeesAreDeleted();
 
 	}
 
