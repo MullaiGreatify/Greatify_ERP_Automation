@@ -696,7 +696,7 @@ public class SchoolOnboardPage extends BaseClass {
 	public void GeneratesNewSchoolProfileInvite() throws FileNotFoundException, IOException, CsvException {
 
 		explicitWaitClickable(20, getBtnInviteSchool());
-		clickWithRetry(getBtnInviteSchool());
+		clickWithMultipleRetry(getBtnInviteSchool(), 20, 2000);
 
 //		scanner = new Scanner(System.in);
 //		System.out.println("Enter the row number:");
