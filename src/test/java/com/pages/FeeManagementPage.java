@@ -943,7 +943,7 @@ public class FeeManagementPage extends BaseClass {
 		desiredYear = readSpecificCell(getProjectPath() + getPropertyFileValue("manageFee"), rowNum, 12);
 		System.out.println(desiredYear);
 
-		int maxRetries1 = 3;
+		int maxRetries1 = 5;
 		for (int attempt = 1; attempt <= maxRetries1; attempt++) {
 			try {
 
@@ -970,16 +970,12 @@ public class FeeManagementPage extends BaseClass {
 
 				WebElement yearOption = yearSelector.findElement(By.xpath("//span[text()='" + desiredYear + "']"));
 
-//				yearOption.click();
-
 				explicitWaitClickable(10, yearOption);
 				clickWithMultipleRetry(yearOption, 20, 2000);
 
 				// Select the desired month
 
 				WebElement monthOption = monthSelector.findElement(By.xpath("//span[text()='" + desiredMonth + "']"));
-
-//				monthOption.click();
 
 				explicitWaitClickable(10, monthOption);
 				clickWithMultipleRetry(monthOption, 20, 2000);
@@ -988,8 +984,6 @@ public class FeeManagementPage extends BaseClass {
 				WebElement dateSelector = dateTimePickerWidget.findElement(By.className("datepicker-days"));
 
 				WebElement dateOption = dateSelector.findElement(By.xpath("//td[text()='" + desiredDate + "']"));
-
-//				dateOption.click();
 
 				explicitWaitClickable(10, dateOption);
 				clickWithMultipleRetry(dateOption, 20, 2000);
