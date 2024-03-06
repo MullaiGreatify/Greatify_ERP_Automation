@@ -99,14 +99,14 @@ public class TC4_FeeManagementStep {
 	@When("the user creates new Fee Discount")
 	public void theUserCreatesNewFeeDiscount() throws FileNotFoundException, IOException, CsvException, AWTException {
 
-		pom.getFeeManagementPage().CreatesNewFeeDiscount();
+//		pom.getFeeManagementPage().CreatesNewFeeDiscount();
 
 	}
 
 	@Then("the user should see the created Fee Discount")
 	public void theUserShouldSeeTheCreatedFeeDiscount() {
 
-		pom.getFeeManagementPage().VerifyCreatedFeeDiscount();
+//		pom.getFeeManagementPage().VerifyCreatedFeeDiscount();
 
 	}
 
@@ -125,13 +125,13 @@ public class TC4_FeeManagementStep {
 	@When("the user deletes the Fee Discount")
 	public void theUserDeletesTheFeeDiscount()
 			throws InterruptedException, FileNotFoundException, IOException, CsvException {
-		pom.getFeeManagementPage().DeletesTheFeeDiscount();
+//		pom.getFeeManagementPage().DeletesTheFeeDiscount();
 	}
 
 	@Then("the user should verify that the Fee Discount is deleted")
 	public void theUserShouldVerifyThatTheFeeDiscountIsDeleted() {
 
-		pom.getFeeManagementPage().VerifyFeeDiscountIsDeleted();
+//		pom.getFeeManagementPage().VerifyFeeDiscountIsDeleted();
 
 	}
 

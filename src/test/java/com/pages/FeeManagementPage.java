@@ -993,7 +993,7 @@ public class FeeManagementPage extends BaseClass {
 
 			} catch (Exception e) {
 				System.out.println("Exception occurred: " + e.getMessage() + attempt);
-				e.printStackTrace();
+//				e.printStackTrace();
 				Thread.sleep(500);
 			}
 		}
