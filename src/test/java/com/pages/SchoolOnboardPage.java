@@ -834,19 +834,19 @@ public class SchoolOnboardPage extends BaseClass {
 //		implicitwait(30);
 //		maxWindow();
 
-		enterUrl(schoolAdminURL);
+//		enterUrl(schoolAdminURL);
 
-//		enterUrl("https://abcd071.heycampus.in/school/login");
+		enterUrl("https://abcd071.heycampus.in/school/login");
 
 		explicitWaitClickable(10, getUserID());
 		clickWithRetry(getUserID());
-		EnterInTextbox(getUserID(), schoolID);
-//		EnterInTextbox(getUserID(), "HCSCHOOL0413");
+//		EnterInTextbox(getUserID(), schoolID);
+		EnterInTextbox(getUserID(), "HCSCHOOL0413");
 
 		explicitWaitClickable(10, getUserPassword());
 		clickWithRetry(getUserPassword());
-		EnterInTextbox(getUserPassword(), schoolPassword);
-//		EnterInTextbox(getUserPassword(), "9#69PGCPQ74");
+//		EnterInTextbox(getUserPassword(), schoolPassword);
+		EnterInTextbox(getUserPassword(), "9#69PGCPQ74");
 
 		explicitWaitClickable(10, getBtnLoginSA());
 		clickWithRetry(getBtnLoginSA());
