@@ -9,7 +9,7 @@ import com.pagemanager.PageObjectManager;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class TC2_TeacherInformationStep extends BaseClass{
+public class TC0_TeacherInformationStep extends BaseClass{
 
 	PageObjectManager pom = new PageObjectManager();
 

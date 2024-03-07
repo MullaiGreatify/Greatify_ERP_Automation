@@ -10,7 +10,7 @@ import com.pagemanager.PageObjectManager;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class TC5_ManageTransport {
+public class TC4_ManageTransport {
 
 	PageObjectManager pom = new PageObjectManager();
 

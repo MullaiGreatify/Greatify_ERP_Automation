@@ -24,7 +24,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.qameta.allure.Step;
 
-public class TC1_StudentInformationStep extends BaseClass {
+public class TC0_StudentInformationStep extends BaseClass {
 
 	PageObjectManager pom = new PageObjectManager();
 

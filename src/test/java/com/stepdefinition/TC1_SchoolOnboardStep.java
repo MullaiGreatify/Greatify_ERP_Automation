@@ -15,7 +15,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class TC3_SchoolOnboardStep extends BaseClass {
+public class TC1_SchoolOnboardStep extends BaseClass {
 
 	PageObjectManager pom = new PageObjectManager();
 

@@ -10,7 +10,7 @@ import com.pagemanager.PageObjectManager;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class TC4_FeeManagementStep {
+public class TC3_FeeManagementStep {
 
 	PageObjectManager pom = new PageObjectManager();
 

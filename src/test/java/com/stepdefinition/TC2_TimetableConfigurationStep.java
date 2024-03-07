@@ -12,7 +12,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class TC3_TimetableConfigurationStep extends BaseClass {
+public class TC2_TimetableConfigurationStep extends BaseClass {
 
 	PageObjectManager pom = new PageObjectManager();
 
