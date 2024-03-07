@@ -1,72 +1,38 @@
 -------------------------------------------------------------------------------
 Test set: com.runner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 39, Failures: 0, Errors: 6, Skipped: 24, Time elapsed: 236.7 s <<< FAILURE! -- in com.runner.TestRunner
-Invite a new school, onboard the school, and log in to the School Admin Dashboard..the user onboards the school using the corresponding CSV file -- Time elapsed: 16.47 s <<< ERROR!
-org.openqa.selenium.ElementClickInterceptedException: 
-element click intercepted: Element <button class="Continue-btn submit">...</button> is not clickable at point (615, 628). Other element would receive the click: <div class="swal-overlay swal-overlay--show-modal" tabindex="-1">...</div>
-  (Session info: chrome=122.0.6261.94)
+Tests run: 39, Failures: 0, Errors: 6, Skipped: 28, Time elapsed: 245.0 s <<< FAILURE! -- in com.runner.TestRunner
+Invite a new school, onboard the school, and log in to the School Admin Dashboard..the user should verify the "Success" popup message in the Super Admin Dashboard. -- Time elapsed: 101.5 s <<< ERROR!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on mac (41664dd722281831ac6acfe1556570bd)] -> xpath: //button[contains(.,'OK')]] (tried for 100 second(s) with 500 milliseconds interval)
 Build info: version: '4.16.1', revision: '9b4c83354e'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [34437c2c05a2b01152ddb38385e485b8, clickElement {id=f.529E2EAEF6A0507564440DFD3B50AFB3.d.82325AEFDCCB4E4377E83B68E3BE6777.e.135}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58496}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58496/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (34437c2c05a2b01152ddb38385e485b8)] -> xpath: //button[contains(text(),'Submit')]]
-Session ID: 34437c2c05a2b01152ddb38385e485b8
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy26.click(Unknown Source)
-	at com.base.BaseClass.clickWithRetry(BaseClass.java:492)
-	at com.pages.SchoolOnboardPage.OnboardSchoolUsingCSVFile(SchoolOnboardPage.java:1229)
-	at com.stepdefinition.TC3_SchoolOnboardStep.theUserOnboardsTheSchoolUsingTheCorrespondingCSVFile(TC3_SchoolOnboardStep.java:90)
-	at ✽.the user onboards the school using the corresponding CSV file(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC2_SchoolAdminOnboard.feature:12)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51402}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51402/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 41664dd722281831ac6acfe1556570bd
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.base.BaseClass.explicitWaitClickable(BaseClass.java:334)
+	at com.pages.SchoolOnboardPage.VerifySuccessMessageInSuperAdmin(SchoolOnboardPage.java:768)
+	at com.stepdefinition.TC3_SchoolOnboardStep.theUserShouldVerifyThePopupMessageInTheSuperAdminDashboard(TC3_SchoolOnboardStep.java:50)
+	at ✽.the user should verify the "Success" popup message in the Super Admin Dashboard.(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC2_SchoolAdminOnboard.feature:8)
 
-Generate a new school invite from Super Admin Dashboard. Onboard the new school and log in to School Admin Dashboard..Invite a new school, onboard the school, and log in to the School Admin Dashboard. -- Time elapsed: 0.723 s <<< ERROR!
-org.openqa.selenium.ElementClickInterceptedException: 
-element click intercepted: Element <button class="Continue-btn submit">...</button> is not clickable at point (615, 628). Other element would receive the click: <div class="swal-overlay swal-overlay--show-modal" tabindex="-1">...</div>
-  (Session info: chrome=122.0.6261.94)
+Generate a new school invite from Super Admin Dashboard. Onboard the new school and log in to School Admin Dashboard..Invite a new school, onboard the school, and log in to the School Admin Dashboard. -- Time elapsed: 0.789 s <<< ERROR!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on mac (41664dd722281831ac6acfe1556570bd)] -> xpath: //button[contains(.,'OK')]] (tried for 100 second(s) with 500 milliseconds interval)
 Build info: version: '4.16.1', revision: '9b4c83354e'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [34437c2c05a2b01152ddb38385e485b8, clickElement {id=f.529E2EAEF6A0507564440DFD3B50AFB3.d.82325AEFDCCB4E4377E83B68E3BE6777.e.135}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58496}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58496/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (34437c2c05a2b01152ddb38385e485b8)] -> xpath: //button[contains(text(),'Submit')]]
-Session ID: 34437c2c05a2b01152ddb38385e485b8
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy26.click(Unknown Source)
-	at com.base.BaseClass.clickWithRetry(BaseClass.java:492)
-	at com.pages.SchoolOnboardPage.OnboardSchoolUsingCSVFile(SchoolOnboardPage.java:1229)
-	at com.stepdefinition.TC3_SchoolOnboardStep.theUserOnboardsTheSchoolUsingTheCorrespondingCSVFile(TC3_SchoolOnboardStep.java:90)
-	at ✽.the user onboards the school using the corresponding CSV file(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC2_SchoolAdminOnboard.feature:12)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51402}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51402/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 41664dd722281831ac6acfe1556570bd
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.base.BaseClass.explicitWaitClickable(BaseClass.java:334)
+	at com.pages.SchoolOnboardPage.VerifySuccessMessageInSuperAdmin(SchoolOnboardPage.java:768)
+	at com.stepdefinition.TC3_SchoolOnboardStep.theUserShouldVerifyThePopupMessageInTheSuperAdminDashboard(TC3_SchoolOnboardStep.java:50)
+	at ✽.the user should verify the "Success" popup message in the Super Admin Dashboard.(file:///Users/mullai/Documents/GitRepo/Git%20Repo%20Greatify/Greatify_ERP_Automation/src/test/resources/Features/TC2_SchoolAdminOnboard.feature:8)
 
-School Admin generates the timetable for all the classes in the newly onboarded school.the user configures subject hours in the "Subject Mapping" page -- Time elapsed: 60.08 s <<< ERROR!
+School Admin generates the timetable for all the classes in the newly onboarded school.the user configures subject hours in the "Subject Mapping" page -- Time elapsed: 60.09 s <<< ERROR!
 org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.cssSelector: #schoolManagementSection' (tried for 30 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
@@ -80,9 +46,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.16.1', revision: '9b4c83354e'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [34437c2c05a2b01152ddb38385e485b8, findElement {using=css selector, value=#schoolManagementSection}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58496}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58496/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 34437c2c05a2b01152ddb38385e485b8
+Command: [41664dd722281831ac6acfe1556570bd, findElement {using=css selector, value=#schoolManagementSection}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51402}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51402/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 41664dd722281831ac6acfe1556570bd
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -175,7 +141,7 @@ Session ID: 34437c2c05a2b01152ddb38385e485b8
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-Timetable generation for all the classes in the newly onboarded school.School Admin generates the timetable for all the classes in the newly onboarded school -- Time elapsed: 0.710 s <<< ERROR!
+Timetable generation for all the classes in the newly onboarded school.School Admin generates the timetable for all the classes in the newly onboarded school -- Time elapsed: 0.743 s <<< ERROR!
 org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.cssSelector: #schoolManagementSection' (tried for 30 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
@@ -189,9 +155,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.16.1', revision: '9b4c83354e'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [34437c2c05a2b01152ddb38385e485b8, findElement {using=css selector, value=#schoolManagementSection}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58496}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58496/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 34437c2c05a2b01152ddb38385e485b8
+Command: [41664dd722281831ac6acfe1556570bd, findElement {using=css selector, value=#schoolManagementSection}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51402}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51402/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 41664dd722281831ac6acfe1556570bd
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -284,7 +250,7 @@ Session ID: 34437c2c05a2b01152ddb38385e485b8
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-Manage School Fees, Add-On Fees, Fee Discounts.the user creates new School Fees -- Time elapsed: 60.08 s <<< ERROR!
+Manage School Fees, Add-On Fees, Fee Discounts.the user creates new School Fees -- Time elapsed: 60.14 s <<< ERROR!
 org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.id: leadManagementSection' (tried for 20 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
@@ -298,9 +264,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.16.1', revision: '9b4c83354e'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [34437c2c05a2b01152ddb38385e485b8, findElement {using=id, value=leadManagementSection}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58496}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58496/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 34437c2c05a2b01152ddb38385e485b8
+Command: [41664dd722281831ac6acfe1556570bd, findElement {using=id, value=leadManagementSection}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51402}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51402/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 41664dd722281831ac6acfe1556570bd
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -393,7 +359,7 @@ Session ID: 34437c2c05a2b01152ddb38385e485b8
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-Manage School Fees, Add-On Fees, and Fee Discounts for newly Onboarded School.Manage School Fees, Add-On Fees, Fee Discounts -- Time elapsed: 0.738 s <<< ERROR!
+Manage School Fees, Add-On Fees, and Fee Discounts for newly Onboarded School.Manage School Fees, Add-On Fees, Fee Discounts -- Time elapsed: 0.988 s <<< ERROR!
 org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.id: leadManagementSection' (tried for 20 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
@@ -407,9 +373,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.16.1', revision: '9b4c83354e'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [34437c2c05a2b01152ddb38385e485b8, findElement {using=id, value=leadManagementSection}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58496}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58496/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 34437c2c05a2b01152ddb38385e485b8
+Command: [41664dd722281831ac6acfe1556570bd, findElement {using=id, value=leadManagementSection}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: /var/folders/53/crfhd_xs5q9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51402}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51402/devtoo..., se:cdpVersion: 122.0.6261.94, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 41664dd722281831ac6acfe1556570bd
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
