@@ -428,28 +428,28 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 
 	public void ConfigureSubjectHours() throws InterruptedException, FileNotFoundException, IOException, CsvException {
 
-		explicitWaitClickable(30, getSchoolOperationMainMenu());
-		clickWithMultipleRetry(getSchoolOperationMainMenu(), 30, 2000);
+		explicitWaitClickable(50, getSchoolOperationMainMenu());
+		clickWithMultipleRetry(getSchoolOperationMainMenu(), 50, 2000);
 
-		explicitWaitClickable(30, getManageClassMainMenu());
-		clickWithMultipleRetry(getManageClassMainMenu(), 30, 2000);
+		explicitWaitClickable(50, getManageClassMainMenu());
+		clickWithMultipleRetry(getManageClassMainMenu(), 50, 2000);
 
 		Thread.sleep(2000);
 
-		explicitWaitClickable(30, getSchoolConfigurationMainMenu());
-		clickWithMultipleRetry(getSchoolConfigurationMainMenu(), 30, 2000);
+		explicitWaitClickable(50, getSchoolConfigurationMainMenu());
+		clickWithMultipleRetry(getSchoolConfigurationMainMenu(), 50, 2000);
 
-		explicitWaitClickable(30, getClassTab());
-		clickWithMultipleRetry(getClassTab(), 30, 2000);
+		explicitWaitClickable(50, getClassTab());
+		clickWithMultipleRetry(getClassTab(), 50, 2000);
 
-		explicitWaitClickable(30, getSubjectMappingTab());
-		clickWithMultipleRetry(getSubjectMappingTab(), 30, 2000);
+		explicitWaitClickable(50, getSubjectMappingTab());
+		clickWithMultipleRetry(getSubjectMappingTab(), 50, 2000);
 
 		/**
 		 * Verify the datas are available in the Table. Otherwise reload the page
 		 */
 
-		int maxReloadAttempts = 30; // Maximum number of reload attempts
+		int maxReloadAttempts = 50; // Maximum number of reload attempts
 		int reloadCount = 0; // Initialize reload count
 
 		while (true) {
@@ -479,8 +479,8 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.id("DataTables_Table_9")));
 
-			explicitWaitClickable(30, getSubjectMappingTab());
-			clickWithMultipleRetry(getSubjectMappingTab(), 30, 2000);
+			explicitWaitClickable(50, getSubjectMappingTab());
+			clickWithMultipleRetry(getSubjectMappingTab(), 50, 2000);
 		}
 
 		if (reloadCount == maxReloadAttempts) {
@@ -500,7 +500,7 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 //			driver.navigate().refresh();
 //			// Add a wait here to wait for the table to load after the refresh
 //			// For example, you can use WebDriverWait
-//			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+//			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 //			wait.until(ExpectedConditions.presenceOfElementLocated(By.id("DataTables_Table_9")));
 //		} else {
 //			System.out.println("Table is not empty.");
@@ -514,7 +514,7 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 //		int size = rowCounts.size();
 //		System.out.println("Size :" + size);
 //
-//		int maxRetries = 30;
+//		int maxRetries = 50;
 //		for (int attempt = 1; attempt <= maxRetries; attempt++) {
 //
 //			System.out.println(size);
@@ -540,7 +540,7 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 
 //	}
 
-//		for (int i = 0; i >= 30; ++i) {
+//		for (int i = 0; i >= 50; ++i) {
 //			System.out.println(size);
 //			size = size - 1;
 //			if (size == 1) {
@@ -609,8 +609,8 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 
 			WebElement editButton = actionColumn.findElement(By.cssSelector(".edit_std_sub"));
 
-			explicitWaitClickable(30, editButton);
-			clickWithMultipleRetry(editButton, 30, 2000);
+			explicitWaitClickable(50, editButton);
+			clickWithMultipleRetry(editButton, 50, 2000);
 
 			/*
 			 * Get Hours
@@ -626,8 +626,8 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 			for (int i = 1; i < size; i++) {
 				WebElement hour = hours.get(i);
 				try {
-					explicitWaitClickable(30, hour);
-					clickWithMultipleRetry(hour, 30, 2000);
+					explicitWaitClickable(50, hour);
+					clickWithMultipleRetry(hour, 50, 2000);
 					eleClear(hour);
 					EnterInTextbox(hour, subjectHour);
 				} catch (Exception e) {
@@ -638,8 +638,8 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 
 //			for (WebElement hour : hours) {
 //				try {
-//					explicitWaitClickable(30, hour);
-//					clickWithMultipleRetry(hour, 30, 2000);
+//					explicitWaitClickable(50, hour);
+//					clickWithMultipleRetry(hour, 50, 2000);
 //					eleClear(hour);
 //					EnterInTextbox(hour, subjectHour);
 //				} catch (Exception e) {
@@ -663,8 +663,8 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 			for (int i = 1; i < minutes.size(); i++) {
 				WebElement min = minutes.get(i);
 				try {
-					explicitWaitClickable(30, min);
-					clickWithMultipleRetry(min, 30, 2000);
+					explicitWaitClickable(50, min);
+					clickWithMultipleRetry(min, 50, 2000);
 					eleClear(min);
 					EnterInTextbox(min, subjectMinutes);
 				} catch (Exception e) {
@@ -676,8 +676,8 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 //
 //			for (WebElement min : minutes) {
 //				try {
-//					explicitWaitClickable(30, min);
-//					clickWithMultipleRetry(min, 30, 2000);
+//					explicitWaitClickable(50, min);
+//					clickWithMultipleRetry(min, 50, 2000);
 //					eleClear(min);
 //					EnterInTextbox(min, subjectMinutes);
 //				} catch (Exception e) {
@@ -691,7 +691,7 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 			int maxRetries1 = 5;
 			for (int attempt1 = 1; attempt1 <= maxRetries1; attempt1++) {
 				try {
-					clickWithMultipleRetry(getBtnSuccess(), 30, 2000);
+					clickWithMultipleRetry(getBtnSuccess(), 50, 2000);
 					break;
 				} catch (Exception e) {
 					System.out.println("Exception occurred: " + e.getMessage() + attempt1);
@@ -709,7 +709,7 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 
 		getCalendarMainMenu().click();
 
-		explicitWaitClickable(30, getBtnUploadCSV());
+		explicitWaitClickable(50, getBtnUploadCSV());
 //		getBtnUploadCSV().click();
 
 		/*
@@ -752,22 +752,22 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 
 		fileInput1.sendKeys(uploadFile1.getAbsolutePath());
 
-		explicitWaitClickable(30, getBtnSuccessPopup());
-		clickWithMultipleRetry(getBtnSuccessPopup(), 30, 2000);
+		explicitWaitClickable(50, getBtnSuccessPopup());
+		clickWithMultipleRetry(getBtnSuccessPopup(), 50, 2000);
 //		getBtnSuccessPopup().click();
 
 	}
 
 	public void NavigateToManageTimetable() throws FileNotFoundException, IOException, CsvException {
 
-//		explicitWaitClickable(30, getSchoolOperationMainMenu());
+//		explicitWaitClickable(50, getSchoolOperationMainMenu());
 //		clickWithMultipleRetry(getSchoolOperationMainMenu());
 
-		explicitWaitClickable(30, getManageTimetableMainMenu());
-		clickWithMultipleRetry(getManageTimetableMainMenu(), 30, 2000);
+		explicitWaitClickable(50, getManageTimetableMainMenu());
+		clickWithMultipleRetry(getManageTimetableMainMenu(), 50, 2000);
 
-		explicitWaitClickable(30, getBtnConfigureTimetable());
-		clickWithMultipleRetry(getBtnConfigureTimetable(), 30, 2000);
+		explicitWaitClickable(50, getBtnConfigureTimetable());
+		clickWithMultipleRetry(getBtnConfigureTimetable(), 50, 2000);
 
 	}
 
@@ -781,7 +781,7 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 
 		String cell1 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTimetableCSV"), rowNum, 4);
 		System.out.println(cell1);
-		explicitWaitClickable(30, getDdnCategories());
+		explicitWaitClickable(50, getDdnCategories());
 		selectDdnByText(getDdnCategories(), cell1);
 
 		/*
@@ -824,20 +824,20 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 //			}
 //		}
 
-//		explicitWaitClickable(30, getCheckBoxMonday());
+//		explicitWaitClickable(50, getCheckBoxMonday());
 //		clickWithMultipleRetry(getCheckBoxMonday());
-//		explicitWaitClickable(30, getCheckBoxTuesday());
+//		explicitWaitClickable(50, getCheckBoxTuesday());
 //		clickWithMultipleRetry(getCheckBoxTuesday());
-//		explicitWaitClickable(30, getCheckBoxWednesday());
+//		explicitWaitClickable(50, getCheckBoxWednesday());
 //		clickWithMultipleRetry(getCheckBoxWednesday());
-//		explicitWaitClickable(30, getCheckBoxThursday());
+//		explicitWaitClickable(50, getCheckBoxThursday());
 //		clickWithMultipleRetry(getCheckBoxThursday());
-//		explicitWaitClickable(30, getCheckBoxFriday());
+//		explicitWaitClickable(50, getCheckBoxFriday());
 //		clickWithMultipleRetry(getCheckBoxFriday());
 
 		String cell2 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTimetableCSV"), rowNum, 5);
 		System.out.println(cell2);
-		explicitWaitClickable(30, getTxtSchoolStartTime());
+		explicitWaitClickable(50, getTxtSchoolStartTime());
 
 		getTxtSchoolStartTime().click();
 		getTxtSchoolStartTime().clear();
@@ -865,11 +865,11 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 
 		String cell7 = readSpecificCell(getProjectPath() + getPropertyFileValue("manageTimetableCSV"), rowNum, 10);
 		System.out.println(cell7);
-		clickWithMultipleRetry(getDdnBreakAfter(), 30, 2000);
+		clickWithMultipleRetry(getDdnBreakAfter(), 50, 2000);
 		selectDdnByValue(getDdnBreakAfter(), cell7);
 
-		explicitWaitClickable(30, getBtnConfigNewTimetable());
-		clickWithMultipleRetry(getBtnConfigNewTimetable(), 30, 2000);
+		explicitWaitClickable(50, getBtnConfigNewTimetable());
+		clickWithMultipleRetry(getBtnConfigNewTimetable(), 50, 2000);
 	}
 
 	public void ConfiguresAndPublishesTheTimetable() throws InterruptedException {
@@ -878,33 +878,33 @@ public class TimetableConfigurationPage extends SchoolOnboardPage {
 		 * For Reconfiguration
 		 * 
 		 * 
-		 * explicitWaitClickable(30, getBtnReconfigureBuild());
+		 * explicitWaitClickable(50, getBtnReconfigureBuild());
 		 * clickWithMultipleRetry(getBtnReconfigureBuild());
 		 */
 
-		explicitWaitClickable(30, getBtnBuildTimetable());
-		clickWithMultipleRetry(getBtnBuildTimetable(), 30, 2000);
+		explicitWaitClickable(50, getBtnBuildTimetable());
+		clickWithMultipleRetry(getBtnBuildTimetable(), 50, 2000);
 
-		String javascriptCode = "$('.home').animate({ scrollTop: parseInt($('html').scrollTop() + 30)} );";
+		String javascriptCode = "$('.home').animate({ scrollTop: parseInt($('html').scrollTop() + 50)} );";
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript(javascriptCode);
 
-		explicitWaitClickable(30, getBtnPublishTimetable());
-		clickWithMultipleRetry(getBtnPublishTimetable(), 30, 2000);
+		explicitWaitClickable(50, getBtnPublishTimetable());
+		clickWithMultipleRetry(getBtnPublishTimetable(), 50, 2000);
 
 	}
 
 	public void VerifiesTheSuccessfulPopupMessage() {
 
-		explicitWaitClickable(30, getBtnSuccessfullPopup());
+		explicitWaitClickable(50, getBtnSuccessfullPopup());
 
 		String successPopupMsz = getText(getTxtSuccessPopup());
 		System.out.println(successPopupMsz);
 		Assert.assertEquals("TimeTable Published Successfully", successPopupMsz);
 		HighlightOutput("Assertion Passed Success Popup Message is " + successPopupMsz);
 
-		clickWithMultipleRetry(getBtnSuccessfullPopup(), 30, 2000);
+		clickWithMultipleRetry(getBtnSuccessfullPopup(), 50, 2000);
 
 	}
 }
