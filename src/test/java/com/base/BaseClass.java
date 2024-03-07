@@ -396,6 +396,11 @@ public class BaseClass {
 			prefs.put("profile.password_manager_enabled", false);
 			options.setExperimentalOption("prefs", prefs);
 
+			// 8.
+
+			options.addArguments("--no-sandbox");
+			options.addArguments("--disable-dev-shm-usage");
+
 			driver = new ChromeDriver(options);
 
 			break;
