@@ -360,7 +360,7 @@ public class BaseClass {
 			ChromeOptions options = new ChromeOptions();
 
 			// 1. Without opening the browser
-			 options.addArguments("--headless");
+			options.addArguments("--headless");
 			// 2. Maximize Window
 			// options.addArguments("--start-maximized");
 			// 3. Open in incognito
@@ -477,7 +477,8 @@ public class BaseClass {
 				element.click();
 				break;
 			} catch (Exception e) {
-				System.out.println("Handling Exception - Attempt " + attempt);
+				System.out.println("Exception occurred: " + e.getMessage());
+//				e.printStackTrace();
 				try {
 					Thread.sleep(retryIntervalMillis);
 				} catch (InterruptedException ex) {
@@ -491,8 +492,8 @@ public class BaseClass {
 	public void clickWithRetry(WebElement element) {
 		try {
 			element.click();
-		} catch (ElementClickInterceptedException e) {
-			// If Exception occurs, wait for a moment and retry
+		} catch (Exception e) {
+			System.out.println("Exception occurred: " + e.getMessage());
 			sleep(500); // You might need to adjust the sleep duration
 			element.click();
 		}

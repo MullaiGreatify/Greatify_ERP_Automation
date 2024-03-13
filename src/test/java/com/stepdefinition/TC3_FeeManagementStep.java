@@ -42,7 +42,7 @@ public class TC3_FeeManagementStep {
 	}
 
 	@Then("the user should see the updated School Fees")
-	public void theUserShouldSeeTheUpdatedSchoolFees() {
+	public void theUserShouldSeeTheUpdatedSchoolFees() throws InterruptedException {
 
 		pom.getFeeManagementPage().VerifySchoolFeesUpdated();
 

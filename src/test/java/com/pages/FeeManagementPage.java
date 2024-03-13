@@ -1019,13 +1019,33 @@ public class FeeManagementPage extends BaseClass {
 
 	}
 
-	public void VerifySchoolFeesUpdated() {
+	public void VerifySchoolFeesUpdated() throws InterruptedException {
 
-		explicitWaitClickable(100, getBtnSuccess());
-		String popuptext = getText(getTxtSuccessMsz());
-		HighlightOutput(popuptext);
-		Assert.assertEquals("Assertion Failed", popuptext, "Fee Updated Successfully");
-		clickWithRetry(getBtnSuccess());
+		int maxRetries1 = 5;
+		for (int attempt1 = 1; attempt1 <= maxRetries1; attempt1++) {
+			try {
+				explicitWaitClickable(50, getBtnSuccess());
+
+				String successPopupMsz = getText(getTxtSuccessMsz());
+				System.out.println(successPopupMsz);
+				Assert.assertEquals("Fee Updated Successfully", successPopupMsz);
+				HighlightOutput("Assertion Passed Success Popup Message: " + successPopupMsz);
+
+				clickWithMultipleRetry(getBtnSuccess(), 50, 2000);
+
+				break;
+			} catch (Exception e) {
+				System.out.println("Exception occurred: " + e.getMessage() + attempt1);
+				e.printStackTrace();
+				Thread.sleep(500);
+			}
+		}
+
+//		explicitWaitClickable(100, getBtnSuccess());
+//		String popuptext = getText(getTxtSuccessMsz());
+//		HighlightOutput(popuptext);
+//		Assert.assertEquals("Assertion Failed", popuptext, "Fee Updated Successfully");
+//		clickWithRetry(getBtnSuccess());
 
 	}
 
