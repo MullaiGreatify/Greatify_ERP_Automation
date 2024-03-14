@@ -16,6 +16,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -1049,10 +1050,29 @@ public class FeeManagementPage extends BaseClass {
 
 	}
 
-	public void DeletesTheSchoolFees() {
+	public void DeletesTheSchoolFees() throws InterruptedException {
 
-		explicitWaitClickable(20, getSchoolFeesTab());
-		clickWithRetry(getSchoolFeesTab());
+		int maxRetries = 10;
+		for (int attempt = 1; attempt <= maxRetries; attempt++) {
+			try {
+
+				Actions actions = new Actions(driver);
+				actions.moveToElement(getSchoolFeesTab()).clickAndHold().moveToElement(getSchoolFeesTab()).release()
+						.perform();
+
+				explicitWaitClickable(50, getSchoolFeesTab());
+				getSchoolFeesTab().click();
+
+				break;
+			} catch (Exception e) {
+				System.out.println("Exception occurred: " + e.getMessage() + attempt);
+				e.printStackTrace();
+				Thread.sleep(2000);
+			}
+		}
+
+//		explicitWaitClickable(20, getSchoolFeesTab());
+//		clickWithRetry(getSchoolFeesTab());
 
 		explicitWaitClickable(10, getBtnDelete());
 		clickWithRetry(getBtnDelete());
@@ -1407,8 +1427,27 @@ public class FeeManagementPage extends BaseClass {
 
 	public void DeletesTheFeeDiscount() throws InterruptedException, FileNotFoundException, IOException, CsvException {
 
-		explicitWaitClickable(20, getConcessionTab());
-		clickWithRetry(getConcessionTab());
+		int maxRetries = 10;
+		for (int attempt = 1; attempt <= maxRetries; attempt++) {
+			try {
+
+				Actions actions = new Actions(driver);
+				actions.moveToElement(getConcessionTab()).clickAndHold().moveToElement(getConcessionTab()).release()
+						.perform();
+
+				explicitWaitClickable(50, getConcessionTab());
+				getConcessionTab().click();
+
+				break;
+			} catch (Exception e) {
+				System.out.println("Exception occurred: " + e.getMessage() + attempt);
+				e.printStackTrace();
+				Thread.sleep(2000);
+			}
+		}
+
+//		explicitWaitClickable(20, getConcessionTab());
+//		clickWithRetry(getConcessionTab());
 
 		List<WebElement> deleteBtns = driver
 

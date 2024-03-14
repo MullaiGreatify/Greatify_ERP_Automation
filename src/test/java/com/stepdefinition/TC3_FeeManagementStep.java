@@ -49,7 +49,7 @@ public class TC3_FeeManagementStep {
 	}
 
 	@When("the user deletes the School Fees")
-	public void theUserDeletesTheSchoolFees() {
+	public void theUserDeletesTheSchoolFees() throws InterruptedException {
 
 		pom.getFeeManagementPage().DeletesTheSchoolFees();
 	}
