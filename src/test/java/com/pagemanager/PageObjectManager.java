@@ -2,6 +2,7 @@ package com.pagemanager;
 
 import com.pages.CreateNewStudentPage;
 import com.pages.FeeManagementPage;
+import com.pages.ManageBooksPage;
 import com.pages.ManageLibraryPage;
 import com.pages.ManageTransportPage;
 import com.pages.SchoolOnboardPage;
@@ -61,6 +62,12 @@ public class PageObjectManager {
 
 	public ManageLibraryPage getManageLibraryPage() {
 		return (manageLibraryPage == null) ? manageLibraryPage = new ManageLibraryPage() : manageLibraryPage;
+	}
+
+	private ManageBooksPage manageBooksPage;
+
+	public ManageBooksPage getManageBooksPage() {
+		return (manageBooksPage == null) ? manageBooksPage = new ManageBooksPage() : manageBooksPage;
 	}
 
 }

@@ -809,7 +809,7 @@ public class ManageLibraryPage extends BaseClass {
 				int numberOfRows = rows.size();
 				System.out.println("Table Rows :" + numberOfRows);
 
-				for (int rowIndex = 0; rowIndex < numberOfRows; rowIndex++) {
+				for (int rowIndex = 1; rowIndex < numberOfRows; rowIndex++) {
 
 					WebElement actionColumn = getTable()
 							.findElement(By.xpath(".//tr[" + (rowIndex + 1) + "]/td[" + (columnIndex + 1) + "]"));
@@ -894,7 +894,7 @@ public class ManageLibraryPage extends BaseClass {
 				int numberOfRows = rows.size();
 				System.out.println("Table Rows :" + numberOfRows);
 
-				for (int rowIndex = 0; rowIndex < numberOfRows; rowIndex++) {
+				for (int rowIndex = 1; rowIndex < numberOfRows; rowIndex++) {
 
 					WebElement actionColumn = getTable1()
 							.findElement(By.xpath(".//tr[" + (rowIndex + 1) + "]/td[" + (columnIndex + 1) + "]"));
@@ -973,7 +973,7 @@ public class ManageLibraryPage extends BaseClass {
 				int numberOfRows = rows.size();
 				System.out.println("Table Rows :" + numberOfRows);
 
-				for (int rowIndex = 0; rowIndex < numberOfRows; rowIndex++) {
+				for (int rowIndex = 1; rowIndex < numberOfRows; rowIndex++) {
 
 					WebElement actionColumn = getTable2()
 							.findElement(By.xpath(".//tr[" + (rowIndex + 1) + "]/td[" + (columnIndex + 1) + "]"));
@@ -1132,7 +1132,7 @@ public class ManageLibraryPage extends BaseClass {
 		int numberOfRows = rows.size();
 		System.out.println("Table Rows :" + numberOfRows);
 
-		for (int rowIndex = 0; rowIndex < numberOfRows; rowIndex++) {
+		for (int rowIndex = 1; rowIndex < numberOfRows; rowIndex++) {
 			int maxRetries1 = 5;
 			for (int attempt1 = 1; attempt1 <= maxRetries1; attempt1++) {
 				try {
@@ -1214,7 +1214,7 @@ public class ManageLibraryPage extends BaseClass {
 		int numberOfRows = rows.size();
 		System.out.println("Table Rows :" + numberOfRows);
 
-		for (int rowIndex = 0; rowIndex < numberOfRows; rowIndex++) {
+		for (int rowIndex = 1; rowIndex < numberOfRows; rowIndex++) {
 			int maxRetries1 = 5;
 			for (int attempt1 = 1; attempt1 <= maxRetries1; attempt1++) {
 				try {
@@ -1297,7 +1297,7 @@ public class ManageLibraryPage extends BaseClass {
 		int numberOfRows = rows.size();
 		System.out.println("Table Rows :" + numberOfRows);
 
-		for (int rowIndex = 0; rowIndex < numberOfRows; rowIndex++) {
+		for (int rowIndex = 1; rowIndex < numberOfRows; rowIndex++) {
 
 			int maxRetries1 = 5;
 			for (int attempt1 = 1; attempt1 <= maxRetries1; attempt1++) {

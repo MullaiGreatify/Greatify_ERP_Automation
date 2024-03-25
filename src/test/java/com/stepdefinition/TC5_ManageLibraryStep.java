@@ -10,7 +10,7 @@ import com.pagemanager.PageObjectManager;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class TC5_ManageLibrary {
+public class TC5_ManageLibraryStep {
 
 	PageObjectManager pom = new PageObjectManager();
 
