@@ -10,7 +10,7 @@ import com.pagemanager.PageObjectManager;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class TC7_ManageBooksStep {
+public class TC6_ManageBooksStep {
 
 	PageObjectManager pom = new PageObjectManager();
 
